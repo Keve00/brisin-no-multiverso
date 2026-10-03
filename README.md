@@ -81,11 +81,9 @@ godot --path godot
 Se o executável tiver outro nome ou não estiver no PATH, substitua `godot` pelo
 caminho dele. No Windows, o editor também abre `project.godot` por duplo clique.
 
-Este repositório é privado. O clone HTTPS exige autenticação de uma conta com
-acesso; para um serviço de deploy, cadastre a chave pública em **Settings →
-Deploy keys**, mantenha a privada no serviço e use
-`git@github.com:Keve00/brisin-no-multiverso.git`. Somente leitura basta para
-clonar e atualizar o deploy. Chaves privadas nunca fazem parte do projeto.
+Se o repositório estiver privado, o clone HTTPS exige uma conta com acesso.
+Para deploy por SSH, mantenha chaves privadas fora do código e configure
+a chave pública nas configurações do repositório.
 
 ## Controles
 
@@ -212,15 +210,15 @@ Arte rígida conserva escala uniforme e pivôs; comprimento de plataforma/água
 
 ## Documentação
 
-- [GDD do Mundo 1](godot/docs/GDD_mundo_1.md)
+- GDD do Mundo 1: `godot/docs/GDD_mundo_1.md` (dentro do ZIP)
 - [Regras de desenvolvimento](AGENTS.md)
-- [Integração de assets](godot/docs/asset_integration.md)
-- [Combate e chips](godot/docs/combat_svg.md)
-- [Gesto de lançamento](godot/docs/chip_gesture.md)
-- [Cenário e atmosfera](godot/docs/background_svg.md)
-- [Mar em SVG](godot/docs/sea_svg.md)
-- [Auditoria da transição do portal](godot/docs/portal_transition_audit.md)
-- [Créditos/licenças do runtime Godot](godot/docs/GODOT_COPYRIGHT.txt)
+- Integração de assets: `godot/docs/asset_integration.md` (dentro do ZIP)
+- Combate e chips: `godot/docs/combat_svg.md` (dentro do ZIP)
+- Gesto de lançamento: `godot/docs/chip_gesture.md` (dentro do ZIP)
+- Cenário e atmosfera: `godot/docs/background_svg.md` (dentro do ZIP)
+- Mar em SVG: `godot/docs/sea_svg.md` (dentro do ZIP)
+- Auditoria da transição do portal: `godot/docs/portal_transition_audit.md` (dentro do ZIP)
+- Créditos/licenças do runtime Godot: `godot/docs/GODOT_COPYRIGHT.txt` (dentro do ZIP)
 
 Este repositório reúne o código, os assets e a documentação para continuar
 o desenvolvimento do jogo.
