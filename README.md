@@ -1,5 +1,20 @@
 # Brisin no Multiverso
 
+> **Entrega atual: versão 17.** O código, assets SVG, áudio, testes e ferramentas
+> estão em `Brisin_v17_projeto_editavel.zip`. O arquivo preserva a estrutura completa
+> do projeto; extraia a pasta `Brisin/` antes de executar os comandos deste guia.
+> Os binários web podem ser reconstruídos pelas ferramentas incluídas.
+
+```bash
+git clone https://github.com/Keve00/brisin-no-multiverso.git
+cd brisin-no-multiverso
+python -m zipfile -e Brisin_v17_projeto_editavel.zip projeto
+cd projeto/Brisin
+```
+
+No Windows, também é possível extrair o ZIP pelo Explorador de Arquivos.
+Importe `projeto/Brisin/godot/project.godot` no Godot 4.5.1.
+
 Jogo de plataforma 2D em pixel art feito em **Godot 4.5.1**. Brisin viaja por
 mundos paralelos para restabelecer suas conexões. Esta versão contém o
 **Vertical Slice 0.1 do Mundo 1 — Costa dos Ventos Conectados**, com uma fase
@@ -12,12 +27,14 @@ jogável de 9.600 pixels e transformação de Offline para Online.
 - Movimento, pulo variável, coyote time e jump buffer.
 - Dash aéreo, correntes de vento, rail de sinal e plataformas móveis.
 - Checkpoint, respawn e progresso salvo localmente.
-- Ruídozinhos com patrulha, atordoamento, reação e derrota.
+- Doze Ruídozinhos distribuídos em plataformas, com patrulha, atordoamento,
+  reação e derrota.
 - Pulso de sinal e lançamento de chips SIM brancos.
 - Gemas laranja pulsantes, plataformas desmoronáveis e áreas Online.
 - Nó de conexão, transformação do cenário e portal com entrada animada antes
   da conclusão.
-- Menu com Brisin animado, HUD, dicas contextuais e opção de reduzir flashes.
+- Menu com Brisin animado, cinco gemas flutuantes e música chiptune original;
+  HUD, dicas contextuais e opção de reduzir flashes.
 - Arte SVG animada pelo Godot: cenário em camadas, plantas, vento, mar,
   plataformas, efeitos de combate e interações.
 
@@ -36,6 +53,8 @@ presentes no catálogo de assets não são necessariamente usadas no percurso.
 
 Os assets prontos estão incluídos. Python e Inkscape são necessários apenas
 para regenerar arte; não são necessários para jogar no editor.
+Para regenerar a música original, instale também FFmpeg e execute
+`python tools/generate_menu_theme.py`.
 
 ## Instalação e execução no Godot
 
@@ -62,6 +81,12 @@ godot --path godot
 Se o executável tiver outro nome ou não estiver no PATH, substitua `godot` pelo
 caminho dele. No Windows, o editor também abre `project.godot` por duplo clique.
 
+Este repositório é privado. O clone HTTPS exige autenticação de uma conta com
+acesso; para um serviço de deploy, cadastre a chave pública em **Settings →
+Deploy keys**, mantenha a privada no serviço e use
+`git@github.com:Keve00/brisin-no-multiverso.git`. Somente leitura basta para
+clonar e atualizar o deploy. Chaves privadas nunca fazem parte do projeto.
+
 ## Controles
 
 | Ação | Teclado | Controle |
@@ -80,9 +105,20 @@ uma mecânica está relevante.
 
 ## Jogar a exportação web localmente
 
-A pasta `dist/` contém o pacote web usado na versão publicada. Sirva a raiz do
-projeto por HTTP; abrir `index.html` diretamente como `file://` não carrega os
-arquivos WebAssembly de forma confiável.
+O GitHub contém o projeto editável e o carregador; os binários gerados
+`index.pck`, as três partes WASM e o ZIP de entrega são reconstruídos fora do
+repositório portátil. Para jogar localmente no navegador, instale Godot 4.5.1,
+Python e Node.js e execute primeiro:
+
+```bash
+python tools/export_web.py --godot godot
+```
+
+Na primeira execução, o helper baixa cerca de 38 MB do runtime compatível da
+versão publicada e verifica seu SHA256; depois exporta o código e assets locais
+para `dist/index.pck`. A importação e o jogo no editor funcionam com os assets
+incluídos, sem baixar esse runtime. Sirva a raiz do projeto por HTTP; abrir
+`index.html` diretamente como `file://` não carrega WebAssembly de forma confiável.
 
 ```bash
 python -m http.server 8000
@@ -100,22 +136,22 @@ Escolha uma pasta de saída fora de `godot/`.
 Para atualizar o pacote web deste repositório preservando seu carregador:
 
 ```bash
-godot --headless --path godot --editor --import
-godot --headless --path godot --export-pack Web dist/index.pck
-node tools/update_web_pack_size.cjs
-node verify-loader.cjs
-python tools/package_svg_delivery.py
+python tools/export_web.py --godot godot
 ```
 
-Passe um caminho absoluto para `dist/index.pck` se o sistema interpretar a
-saída em relação à pasta do projeto Godot. O último comando gera o ZIP do
-projeto editável, documentação e SVGs.
+O helper usa caminhos absolutos, recupera o runtime quando necessário, importa os recursos, exporta o PCK, atualiza
+o carregador e gera o ZIP do projeto editável. No Windows, passe o caminho
+do executável Godot em `--godot` e use `py` se necessário.
 
 O carregador web usa o runtime Godot 4.5.1 sem threads e recompõe o WASM original
 a partir de partes. **Exportar um PCK não atualiza o runtime**: se mudar a versão
 do Godot ou as opções de exportação, exporte o runtime completo e revise também
 o carregador, as partes WASM e seus hashes. A verificação atual compara o
 runtime original, compila o WASM e confere tamanho do PCK/limites dos arquivos.
+O download depende da versão publicada permanecer disponível. Se usar outro
+espelho, `python tools/bootstrap_web_runtime.py --runtime-url URL` aceita apenas
+os mesmos bytes verificados pelo manifesto. Alternativamente, exporte um pacote
+Web completo no Godot para uma pasta separada e sirva essa exportação padrão.
 
 ## Estrutura do projeto
 
@@ -131,7 +167,7 @@ godot/
 tools/                   Geradores de SVG e ferramentas de empacotamento
 docs/                    Prévias vetoriais e keyframes fora do export
 qa/                      Pranchas para revisão visual
-dist/                    Jogo web exportado e pacote editável
+dist/                    Carregador e arquivos web; binários gerados pelo helper
 AGENTS.md                Regras de arte, física, interface e integração
 ```
 
@@ -160,6 +196,9 @@ python tools/build_brisin_menu_svg.py
 python tools/build_chip_gesture.py
 python tools/build_checkpoint_wave.py
 python tools/build_atmosphere_svg.py
+python tools/build_gameplay_sea_svg.py
+python tools/build_far_sea_ripples.py
+python tools/build_portal_assets.py
 ```
 
 Instale também o Inkscape e disponibilize seu executável no PATH para os
@@ -179,9 +218,9 @@ Arte rígida conserva escala uniforme e pivôs; comprimento de plataforma/água
 - [Combate e chips](godot/docs/combat_svg.md)
 - [Gesto de lançamento](godot/docs/chip_gesture.md)
 - [Cenário e atmosfera](godot/docs/background_svg.md)
+- [Mar em SVG](godot/docs/sea_svg.md)
 - [Auditoria da transição do portal](godot/docs/portal_transition_audit.md)
 - [Créditos/licenças do runtime Godot](godot/docs/GODOT_COPYRIGHT.txt)
 
-Este repositório registra o projeto e seus assets para continuidade do
-desenvolvimento. Nenhuma licença de redistribuição dos assets de marca é
-concedida por este README.
+Este repositório reúne o código, os assets e a documentação para continuar
+o desenvolvimento do jogo.
