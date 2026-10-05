@@ -18,7 +18,7 @@ func run()->void:
   if marker.kind=="checkpoint" and marker.id!="brisa_01":totems.append(marker)
  check(totems.size()==5,"five additional checkpoint totems are present")
  for marker in totems:
-  check(marker.art and marker.CHECKPOINT_BASE.get_size()==Vector2(80,128) and marker.TOTEM_SCALE==1.0,"totem uses native SVG layers with one uniform scale")
+  check(marker.art and marker.ALIEN_CHECKPOINT_OFF.get_size()==Vector2(128,140) and marker.TOTEM_SCALE==1.0,"totem uses native SVG layers with one uniform scale")
   world.player.position=marker.position+Vector2(0,-3)
   world.player.velocity=Vector2.ZERO;world.player.change_state("IDLE")
   await frames(3)

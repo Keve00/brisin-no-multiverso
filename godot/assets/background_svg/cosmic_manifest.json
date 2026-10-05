@@ -1,0 +1,9 @@
+{
+  "canvas": [
+    2172,
+    724
+  ],
+  "source": "tools/reference_art/cosmic/background.png",
+  "grid": 2,
+  "parallax": "Shared canvas, horizontal travel, no stretch"
+}

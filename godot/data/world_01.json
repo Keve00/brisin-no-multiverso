@@ -941,21 +941,21 @@
       0,
       80,
       560,
-      1
+      1.5
     ],
     [
       "palms",
       1,
       535,
       560,
-      1
+      1.5
     ],
     [
       "palms",
       2,
       985,
       520,
-      0.9
+      1.5
     ],
     [
       "vegetation",
@@ -1081,7 +1081,7 @@
       1,
       6650,
       340,
-      1.4
+      1.5
     ],
     [
       "palms",
@@ -1130,7 +1130,7 @@
       1,
       8330,
       320,
-      1.4
+      1.5
     ],
     [
       "vegetation",
@@ -1193,7 +1193,7 @@
       1,
       12000,
       250,
-      1.4
+      1.5
     ],
     [
       "palms",
@@ -1281,5 +1281,17 @@
         250
       ]
     }
+  ],
+  "theme": "Conexão de Outro Mundo",
+  "enemy_variants": [
+    "cristal",
+    "esporo",
+    "magnetico",
+    "escavador",
+    "plasma",
+    "satelite",
+    "corrompido",
+    "sentinela",
+    "orbital"
   ]
 }

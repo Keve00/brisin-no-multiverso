@@ -1,0 +1,6297 @@
+{
+  "theme": "Conexão de Outro Mundo",
+  "assets": [
+    {
+      "path": "godot/assets/world_01/platforms/cosmic_menu.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 47
+    },
+    {
+      "path": "godot/assets/world_01/platforms/coastal_0.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 27
+    },
+    {
+      "path": "godot/assets/world_01/platforms/coastal_0_ground.svg",
+      "canvas": [
+        171,
+        49
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/world_01/platforms/coastal_0_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 27
+    },
+    {
+      "path": "godot/assets/world_01/platforms/coastal_1.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 27
+    },
+    {
+      "path": "godot/assets/world_01/platforms/coastal_1_ground.svg",
+      "canvas": [
+        171,
+        49
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/world_01/platforms/coastal_1_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 27
+    },
+    {
+      "path": "godot/assets/world_01/platforms/sand_0.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/world_01/platforms/sand_0_ground.svg",
+      "canvas": [
+        132,
+        34
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/world_01/platforms/sand_0_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/world_01/platforms/sand_1.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/world_01/platforms/sand_1_ground.svg",
+      "canvas": [
+        132,
+        34
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/world_01/platforms/sand_1_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/world_01/platforms/steps_0.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 41
+    },
+    {
+      "path": "godot/assets/world_01/platforms/steps_0_ground.svg",
+      "canvas": [
+        137,
+        95
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 41
+    },
+    {
+      "path": "godot/assets/world_01/platforms/steps_0_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 0
+    },
+    {
+      "path": "godot/assets/world_01/platforms/steps_1.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 41
+    },
+    {
+      "path": "godot/assets/world_01/platforms/steps_1_ground.svg",
+      "canvas": [
+        137,
+        95
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 41
+    },
+    {
+      "path": "godot/assets/world_01/platforms/steps_1_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 0
+    },
+    {
+      "path": "godot/assets/world_01/platforms/thin_0.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/world_01/platforms/thin_0_ground.svg",
+      "canvas": [
+        157,
+        33
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 16
+    },
+    {
+      "path": "godot/assets/world_01/platforms/thin_0_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 15
+    },
+    {
+      "path": "godot/assets/world_01/platforms/thin_1.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/world_01/platforms/thin_1_ground.svg",
+      "canvas": [
+        157,
+        33
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 16
+    },
+    {
+      "path": "godot/assets/world_01/platforms/thin_1_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 15
+    },
+    {
+      "path": "godot/assets/world_01/platforms/cracked_0.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/world_01/platforms/cracked_0_ground.svg",
+      "canvas": [
+        141,
+        48
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/world_01/platforms/cracked_0_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/world_01/platforms/cracked_1.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/world_01/platforms/cracked_1_ground.svg",
+      "canvas": [
+        141,
+        48
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/world_01/platforms/cracked_1_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/world_01/platforms/raft_0.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 27
+    },
+    {
+      "path": "godot/assets/world_01/platforms/raft_0_ground.svg",
+      "canvas": [
+        148,
+        37
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 27
+    },
+    {
+      "path": "godot/assets/world_01/platforms/raft_0_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/world_01/platforms/raft_1.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 27
+    },
+    {
+      "path": "godot/assets/world_01/platforms/raft_1_ground.svg",
+      "canvas": [
+        148,
+        37
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 27
+    },
+    {
+      "path": "godot/assets/world_01/platforms/raft_1_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/world_01/platforms/wood_bridge_0.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 16
+    },
+    {
+      "path": "godot/assets/world_01/platforms/wood_bridge_0_ground.svg",
+      "canvas": [
+        162,
+        46
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 16
+    },
+    {
+      "path": "godot/assets/world_01/platforms/wood_bridge_0_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 0
+    },
+    {
+      "path": "godot/assets/world_01/platforms/wood_bridge_1.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 16
+    },
+    {
+      "path": "godot/assets/world_01/platforms/wood_bridge_1_ground.svg",
+      "canvas": [
+        162,
+        46
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 16
+    },
+    {
+      "path": "godot/assets/world_01/platforms/wood_bridge_1_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 0
+    },
+    {
+      "path": "godot/assets/world_01/platforms/signal_0.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 19
+    },
+    {
+      "path": "godot/assets/world_01/platforms/signal_0_ground.svg",
+      "canvas": [
+        137,
+        53
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 19
+    },
+    {
+      "path": "godot/assets/world_01/platforms/signal_0_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 9
+    },
+    {
+      "path": "godot/assets/world_01/platforms/signal_1.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 19
+    },
+    {
+      "path": "godot/assets/world_01/platforms/signal_1_ground.svg",
+      "canvas": [
+        137,
+        53
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 19
+    },
+    {
+      "path": "godot/assets/world_01/platforms/signal_1_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 9
+    },
+    {
+      "path": "godot/assets/world_01/platforms/wind_island_0.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 29
+    },
+    {
+      "path": "godot/assets/world_01/platforms/wind_island_0_ground.svg",
+      "canvas": [
+        140,
+        39
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/world_01/platforms/wind_island_0_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 29
+    },
+    {
+      "path": "godot/assets/world_01/platforms/wind_island_0_wind.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 2
+    },
+    {
+      "path": "godot/assets/world_01/platforms/wind_island_1.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 29
+    },
+    {
+      "path": "godot/assets/world_01/platforms/wind_island_1_ground.svg",
+      "canvas": [
+        140,
+        39
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/world_01/platforms/wind_island_1_deco.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 29
+    },
+    {
+      "path": "godot/assets/world_01/platforms/wind_island_1_wind.svg",
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 2
+    },
+    {
+      "path": "godot/assets/world_01/environment/palms_0.svg",
+      "canvas": [
+        126,
+        119
+      ],
+      "pivot": [
+        63,
+        114
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/world_01/environment/palms_1.svg",
+      "canvas": [
+        106,
+        102
+      ],
+      "pivot": [
+        53,
+        97
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/world_01/environment/palms_2.svg",
+      "canvas": [
+        88,
+        85
+      ],
+      "pivot": [
+        44,
+        80
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/world_01/environment/vegetation_0.svg",
+      "canvas": [
+        59,
+        42
+      ],
+      "pivot": [
+        29,
+        37
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/world_01/environment/vegetation_1.svg",
+      "canvas": [
+        54,
+        39
+      ],
+      "pivot": [
+        27,
+        34
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/world_01/environment/vegetation_2.svg",
+      "canvas": [
+        44,
+        52
+      ],
+      "pivot": [
+        22,
+        47
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/world_01/environment/rocks_sand_0.svg",
+      "canvas": [
+        37,
+        52
+      ],
+      "pivot": [
+        18,
+        47
+      ],
+      "geometry": "paths",
+      "colors": 27
+    },
+    {
+      "path": "godot/assets/world_01/environment/rocks_sand_1.svg",
+      "canvas": [
+        60,
+        48
+      ],
+      "pivot": [
+        30,
+        43
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/world_01/environment/rocks_sand_2.svg",
+      "canvas": [
+        57,
+        45
+      ],
+      "pivot": [
+        28,
+        40
+      ],
+      "geometry": "paths",
+      "colors": 36
+    },
+    {
+      "path": "godot/assets/world_01/environment/ruins_0.svg",
+      "canvas": [
+        68,
+        60
+      ],
+      "pivot": [
+        34,
+        55
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/world_01/environment/ruins_1.svg",
+      "canvas": [
+        68,
+        60
+      ],
+      "pivot": [
+        34,
+        55
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/world_01/environment/ruins_2.svg",
+      "canvas": [
+        29,
+        54
+      ],
+      "pivot": [
+        14,
+        49
+      ],
+      "geometry": "paths",
+      "colors": 31
+    },
+    {
+      "path": "godot/assets/world_01/environment/posts_0.svg",
+      "canvas": [
+        43,
+        51
+      ],
+      "pivot": [
+        21,
+        46
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/world_01/environment/posts_0_lamp.svg",
+      "canvas": [
+        43,
+        51
+      ],
+      "pivot": [
+        21,
+        46
+      ],
+      "geometry": "paths",
+      "colors": 3
+    },
+    {
+      "path": "godot/assets/world_01/environment/posts_1.svg",
+      "canvas": [
+        43,
+        51
+      ],
+      "pivot": [
+        21,
+        46
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/world_01/environment/posts_1_lamp.svg",
+      "canvas": [
+        43,
+        51
+      ],
+      "pivot": [
+        21,
+        46
+      ],
+      "geometry": "paths",
+      "colors": 3
+    },
+    {
+      "path": "godot/assets/world_01/environment/posts_2.svg",
+      "canvas": [
+        43,
+        51
+      ],
+      "pivot": [
+        21,
+        46
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/world_01/environment/posts_2_lamp.svg",
+      "canvas": [
+        43,
+        51
+      ],
+      "pivot": [
+        21,
+        46
+      ],
+      "geometry": "paths",
+      "colors": 3
+    },
+    {
+      "path": "godot/assets/world_01/environment/water_props_0.svg",
+      "canvas": [
+        48,
+        42
+      ],
+      "pivot": [
+        24,
+        37
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/world_01/environment/water_props_1.svg",
+      "canvas": [
+        48,
+        42
+      ],
+      "pivot": [
+        24,
+        37
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/world_01/environment/water_props_2.svg",
+      "canvas": [
+        44,
+        16
+      ],
+      "pivot": [
+        22,
+        11
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/world_01/interactive/turbine_base_off.svg",
+      "canvas": [
+        128,
+        160
+      ],
+      "pivot": [
+        64,
+        156
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/world_01/interactive/turbine_rotor_off.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/world_01/interactive/turbine_base_on.svg",
+      "canvas": [
+        128,
+        160
+      ],
+      "pivot": [
+        64,
+        156
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/world_01/interactive/turbine_rotor_on.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/world_01/interactive/lighthouse_base_off.svg",
+      "canvas": [
+        116,
+        156
+      ],
+      "pivot": [
+        63,
+        153
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/world_01/interactive/lighthouse_lamp_off.svg",
+      "canvas": [
+        20,
+        20
+      ],
+      "pivot": [
+        10,
+        10
+      ],
+      "geometry": "paths",
+      "colors": 1
+    },
+    {
+      "path": "godot/assets/world_01/interactive/lighthouse_base_on.svg",
+      "canvas": [
+        116,
+        156
+      ],
+      "pivot": [
+        63,
+        153
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/world_01/interactive/lighthouse_lamp_on.svg",
+      "canvas": [
+        20,
+        20
+      ],
+      "pivot": [
+        10,
+        10
+      ],
+      "geometry": "paths",
+      "colors": 1
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_base_off.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 19
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_off.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        54,
+        24
+      ],
+      "geometry": "paths",
+      "colors": 2
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_off_00.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 2
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_off_01.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 2
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_off_02.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 2
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_off_03.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 2
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_off_04.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 2
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_off_05.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 2
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_off_06.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 2
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_off_07.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 2
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_lamp_off.svg",
+      "canvas": [
+        24,
+        24
+      ],
+      "pivot": [
+        12,
+        12
+      ],
+      "geometry": "paths",
+      "colors": 1
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_base_on.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_on.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        54,
+        24
+      ],
+      "geometry": "paths",
+      "colors": 5
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_on_00.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 5
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_on_01.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 5
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_on_02.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 5
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_on_03.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 5
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_on_04.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 5
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_on_05.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 5
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_on_06.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 5
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_flag_on_07.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ],
+      "geometry": "paths",
+      "colors": 5
+    },
+    {
+      "path": "godot/assets/world_01/interactive/checkpoint_lamp_on.svg",
+      "canvas": [
+        24,
+        24
+      ],
+      "pivot": [
+        12,
+        12
+      ],
+      "geometry": "paths",
+      "colors": 1
+    },
+    {
+      "path": "godot/assets/world_01/interactive/node_frame_off.svg",
+      "canvas": [
+        120,
+        130
+      ],
+      "pivot": [
+        63,
+        127
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/world_01/interactive/node_core_off.svg",
+      "canvas": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        32
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/world_01/interactive/node_frame_on.svg",
+      "canvas": [
+        120,
+        130
+      ],
+      "pivot": [
+        63,
+        127
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/world_01/interactive/node_core.svg",
+      "canvas": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        32
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/world_01/interactive/portal_frame_off.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        62,
+        136
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/world_01/interactive/portal_core_off.svg",
+      "canvas": [
+        80,
+        80
+      ],
+      "pivot": [
+        40,
+        40
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/world_01/interactive/portal_frame_on.svg",
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        62,
+        136
+      ],
+      "geometry": "paths",
+      "colors": 32
+    },
+    {
+      "path": "godot/assets/world_01/interactive/portal_core.svg",
+      "canvas": [
+        80,
+        80
+      ],
+      "pivot": [
+        40,
+        40
+      ],
+      "geometry": "paths",
+      "colors": 32
+    },
+    {
+      "path": "godot/assets/world_01/interactive/rail_post_off.svg",
+      "canvas": [
+        42,
+        52
+      ],
+      "pivot": [
+        30,
+        24
+      ],
+      "geometry": "paths",
+      "colors": 16
+    },
+    {
+      "path": "godot/assets/world_01/interactive/rail_segment_off.svg",
+      "canvas": [
+        24,
+        18
+      ],
+      "pivot": [
+        0,
+        9
+      ],
+      "geometry": "paths",
+      "colors": 3
+    },
+    {
+      "path": "godot/assets/world_01/interactive/rail_post_on.svg",
+      "canvas": [
+        42,
+        52
+      ],
+      "pivot": [
+        30,
+        24
+      ],
+      "geometry": "paths",
+      "colors": 16
+    },
+    {
+      "path": "godot/assets/world_01/interactive/rail_segment_on.svg",
+      "canvas": [
+        24,
+        18
+      ],
+      "pivot": [
+        0,
+        9
+      ],
+      "geometry": "paths",
+      "colors": 3
+    },
+    {
+      "path": "godot/assets/world_01/svg/gem_orange.svg",
+      "canvas": [
+        48,
+        56
+      ],
+      "pivot": [
+        24,
+        28
+      ],
+      "geometry": "paths",
+      "colors": 37
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/idle/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/idle/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/idle/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/idle/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/idle/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/idle/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/idle/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/idle/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/patrol/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/patrol/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/patrol/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/patrol/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/patrol/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/patrol/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/patrol/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/patrol/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/alert/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/alert/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/alert/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/alert/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/alert/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/alert/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/hit/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/hit/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/hit/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/hit/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/hit/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/hit/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/defeated/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/defeated/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/defeated/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/defeated/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/defeated/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/defeated/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/defeated/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/defeated/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/defeated/08.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/defeated/09.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/defeated/10.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/cristal/frames/defeated/11.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/idle/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/idle/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/idle/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/idle/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/idle/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/idle/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/idle/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/idle/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/patrol/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/patrol/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/patrol/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/patrol/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/patrol/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/patrol/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/patrol/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/patrol/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/alert/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/alert/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/alert/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/alert/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/alert/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/alert/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/hit/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/hit/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/hit/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/hit/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/hit/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/hit/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/defeated/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/defeated/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/defeated/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/defeated/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/defeated/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/defeated/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/defeated/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/defeated/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/defeated/08.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/defeated/09.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/defeated/10.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/esporo/frames/defeated/11.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 17
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/idle/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/idle/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/idle/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/idle/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/idle/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/idle/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/idle/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/idle/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/patrol/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/patrol/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/patrol/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/patrol/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/patrol/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/patrol/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/patrol/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/patrol/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/alert/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/alert/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/alert/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/alert/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/alert/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/alert/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/hit/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/hit/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/hit/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/hit/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/hit/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/hit/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/defeated/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/defeated/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/defeated/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/defeated/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/defeated/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/defeated/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/defeated/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/defeated/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/defeated/08.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/defeated/09.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/defeated/10.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/magnetico/frames/defeated/11.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/idle/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/idle/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/idle/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/idle/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/idle/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/idle/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/idle/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/idle/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/patrol/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/patrol/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/patrol/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/patrol/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/patrol/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/patrol/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/patrol/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/patrol/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/alert/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/alert/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 27
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/alert/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 27
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/alert/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 27
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/alert/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/alert/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/hit/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/hit/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 27
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/hit/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 27
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/hit/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 27
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/hit/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/hit/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/defeated/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/defeated/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/defeated/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/defeated/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/defeated/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/defeated/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/defeated/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/defeated/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/defeated/08.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/defeated/09.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/defeated/10.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/escavador/frames/defeated/11.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/idle/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/idle/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/idle/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/idle/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/idle/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/idle/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/idle/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/idle/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/patrol/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/patrol/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/patrol/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/patrol/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/patrol/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/patrol/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/patrol/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/patrol/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/alert/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/alert/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/alert/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/alert/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/alert/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/alert/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/hit/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/hit/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/hit/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/hit/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/hit/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/hit/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/defeated/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/defeated/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/defeated/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/defeated/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/defeated/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/defeated/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/defeated/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/defeated/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 18
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/defeated/08.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 17
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/defeated/09.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 17
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/defeated/10.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 15
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/plasma/frames/defeated/11.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 12
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/idle/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/idle/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/idle/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/idle/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/idle/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/idle/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/idle/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/idle/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/patrol/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/patrol/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/patrol/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/patrol/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/patrol/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/patrol/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/patrol/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/patrol/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/alert/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/alert/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/alert/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/alert/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/alert/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/alert/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/hit/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/hit/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/hit/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/hit/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/hit/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/hit/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/defeated/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/defeated/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/defeated/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/defeated/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/defeated/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/defeated/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/defeated/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/defeated/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/defeated/08.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/defeated/09.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/defeated/10.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/satelite/frames/defeated/11.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 19
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/idle/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/idle/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/idle/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/idle/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/idle/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/idle/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/idle/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/idle/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/patrol/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/patrol/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/patrol/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/patrol/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/patrol/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/patrol/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/patrol/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/patrol/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/alert/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/alert/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/alert/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/alert/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/alert/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/alert/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/hit/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/hit/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/hit/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/hit/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/hit/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/hit/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/defeated/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/defeated/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/defeated/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/defeated/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/defeated/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/defeated/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/defeated/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/defeated/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/defeated/08.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/defeated/09.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/defeated/10.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 19
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/corrompido/frames/defeated/11.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 14
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/idle/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/idle/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/idle/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/idle/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/idle/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/idle/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/idle/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/idle/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/patrol/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/patrol/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/patrol/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/patrol/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/patrol/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/patrol/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/patrol/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/patrol/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/alert/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/alert/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/alert/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/alert/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/alert/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/alert/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/hit/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/hit/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/hit/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/hit/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 26
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/hit/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/hit/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/defeated/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/defeated/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/defeated/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/defeated/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/defeated/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/defeated/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/defeated/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 24
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/defeated/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/defeated/08.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/defeated/09.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/defeated/10.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/sentinela/frames/defeated/11.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/idle/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/idle/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/idle/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/idle/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/idle/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/idle/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/idle/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/idle/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/patrol/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/patrol/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/patrol/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/patrol/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/patrol/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/patrol/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/patrol/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/patrol/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/alert/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/alert/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/alert/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/alert/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/alert/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/alert/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/hit/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/hit/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/hit/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/hit/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/hit/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/hit/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/00.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/01.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/02.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 23
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/03.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/04.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 22
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/05.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/06.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/07.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 21
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/08.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/09.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/10.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/11.svg",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        112
+      ],
+      "geometry": "paths",
+      "colors": 20
+    },
+    {
+      "path": "godot/assets/background_svg/cosmic_panorama.svg",
+      "canvas": [
+        2172,
+        724
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "geometry": "paths",
+      "colors": 96
+    },
+    {
+      "path": "godot/assets/ui/cosmic_logo.svg",
+      "canvas": [
+        316,
+        149
+      ],
+      "pivot": [
+        158.0,
+        74.5
+      ],
+      "geometry": "paths",
+      "colors": 29
+    }
+  ],
+  "animation_backend": "Godot SpriteFrames / GDScript",
+  "enemy_variants": [
+    "cristal",
+    "esporo",
+    "magnetico",
+    "escavador",
+    "plasma",
+    "satelite",
+    "corrompido",
+    "sentinela",
+    "orbital"
+  ],
+  "approved_footer_removed": true
+}

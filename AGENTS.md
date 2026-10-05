@@ -204,3 +204,12 @@ Detalhes confirmados nas soluções desta rodada:
 - Por solicitação explícita do usuário, o menu aprovado do mobile também é o menu da web normal. Ação principal larga laranja, Nova Aventura larga quando há progresso, Configurações/Controles lado a lado. Reutilizar os SVGs/fontes de `assets/ui/mobile/` e a referência `tools/reference_art/approved-mobile-menu.png`.
 - Avatar escala uniforme2,6, ilha2,4, pés(902,456), pivô original(100,64). Névoa reduzida só no fundo do menu; gameplay conserva atmosfera, física, inputs e progresso. Texto creme com contorno escuro. Logo canônico432×204 em(150,24).
 - Manter teclado/gamepad, foco visível, preparação finita e escolha explícita de tutorial. Capturar o menu no renderizador e repetir menu_animation/ui_integration antes de exportar/publicar.
+
+## Conexão de Outro Mundo — aprovação de 05/10/2026
+
+- Nesta branch, as referências em `tools/reference_art/cosmic/` substituem a direção costeira para cenário, plataformas, decoração, objetos e inimigos. Regras anteriores de física, proporção, legibilidade e lifecycle continuam válidas.
+- Título: **Brisin — Conexão de Outro Mundo**. Remover a frase de rodapé sobre restabelecer a conexão do planeta; não reincorporar o rodapé da imagem de conceito.
+- SVGs contêm paths reais, nunca PNG/base64. Fonte raster e gerador ficam fora dos recursos exportados; preservar o estilo e as nove paletas aprovadas.
+- Nove Ruídozinhos com animações de repouso, patrulha, alerta, dano e derrota. Variações são cosméticas nesta entrega; não inventar resistências ou ataques sem um design solicitado.
+- Background não contém Brisin, inimigos, gemas, portais ou plataformas de gameplay pintados. Névoa permanece no fundo; todos os efeitos animam no Godot, não via SMIL.
+- Progresso do planeta usa arquivo próprio, preservando o save da versão costeira. A geometria do percurso e os controles são mantidos nesta migração.

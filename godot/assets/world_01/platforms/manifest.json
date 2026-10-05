@@ -10,22 +10,18 @@
         64
       ],
       "ground_size": [
-        127,
-        71
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        3,
-        130
+        171,
+        49
       ],
       "source_crop": [
-        32,
-        118,
-        302,
-        357
+        24,
+        8,
+        554,
+        338
       ],
-      "source_contact_y": 217,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 190,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     },
     {
       "canvas": [
@@ -37,22 +33,18 @@
         64
       ],
       "ground_size": [
-        86,
-        71
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        3,
-        89
+        171,
+        49
       ],
       "source_crop": [
-        337,
-        118,
-        529,
-        357
+        24,
+        8,
+        554,
+        338
       ],
-      "source_contact_y": 217,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 190,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     }
   ],
   "sand": [
@@ -66,22 +58,18 @@
         64
       ],
       "ground_size": [
-        134,
-        70
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        1,
-        135
+        132,
+        34
       ],
       "source_crop": [
-        590,
-        121,
-        867,
-        358
+        586,
+        82,
+        997,
+        322
       ],
-      "source_contact_y": 220,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 221,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     },
     {
       "canvas": [
@@ -93,22 +81,18 @@
         64
       ],
       "ground_size": [
-        92,
-        71
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        4,
-        96
+        132,
+        34
       ],
       "source_crop": [
-        892,
-        165,
-        1092,
-        360
+        586,
+        82,
+        997,
+        322
       ],
-      "source_contact_y": 220,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 221,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     }
   ],
   "steps": [
@@ -123,21 +107,17 @@
       ],
       "ground_size": [
         137,
-        91
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        0,
-        137
+        95
       ],
       "source_crop": [
-        1130,
-        122,
-        1403,
-        359
+        1024,
+        80,
+        1518,
+        318
       ],
-      "source_contact_y": 178,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 129,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     },
     {
       "canvas": [
@@ -149,22 +129,18 @@
         64
       ],
       "ground_size": [
-        102,
-        86
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        0,
-        102
+        137,
+        95
       ],
       "source_crop": [
-        1450,
-        143,
-        1653,
-        358
+        1024,
+        80,
+        1518,
+        318
       ],
-      "source_contact_y": 187,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 129,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     }
   ],
   "thin": [
@@ -178,22 +154,18 @@
         64
       ],
       "ground_size": [
-        131,
-        47
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        3,
-        134
+        157,
+        33
       ],
       "source_crop": [
-        32,
-        443,
-        305,
-        584
+        48,
+        355,
+        535,
+        514
       ],
-      "source_contact_y": 491,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 416,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     },
     {
       "canvas": [
@@ -205,22 +177,18 @@
         64
       ],
       "ground_size": [
-        84,
-        46
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        3,
-        87
+        157,
+        33
       ],
       "source_crop": [
-        343,
-        438,
-        527,
-        584
+        48,
+        355,
+        535,
+        514
       ],
-      "source_contact_y": 492,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 416,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     }
   ],
   "cracked": [
@@ -234,22 +202,18 @@
         64
       ],
       "ground_size": [
-        106,
-        59
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        6,
-        112
+        141,
+        48
       ],
       "source_crop": [
-        600,
-        435,
-        827,
-        597
+        577,
+        344,
+        1006,
+        552
       ],
-      "source_contact_y": 479,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 407,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     },
     {
       "canvas": [
@@ -261,22 +225,18 @@
         64
       ],
       "ground_size": [
-        88,
-        59
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        4,
-        92
+        141,
+        48
       ],
       "source_crop": [
-        875,
-        438,
-        1073,
-        597
+        577,
+        344,
+        1006,
+        552
       ],
-      "source_contact_y": 481,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 407,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     }
   ],
   "raft": [
@@ -290,22 +250,18 @@
         64
       ],
       "ground_size": [
-        130,
-        42
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        6,
-        136
+        148,
+        37
       ],
       "source_crop": [
-        1137,
-        461,
-        1417,
-        565
+        1034,
+        365,
+        1507,
+        514
       ],
-      "source_contact_y": 482,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 405,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     },
     {
       "canvas": [
@@ -317,22 +273,18 @@
         64
       ],
       "ground_size": [
-        100,
-        42
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        8,
-        108
+        148,
+        37
       ],
       "source_crop": [
-        1424,
-        452,
-        1652,
-        565
+        1034,
+        365,
+        1507,
+        514
       ],
-      "source_contact_y": 482,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 405,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     }
   ],
   "wood_bridge": [
@@ -347,21 +299,17 @@
       ],
       "ground_size": [
         162,
-        57
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        4,
-        166
+        46
       ],
       "source_crop": [
-        23,
-        682,
-        358,
-        858
+        36,
+        571,
+        548,
+        724
       ],
-      "source_contact_y": 744,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 587,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     },
     {
       "canvas": [
@@ -373,22 +321,18 @@
         64
       ],
       "ground_size": [
-        83,
-        57
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        2,
-        85
+        162,
+        46
       ],
       "source_crop": [
-        369,
-        684,
-        545,
-        858
+        36,
+        571,
+        548,
+        724
       ],
-      "source_contact_y": 744,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 587,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     }
   ],
   "signal": [
@@ -402,22 +346,18 @@
         64
       ],
       "ground_size": [
-        96,
-        80
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        6,
-        102
+        137,
+        53
       ],
       "source_crop": [
-        613,
-        684,
-        827,
-        855
+        581,
+        552,
+        1001,
+        750
       ],
-      "source_contact_y": 696,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 590,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     },
     {
       "canvas": [
@@ -429,22 +369,18 @@
         64
       ],
       "ground_size": [
-        87,
-        65
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        8,
-        95
+        137,
+        53
       ],
       "source_crop": [
-        863,
-        685,
-        1066,
-        824
+        581,
+        552,
+        1001,
+        750
       ],
-      "source_contact_y": 696,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 590,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     }
   ],
   "wind_island": [
@@ -458,22 +394,18 @@
         64
       ],
       "ground_size": [
-        96,
-        71
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        26,
-        122
+        140,
+        39
       ],
       "source_crop": [
-        1135,
-        665,
-        1401,
-        857
+        1061,
+        533,
+        1518,
+        769
       ],
-      "source_contact_y": 715,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 654,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     },
     {
       "canvas": [
@@ -485,22 +417,18 @@
         64
       ],
       "ground_size": [
-        84,
-        71
-      ],
-      "cap": 24,
-      "surface_crop_x": [
-        5,
-        89
+        140,
+        39
       ],
       "source_crop": [
-        1420,
-        665,
-        1658,
-        856
+        1061,
+        533,
+        1518,
+        769
       ],
-      "source_contact_y": 715,
-      "uniform_source_scale": 0.5
+      "source_contact_y": 654,
+      "uniform_source_scale": 0.3333333333333333,
+      "cap": 24
     }
   ]
 }

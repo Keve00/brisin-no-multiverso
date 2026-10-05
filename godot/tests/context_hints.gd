@@ -17,7 +17,7 @@ func _ready() -> void:
  call_deferred("run")
 func run() -> void:
  # Exercise already acknowledged transient notices; first-read lifecycle has its own suite.
- WorldState.seen_important_notices=["checkpoint", "connecting", "online", "tip:COSTA DOS VENTOS", "tip:NÓ DE SINAL", "tip:RUÍDOZINHO", "tip:LANÇAR CHIP", "tip:TRILHA DE SINAL/rail_enter", "tip:TRILHA DE SINAL/rail_exit", "tip:CORRENTE DE VENTO", "tip:PEDRA RACHADA", "tip:DASH DE SINAL", "tip:COSTA RECONECTADA"]
+ WorldState.seen_important_notices=["checkpoint", "connecting", "online", "tip:PLANETA ALIENÍGENA", "tip:NÓ DE SINAL", "tip:RUÍDOZINHO", "tip:LANÇAR CHIP", "tip:TRILHA DE SINAL/rail_enter", "tip:TRILHA DE SINAL/rail_exit", "tip:CORRENTE DE VENTO", "tip:PEDRA RACHADA", "tip:DASH DE SINAL", "tip:PLANETA RECONECTADO"]
  world=load("res://scenes/world_01/world_01.tscn").instantiate()
  add_child(world)
  world.set_process(false)

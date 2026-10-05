@@ -46,7 +46,7 @@ func run() -> void:
  WorldState.tutorial_choice_made=true
  WorldState.tutorial_session_active=false
  # Exercise already acknowledged transient notices; first-read lifecycle has its own suite.
- WorldState.seen_important_notices=["checkpoint", "connecting", "online", "tip:COSTA DOS VENTOS", "tip:NÓ DE SINAL", "tip:RUÍDOZINHO", "tip:LANÇAR CHIP", "tip:TRILHA DE SINAL/rail_enter", "tip:TRILHA DE SINAL/rail_exit", "tip:CORRENTE DE VENTO", "tip:PEDRA RACHADA", "tip:DASH DE SINAL", "tip:COSTA RECONECTADA"]
+ WorldState.seen_important_notices=["checkpoint", "connecting", "online", "tip:PLANETA ALIENÍGENA", "tip:NÓ DE SINAL", "tip:RUÍDOZINHO", "tip:LANÇAR CHIP", "tip:TRILHA DE SINAL/rail_enter", "tip:TRILHA DE SINAL/rail_exit", "tip:CORRENTE DE VENTO", "tip:PEDRA RACHADA", "tip:DASH DE SINAL", "tip:PLANETA RECONECTADO"]
  save_existed=FileAccess.file_exists(WorldState.SAVE_PATH)
  if save_existed: original_save=FileAccess.get_file_as_string(WorldState.SAVE_PATH)
  var music:float=WorldState.music_volume
@@ -60,8 +60,8 @@ func run() -> void:
  var menu_logo: TextureRect
  var menu_subtitle: Label
  for item in hud.title_screen.get_children():
-  if item is TextureRect and item.texture.resource_path.ends_with("/logo.svg"): menu_logo=item
-  if item is Label and item.text=="COSTA DOS VENTOS CONECTADOS": menu_subtitle=item
+  if item is TextureRect and item.texture.resource_path.ends_with("/cosmic_logo.svg"): menu_logo=item
+  if item is Label and item.text=="CONEXÃO DE OUTRO MUNDO": menu_subtitle=item
  check(menu_logo.size==Vector2(432,204) and menu_subtitle.position.y-menu_logo.get_rect().end.y>=8,"actual logo bounds leave at least 8 px before subtitle")
  check(hud.buttons[0].position.y-menu_subtitle.get_rect().end.y>=4,"subtitle keeps its own space before the primary action")
  check(hud.counter.horizontal_alignment==HORIZONTAL_ALIGNMENT_CENTER and hud.counter.position==Vector2(951,24),"gem count centers visible bitmap ink in the useful area beside its icon")
@@ -123,12 +123,12 @@ func run() -> void:
  check(hud.timer==remaining and hud.toast_state=="checkpoint","checkpoint notice timer freezes during pause")
  hud.resume();hud._process(0.3)
  check(hud.timer<remaining and hud.toast_title.text=="CHECKPOINT ATIVADO" and hud.toast_box.modulate.a==1,"checkpoint notice enters and receives reading duration during play")
- hud.notice("CONECTANDO A COSTA…");hud._process(0.3)
+ hud.notice("CONECTANDO O PLANETA…");hud._process(0.3)
  check(hud.toast_state=="connecting" and hud.toast_icon.texture.resource_path.ends_with("signal.svg"),"connecting notice carries distinct label and signal icon")
  WorldState.reduced_flash=true
  hud._process(0.1)
  check(hud.toast_icon.modulate.a==1,"reduced flashes disables connection opacity pulse")
- hud.notice("COSTA ONLINE • Ponte e portal ativados");hud._process(0.3)
+ hud.notice("PLANETA ONLINE • Ponte e portal ativados");hud._process(0.3)
  check(hud.toast_state=="online" and hud.toast_title.text=="CONEXÃO RESTABELECIDA","online notice communicates activated route")
  check(hud.toast_box.get_global_rect().end.y<208 and visible_bounds(hud.root),"notice stays above gameplay region and visible HUD remains within viewport")
  hud._process(4)
@@ -146,7 +146,7 @@ func run() -> void:
  world.player.camera.force_update_scroll()
  hud._process(0)
  check(hud.context_hint.visible and not hud.context_hint.get_global_rect().intersects(hud.player_screen_rect().grow(12)),"jumping near node keeps prompt below HUD and clear of player")
- hud.notice("CONECTANDO A COSTA…")
+ hud.notice("CONECTANDO O PLANETA…")
  hud._process(0.3)
  check(not hud.toast_box.visible or not hud.toast_box.get_global_rect().intersects(hud.player_screen_rect().grow(12)),"notice repositions or holds when player occupies its area")
  world.player.position=player_position

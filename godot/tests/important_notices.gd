@@ -14,22 +14,22 @@ func run() -> void:
  WorldState.tutorial_choice_made=true
  WorldState.tutorial_opted_in=true
  WorldState.tutorial_session_active=true
- WorldState.seen_important_notices.append("tip:COSTA DOS VENTOS")
+ WorldState.seen_important_notices.append("tip:PLANETA ALIENÍGENA")
  var world=load("res://scenes/world_01/world_01.tscn").instantiate()
  add_child(world)
  var hud=world.hud
  hud.important_notice_shown.connect(func(key): shown.append(key))
  Audio.sounds["notice"]=load("res://assets/audio/notice.wav")
  WorldState.sfx_volume=.55
- WorldState.seen_important_notices.erase("tip:COSTA DOS VENTOS")
+ WorldState.seen_important_notices.erase("tip:PLANETA ALIENÍGENA")
  hud.resume();hud._process(.1)
- check(hud.important_active and get_tree().paused and hud.important_key=="tip:COSTA DOS VENTOS","first movement tutorial pauses and requires acknowledgement")
+ check(hud.important_active and get_tree().paused and hud.important_key=="tip:PLANETA ALIENÍGENA","first movement tutorial pauses and requires acknowledgement")
  var escape:=InputEventAction.new()
  escape.action="pause_game";escape.pressed=true
  hud.important_age=.3;hud._unhandled_input(escape);hud._process(0)
  check(hud.important_active and get_tree().paused,"Escape does not bypass Entendi")
  hud.dismiss_important_notice();hud._process(0)
- check("tip:COSTA DOS VENTOS" in WorldState.seen_important_notices and not get_tree().paused,"Entendi saves tutorial acknowledgement and resumes")
+ check("tip:PLANETA ALIENÍGENA" in WorldState.seen_important_notices and not get_tree().paused,"Entendi saves tutorial acknowledgement and resumes")
  hud._process(.1)
  check(not hud.important_active,"acknowledged tutorial does not pause again")
  var node_position: Vector2=world.point(world.level.node)
@@ -74,11 +74,11 @@ func run() -> void:
  hud.notice("PONTO BRISA • Progresso salvo")
  check(not hud.important_active and not get_tree().paused and shown.size()==1,"later checkpoint remains a transient notice without pausing")
  hud.show_menu("pause")
- hud.notice("CONECTANDO A COSTA…")
- hud.notice("COSTA ONLINE • Ponte e portal ativados")
+ hud.notice("CONECTANDO O PLANETA…")
+ hud.notice("PLANETA ONLINE • Ponte e portal ativados")
  check(not hud.important_active and hud.important_queue.size()==2 and get_tree().paused,"events behind a menu wait without replacing its pause")
  hud.resume();hud._process(.3)
- check(hud.important_active and hud.important_key=="connecting" and hud.important_title.text=="CONECTANDO A COSTA…","queued notices preserve their original text and order")
+ check(hud.important_active and hud.important_key=="connecting" and hud.important_title.text=="CONECTANDO O PLANETA…","queued notices preserve their original text and order")
  hud.dismiss_important_notice();hud._process(.3)
  check(hud.important_active and hud.important_key=="online","next unseen milestone opens after acknowledging previous one")
  hud.dismiss_important_notice();hud._process(0)
@@ -90,8 +90,8 @@ func run() -> void:
  WorldState.tutorial_choice_made=true
  WorldState.tutorial_opted_in=true
  WorldState.tutorial_session_active=true
- WorldState.seen_important_notices.append("tip:COSTA DOS VENTOS")
- check(WorldState.seen_important_notices==["tip:COSTA DOS VENTOS"],"new adventure clears acknowledgements")
+ WorldState.seen_important_notices.append("tip:PLANETA ALIENÍGENA")
+ check(WorldState.seen_important_notices==["tip:PLANETA ALIENÍGENA"],"new adventure clears acknowledgements")
  hud.notice("PONTO BRISA • Progresso salvo");hud._process(.3)
  check(hud.important_active and shown.size()==4,"new adventure can teach the first milestone again")
  hud.dismiss_important_notice()
@@ -101,7 +101,7 @@ func run() -> void:
  WorldState.tutorial_choice_made=true
  WorldState.tutorial_opted_in=true
  WorldState.tutorial_session_active=true
- WorldState.seen_important_notices.append("tip:COSTA DOS VENTOS")
+ WorldState.seen_important_notices.append("tip:PLANETA ALIENÍGENA")
  WorldState.sfx_volume=0.0
  var voice_count := Audio.get_child_count()
  hud.notice("PONTO BRISA • Progresso salvo");hud._process(.3)
@@ -109,7 +109,7 @@ func run() -> void:
  world.queue_free()
  await get_tree().process_frame
  await get_tree().process_frame
- check(not get_tree().paused and WorldState.seen_important_notices==["tip:COSTA DOS VENTOS"],"interrupted scene releases its pause without marking unread notice")
+ check(not get_tree().paused and WorldState.seen_important_notices==["tip:PLANETA ALIENÍGENA"],"interrupted scene releases its pause without marking unread notice")
  # Dummy headless audio does not finish voices on fixed simulation time.
  for voice in Audio.get_children():
   if voice is AudioStreamPlayer and voice.is_in_group("brisin_sfx"):

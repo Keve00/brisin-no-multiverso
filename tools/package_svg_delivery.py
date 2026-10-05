@@ -9,7 +9,7 @@ REFERENCES = [
     'exec-d1fdcf1c-274d-4457-9a1a-2f8668f6d398.png',
     'exec-54a086db-33d8-4bf6-9fc3-26ebb47c10e4.png',
 ]
-README = '''# Brisin — SVGs, animações e interações
+README = '''# Brisin — Conexão de Outro Mundo: SVGs e animações
 
 Abra Brisin/godot/project.godot no Godot 4.5.1. O editor importa os recursos
 automaticamente. O pacote inclui o projeto editável completo, SVGs, scripts,
@@ -20,7 +20,8 @@ O carregador, manifesto WASM e verificadores estão incluídos; o helper baixa
 o runtime compatível e reconstrói o PCK local. Os binários web gerados não
 fazem parte deste ZIP editável.
 
-Inclui as famílias de plataformas, objetos interativos e cenário/efeitos,
+A versão extraterrestre inclui nove Ruídozinhos coloridos com cinco estados,
+menu sem frase de rodapé e todas as famílias de plataformas, objetos interativos e cenário/efeitos,
 o panorama vetorial aprovado com atmosfera, menu e bandeiras animados,
 dash/pulso opacos em SVG, chips SIM brancos (F / Y) com gesto de lançamento, dicas contextuais
 e transição do portal de 1,8 s antes da conclusão.
@@ -34,7 +35,7 @@ As variações disponíveis não são todas instanciadas na fase.
 Os geradores em Brisin/tools exigem Python, Pillow e Inkscape para renderizar.
 As referências mobile aprovadas ficam no repositório em tools/reference_art;
 não são duplicadas neste ZIP para respeitar o limite de download.
-As pranchas estão em Brisin/referencias; a origem do novo fundo fica em
+As referências novas estão em Brisin/tools/reference_art/cosmic; a origem do novo fundo fica em
 Brisin/tools/reference_art. Passe o caminho da prancha ao
 gerador de plataformas/objetos, ou --source ao de cenário. Os PNGs de origem
 servem para regeneração e não estão embutidos nos SVGs.
@@ -56,7 +57,7 @@ def main():
         for name in ['wasm-parts.json', 'verify-loader.cjs', '.gitignore']:
             out.write(ROOT / name, 'Brisin/' + name)
         for file in sorted((ROOT / 'dist').iterdir()):
-            if file.is_file() and file != temporary and file.suffix not in {'.zip', '.pck', '.wasm', '.part0', '.part1', '.part2'}:
+            if file.is_file() and file.name != 'loading-bg.png' and file != temporary and file.suffix not in {'.zip', '.pck', '.wasm', '.part0', '.part1', '.part2'}:
                 out.write(file, 'Brisin/dist/' + file.name)
         for file in sorted((ROOT / 'godot').rglob('*')):
             if not file.is_file():
@@ -64,19 +65,23 @@ def main():
             rel = file.relative_to(ROOT)
             if '.godot' in rel.parts or file.suffix == '.import' or ('qa' in rel.parts and file.suffix == '.png'):
                 continue
+            if 'cosmic_qa' in rel.parts:
+                continue
+            if file.name in {'background.png','background_mirror.png'} and rel.parts[:4] == ('godot','assets','world_01',file.name):
+                continue
             if rel.parts[:4] == ('godot', 'assets', 'world_01', 'environment') and file.suffix == '.png':
                 continue
             if rel.parts[:2] == ('godot', 'docs') and (file.suffix == '.png' or file.name == 'test_results.json'):
                 continue
             out.write(file, 'Brisin/' + str(rel))
         for file in sorted((ROOT / 'tools').rglob('*')):
-            if file.is_file() and file.suffix in {'.py', '.cjs', '.png', '.svg', '.gd'} and file.name not in {'approved-mobile-menu.png', 'approved-mobile-controls.png'}:
+            if file.is_file() and file.suffix in {'.py', '.cjs', '.png', '.svg', '.gd'} and file.name not in {'approved-mobile-menu.png', 'approved-mobile-controls.png', 'approved-background.png', 'approved-checkpoint.png'}:
                 out.write(file, 'Brisin/' + str(file.relative_to(ROOT)))
         for folder in ['docs', 'qa']:
             for file in sorted((ROOT / folder).rglob('*')):
                 if file.is_file() and file.suffix in {'.md', '.svg', '.json'}:
                     out.write(file, 'Brisin/' + str(file.relative_to(ROOT)))
-        for name in REFERENCES:
+        for name in []: # The current cosmic references are included in tools/reference_art/cosmic.
             source = ROOT.parent / 'generated_images' / name
             if not source.exists():
                 source = ROOT / 'referencias' / name

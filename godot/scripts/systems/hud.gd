@@ -162,7 +162,7 @@ func build_hud() -> void:
  root.add_child(game_hud)
  texture(game_hud,"objective_frame",Vector2(24,20),Vector2(360,72))
  texture(game_hud,"signal",Vector2(40,40),Vector2(24,24))
- objective = label(game_hud,"COSTA • OFFLINE",Vector2(80,24),Vector2(288,28),24)
+ objective = label(game_hud,"PLANETA • OFFLINE",Vector2(80,24),Vector2(288,28),24)
  label(game_hud,"RESTABELEÇA O NÓ DE SINAL",Vector2(80,54),Vector2(288,20),12).name="ObjectiveDetail"
  texture(game_hud,"counter_frame",Vector2(906,20),Vector2(160,54))
  texture(game_hud,"diamond",Vector2(918,31),Vector2(24,24))
@@ -224,7 +224,7 @@ func show_menu(kind: String) -> void:
   title_screen.hide()
   panel.show()
   label(panel_box,"PAUSA",Vector2(0,4),Vector2(480,44),36,true)
-  label(panel_box,"A COSTA ESPERA POR VOCÊ",Vector2(0,52),Vector2(480,28),12,true)
+  label(panel_box,"O PLANETA ESPERA POR VOCÊ",Vector2(0,52),Vector2(480,28),12,true)
   add_button(panel_box,"CONTINUAR",Vector2(60,98),resume)
   add_button(panel_box,"RECOMEÇAR",Vector2(60,174),restart)
   add_button(panel_box,"CONFIGURAÇÕES",Vector2(60,250),settings)
@@ -252,13 +252,13 @@ func build_title() -> void:
  shade.size=Vector2(1152,648)
  shade.mouse_filter=Control.MOUSE_FILTER_IGNORE
  title_screen.add_child(shade)
- texture(title_screen,"logo",Vector2(150,24),Vector2(432,204)).name="TitleLogo"
- label(title_screen,"COSTA DOS VENTOS CONECTADOS",Vector2(84,236),Vector2(564,32),24,true).name="TitleSubtitle"
+ texture(title_screen,"cosmic_logo",Vector2(150,24),Vector2(432,204)).name="TitleLogo"
+ label(title_screen,"CONEXÃO DE OUTRO MUNDO",Vector2(84,236),Vector2(564,32),28,true).name="TitleSubtitle"
  # Approved coastal platform, original canvas 200×176 / contact pivot (100,64).
  # Its 2× uniform scale places ground at y=456 and shares the avatar's logical pixels.
  title_platform=Sprite2D.new()
- title_platform.name="BrisinMenuCoastalPlatform"
- title_platform.texture=load("res://assets/world_01/platforms/coastal_0.svg")
+ title_platform.name="BrisinMenuCosmicPlatform"
+ title_platform.texture=load("res://assets/world_01/platforms/cosmic_menu.svg")
  title_platform.centered=false
  title_platform.z_index=1
  title_platform.position=Vector2(662,302.4)
@@ -481,7 +481,7 @@ func conclusion() -> void:
  portal_frame.name="PortalFrame"
  portal_icon=texture(panel_box,"portal_core",Vector2(208,0),Vector2(64,64))
  portal_icon.pivot_offset=Vector2(32,32)
- label(panel_box,"COSTA RECONECTADA",Vector2(0,78),Vector2(480,44),24,true)
+ label(panel_box,"PLANETA RECONECTADO",Vector2(0,78),Vector2(480,44),24,true)
  label(panel_box,"UM NOVO CAMINHO ENTRE MUNDOS",Vector2(0,122),Vector2(480,28),12,true)
  label(panel_box,"FRAGMENTOS  %02d / %02d\nTEMPO       %02d:%02d\nRETORNOS    %02d" % [WorldState.fragments.size(),world.level.fragments.size(),int(world.elapsed)/60,int(world.elapsed)%60,world.deaths],Vector2(60,182),Vector2(360,124),24)
  label(panel_box,"MUNDO 1 • VERTICAL SLICE 0.1",Vector2(0,332),Vector2(480,28),12,true)
@@ -498,7 +498,7 @@ func notice(message: String) -> void:
  elif "CONECTANDO" in value:
   first_key="connecting"
   toast_state="connecting"
-  toast_title.text="CONECTANDO A COSTA…"
+  toast_title.text="CONECTANDO O PLANETA…"
   toast.text="O SINAL ESTÁ VOLTANDO AO MUNDO"
  elif "ONLINE" in value:
   first_key="online"
@@ -697,7 +697,7 @@ func _process(dt: float) -> void:
   toast_icon.modulate.a=1.0 if WorldState.reduced_flash or toast_state!="connecting" else 0.75+0.25*sin(tick*4)
  var state:=WorldState.connection
  var status:="ONLINE" if state==WorldState.Connection.ONLINE else ("CONECTANDO" if state==WorldState.Connection.CONNECTING else "OFFLINE")
- objective.text="COSTA • "+status
+ objective.text="PLANETA • "+status
  game_hud.get_node("ObjectiveDetail").text="ALCANCE O PORTAL" if state==WorldState.Connection.ONLINE else "RESTABELEÇA O NÓ DE SINAL"
  counter.text="%02d/%02d" % [WorldState.fragments.size(),world.level.fragments.size()]
  dash_counter.text="DASH PRONTO" if world.player.dash_available else "DASH EM RECARGA"

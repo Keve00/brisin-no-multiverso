@@ -1,0 +1,88 @@
+[gd_resource type="SpriteFrames" load_steps=41 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/idle/00.svg" id="1"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/idle/01.svg" id="2"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/idle/02.svg" id="3"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/idle/03.svg" id="4"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/idle/04.svg" id="5"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/idle/05.svg" id="6"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/idle/06.svg" id="7"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/idle/07.svg" id="8"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/patrol/00.svg" id="9"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/patrol/01.svg" id="10"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/patrol/02.svg" id="11"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/patrol/03.svg" id="12"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/patrol/04.svg" id="13"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/patrol/05.svg" id="14"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/patrol/06.svg" id="15"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/patrol/07.svg" id="16"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/alert/00.svg" id="17"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/alert/01.svg" id="18"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/alert/02.svg" id="19"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/alert/03.svg" id="20"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/alert/04.svg" id="21"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/alert/05.svg" id="22"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/hit/00.svg" id="23"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/hit/01.svg" id="24"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/hit/02.svg" id="25"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/hit/03.svg" id="26"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/hit/04.svg" id="27"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/hit/05.svg" id="28"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/defeated/00.svg" id="29"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/defeated/01.svg" id="30"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/defeated/02.svg" id="31"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/defeated/03.svg" id="32"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/defeated/04.svg" id="33"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/defeated/05.svg" id="34"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/defeated/06.svg" id="35"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/defeated/07.svg" id="36"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/defeated/08.svg" id="37"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/defeated/09.svg" id="38"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/defeated/10.svg" id="39"]
+
+[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/corrompido/frames/defeated/11.svg" id="40"]
+
+[resource]
+animations = [{"frames":[{"duration":1.0,"texture":ExtResource("1")}, {"duration":1.0,"texture":ExtResource("2")}, {"duration":1.0,"texture":ExtResource("3")}, {"duration":1.0,"texture":ExtResource("4")}, {"duration":1.0,"texture":ExtResource("5")}, {"duration":1.0,"texture":ExtResource("6")}, {"duration":1.0,"texture":ExtResource("7")}, {"duration":1.0,"texture":ExtResource("8")}],"loop":true,"name":&"idle","speed":8.0},
+{"frames":[{"duration":1.0,"texture":ExtResource("9")}, {"duration":1.0,"texture":ExtResource("10")}, {"duration":1.0,"texture":ExtResource("11")}, {"duration":1.0,"texture":ExtResource("12")}, {"duration":1.0,"texture":ExtResource("13")}, {"duration":1.0,"texture":ExtResource("14")}, {"duration":1.0,"texture":ExtResource("15")}, {"duration":1.0,"texture":ExtResource("16")}],"loop":true,"name":&"patrol","speed":12.0},
+{"frames":[{"duration":1.0,"texture":ExtResource("17")}, {"duration":1.0,"texture":ExtResource("18")}, {"duration":1.0,"texture":ExtResource("19")}, {"duration":1.0,"texture":ExtResource("20")}, {"duration":1.0,"texture":ExtResource("21")}, {"duration":1.0,"texture":ExtResource("22")}],"loop":false,"name":&"alert","speed":10.0},
+{"frames":[{"duration":1.0,"texture":ExtResource("23")}, {"duration":1.0,"texture":ExtResource("24")}, {"duration":1.0,"texture":ExtResource("25")}, {"duration":1.0,"texture":ExtResource("26")}, {"duration":1.0,"texture":ExtResource("27")}, {"duration":1.0,"texture":ExtResource("28")}],"loop":false,"name":&"hit","speed":12.0},
+{"frames":[{"duration":1.0,"texture":ExtResource("29")}, {"duration":1.0,"texture":ExtResource("30")}, {"duration":1.0,"texture":ExtResource("31")}, {"duration":1.0,"texture":ExtResource("32")}, {"duration":1.0,"texture":ExtResource("33")}, {"duration":1.0,"texture":ExtResource("34")}, {"duration":1.0,"texture":ExtResource("35")}, {"duration":1.0,"texture":ExtResource("36")}, {"duration":1.0,"texture":ExtResource("37")}, {"duration":1.0,"texture":ExtResource("38")}, {"duration":1.0,"texture":ExtResource("39")}, {"duration":1.0,"texture":ExtResource("40")}],"loop":false,"name":&"defeated","speed":12.0}]

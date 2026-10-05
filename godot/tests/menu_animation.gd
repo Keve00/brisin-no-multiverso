@@ -28,7 +28,7 @@ func run() -> void:
  confirm.button_index=JOY_BUTTON_A
  check(InputMap.action_has_event("ui_accept",confirm),"controller A confirms focused menu actions")
  check(hud.title_hero.sprite_frames.get_frame_texture("wave",0).get_size()==Vector2(176,160) and hud.title_hero.scale==Vector2(2.6,2.6) and hud.title_hero.offset==Vector2(0,-56),"SVG canvas and uniform scale preserve authored ground pivot")
- check(hud.title_platform.texture.resource_path.ends_with("platforms/coastal_0.svg") and hud.title_platform.scale==Vector2.ONE*2.4,"menu reuses approved coastal SVG at uniform source scale")
+ check(hud.title_platform.texture.resource_path.ends_with("platforms/cosmic_menu.svg") and hud.title_platform.scale==Vector2.ONE*2.4,"menu reuses approved cosmic SVG at uniform source scale")
  check(hud.title_platform.position+Vector2(100,64)*hud.title_platform.scale==hud.title_hero.position,"menu feet share the platform's documented contact pivot")
  check(hud.title_screen.has_node("BrisinMenuPanorama") and hud.title_screen.get_node("BrisinMenuPanorama").process_mode==Node.PROCESS_MODE_ALWAYS,"menu shares animated SVG panorama while gameplay is paused")
  check(hud.title_gems.size()==5 and hud.title_gems.all(func(gem): return gem.texture.resource_path.ends_with("gem_orange.svg") and gem.modulate.a==1.0),"menu uses five opaque approved gems")

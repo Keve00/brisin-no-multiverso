@@ -68,13 +68,13 @@ func _ready() -> void:
   bridge_packets.append(packet)
  var node_pos: Vector2= world.point(world.level.node)
  node_frame=at_pivot(self,"node_frame_off",node_pos,Vector2(63,127),1.0)
- node_core=piece(self,"node_core_off",node_pos+Vector2(0,-75))
+ node_core=piece(self,"node_core_off",node_pos+Vector2(0,-50))
  node_halo=piece(self,"node_halo",node_core.position)
  node_frame.z_index=1;node_core.z_index=1;node_halo.z_index=2
  var portal := Node2D.new();portal.position=world.point(world.level.portal);add_child(portal)
  portal.z_index=1
  portal_frame=at_pivot(portal,"portal_frame_off",Vector2.ZERO,Vector2(62,136),1.5)
- portal_rotor=Node2D.new();portal_rotor.position=Vector2(0,-100.5);portal.add_child(portal_rotor)
+ portal_rotor=Node2D.new();portal_rotor.position=Vector2(0,-81.0);portal.add_child(portal_rotor)
  portal_tunnel=Sprite2D.new()
  portal_tunnel.texture=load("res://assets/world_01/portal_transition/tunnel.svg")
  portal_tunnel.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST

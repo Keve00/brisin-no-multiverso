@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Brisin — Costa dos Ventos Conectados"
+config/name="Brisin — Conexão de Outro Mundo"
 ; Keep the original native save location when changing the visible name.
 config/use_custom_user_dir=true
-config/custom_user_dir_name="godot/app_userdata/Brisinho — Costa dos Ventos Conectados"
+config/custom_user_dir_name="godot/app_userdata/Brisin — Conexão de Outro Mundo"
 run/main_scene="res://scenes/world_01/world_01.tscn"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 

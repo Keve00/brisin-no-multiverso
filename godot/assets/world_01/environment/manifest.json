@@ -1,154 +1,334 @@
 {
-  "source": "exec-54a086db-33d8-4bf6-9fc3-26ebb47c10e4.png",
-  "native_svg": true,
-  "embedded_raster": false,
-  "pixel_filter": "nearest",
-  "placement_format": [
-    "kind",
-    "variant",
-    "base_x",
-    "base_y",
-    "uniform_scale"
-  ],
-  "environment_is_decorative": true,
   "assets": [
     {
       "id": "palms_0",
-      "file": "palms_0.svg",
       "canvas": [
-        65,
-        68
+        126,
+        119
       ],
       "pivot": [
-        31,
-        61
-      ],
-      "kind": "palms",
-      "variant": 0,
-      "source_crop": [
-        34,
-        150,
-        199,
-        324
-      ],
-      "source_uniform_scale": 0.3333333333333333,
-      "animation": "base_pivot_sway",
-      "collision": "none"
+        63,
+        114
+      ]
     },
     {
       "id": "palms_1",
-      "file": "palms_1.svg",
       "canvas": [
-        67,
-        92
+        106,
+        102
       ],
       "pivot": [
-        24,
-        84
-      ],
-      "kind": "palms",
-      "variant": 1,
-      "source_crop": [
-        230,
-        79,
-        400,
-        324
-      ],
-      "source_uniform_scale": 0.3333333333333333,
-      "animation": "base_pivot_sway",
-      "collision": "none"
+        53,
+        97
+      ]
     },
     {
       "id": "palms_2",
-      "file": "palms_2.svg",
       "canvas": [
-        62,
-        77
+        88,
+        85
       ],
       "pivot": [
-        12,
-        70
-      ],
-      "kind": "palms",
-      "variant": 2,
-      "source_crop": [
-        408,
-        123,
-        562,
-        324
-      ],
-      "source_uniform_scale": 0.3333333333333333,
-      "animation": "base_pivot_sway",
-      "collision": "none"
+        44,
+        80
+      ]
     },
     {
       "id": "vegetation_0",
-      "file": "vegetation_0.svg",
       "canvas": [
         59,
-        49
+        42
       ],
       "pivot": [
         29,
-        41
-      ],
-      "kind": "vegetation",
-      "variant": 0,
-      "source_crop": [
-        609,
-        192,
-        756,
-        307
-      ],
-      "source_uniform_scale": 0.3333333333333333,
-      "animation": "base_pivot_sway",
-      "collision": "none"
+        37
+      ]
     },
     {
       "id": "vegetation_1",
-      "file": "vegetation_1.svg",
       "canvas": [
-        64,
-        53
+        54,
+        39
       ],
       "pivot": [
-        32,
-        46
-      ],
-      "kind": "vegetation",
-      "variant": 1,
-      "source_crop": [
-        768,
-        178,
-        928,
-        307
-      ],
-      "source_uniform_scale": 0.3333333333333333,
-      "animation": "base_pivot_sway",
-      "collision": "none"
+        27,
+        34
+      ]
     },
     {
       "id": "vegetation_2",
-      "file": "vegetation_2.svg",
       "canvas": [
-        59,
-        53
+        44,
+        52
       ],
       "pivot": [
-        29,
+        22,
+        47
+      ]
+    },
+    {
+      "id": "rocks_sand_0",
+      "canvas": [
+        37,
+        52
+      ],
+      "pivot": [
+        18,
+        47
+      ]
+    },
+    {
+      "id": "rocks_sand_1",
+      "canvas": [
+        60,
+        48
+      ],
+      "pivot": [
+        30,
+        43
+      ]
+    },
+    {
+      "id": "rocks_sand_2",
+      "canvas": [
+        57,
         45
       ],
-      "kind": "vegetation",
-      "variant": 2,
-      "source_crop": [
-        935,
-        180,
-        1082,
-        307
+      "pivot": [
+        28,
+        40
+      ]
+    },
+    {
+      "id": "ruins_0",
+      "canvas": [
+        68,
+        60
       ],
-      "source_uniform_scale": 0.3333333333333333,
-      "animation": "base_pivot_sway",
-      "collision": "none"
+      "pivot": [
+        34,
+        55
+      ]
+    },
+    {
+      "id": "ruins_1",
+      "canvas": [
+        68,
+        60
+      ],
+      "pivot": [
+        34,
+        55
+      ]
+    },
+    {
+      "id": "ruins_2",
+      "canvas": [
+        29,
+        54
+      ],
+      "pivot": [
+        14,
+        49
+      ]
+    },
+    {
+      "id": "posts_0",
+      "canvas": [
+        43,
+        51
+      ],
+      "pivot": [
+        21,
+        46
+      ]
+    },
+    {
+      "id": "posts_1",
+      "canvas": [
+        43,
+        51
+      ],
+      "pivot": [
+        21,
+        46
+      ]
+    },
+    {
+      "id": "posts_2",
+      "canvas": [
+        43,
+        51
+      ],
+      "pivot": [
+        21,
+        46
+      ]
+    },
+    {
+      "id": "water_props_0",
+      "canvas": [
+        48,
+        42
+      ],
+      "pivot": [
+        24,
+        37
+      ]
+    },
+    {
+      "id": "water_props_1",
+      "canvas": [
+        48,
+        42
+      ],
+      "pivot": [
+        24,
+        37
+      ]
+    },
+    {
+      "id": "water_props_2",
+      "canvas": [
+        44,
+        16
+      ],
+      "pivot": [
+        22,
+        11
+      ]
+    },
+    {
+      "id": "rocks_sand_0",
+      "canvas": [
+        37,
+        52
+      ],
+      "pivot": [
+        18,
+        47
+      ]
+    },
+    {
+      "id": "rocks_sand_1",
+      "canvas": [
+        60,
+        48
+      ],
+      "pivot": [
+        30,
+        43
+      ]
+    },
+    {
+      "id": "rocks_sand_2",
+      "canvas": [
+        57,
+        45
+      ],
+      "pivot": [
+        28,
+        40
+      ]
+    },
+    {
+      "id": "water_props_0",
+      "canvas": [
+        48,
+        42
+      ],
+      "pivot": [
+        24,
+        37
+      ]
+    },
+    {
+      "id": "water_props_1",
+      "canvas": [
+        48,
+        42
+      ],
+      "pivot": [
+        24,
+        37
+      ]
+    },
+    {
+      "id": "water_props_2",
+      "canvas": [
+        44,
+        16
+      ],
+      "pivot": [
+        22,
+        11
+      ]
+    },
+    {
+      "id": "rocks_sand_0",
+      "canvas": [
+        41,
+        64
+      ],
+      "pivot": [
+        20,
+        59
+      ]
+    },
+    {
+      "id": "rocks_sand_1",
+      "canvas": [
+        64,
+        50
+      ],
+      "pivot": [
+        32,
+        45
+      ]
+    },
+    {
+      "id": "rocks_sand_2",
+      "canvas": [
+        57,
+        46
+      ],
+      "pivot": [
+        28,
+        41
+      ]
+    },
+    {
+      "id": "water_props_0",
+      "canvas": [
+        51,
+        42
+      ],
+      "pivot": [
+        25,
+        37
+      ]
+    },
+    {
+      "id": "water_props_1",
+      "canvas": [
+        51,
+        42
+      ],
+      "pivot": [
+        25,
+        37
+      ]
+    },
+    {
+      "id": "water_props_2",
+      "canvas": [
+        51,
+        16
+      ],
+      "pivot": [
+        25,
+        11
+      ]
     },
     {
       "id": "rocks_sand_0",
@@ -217,189 +397,6 @@
       ],
       "source_uniform_scale": 0.3333333333333333,
       "animation": "static",
-      "collision": "none"
-    },
-    {
-      "id": "ruins_0",
-      "file": "ruins_0.svg",
-      "canvas": [
-        68,
-        68
-      ],
-      "pivot": [
-        34,
-        59
-      ],
-      "kind": "ruins",
-      "variant": 0,
-      "source_crop": [
-        25,
-        414,
-        198,
-        586
-      ],
-      "source_uniform_scale": 0.3333333333333333,
-      "animation": "static",
-      "collision": "none"
-    },
-    {
-      "id": "ruins_1",
-      "file": "ruins_1.svg",
-      "canvas": [
-        72,
-        65
-      ],
-      "pivot": [
-        36,
-        57
-      ],
-      "kind": "ruins",
-      "variant": 1,
-      "source_crop": [
-        202,
-        421,
-        388,
-        586
-      ],
-      "source_uniform_scale": 0.3333333333333333,
-      "animation": "static",
-      "collision": "none"
-    },
-    {
-      "id": "ruins_2",
-      "file": "ruins_2.svg",
-      "canvas": [
-        69,
-        66
-      ],
-      "pivot": [
-        34,
-        58
-      ],
-      "kind": "ruins",
-      "variant": 2,
-      "source_crop": [
-        395,
-        418,
-        572,
-        586
-      ],
-      "source_uniform_scale": 0.3333333333333333,
-      "animation": "static",
-      "collision": "none"
-    },
-    {
-      "id": "posts_0",
-      "file": "posts_0.svg",
-      "canvas": [
-        61,
-        64
-      ],
-      "pivot": [
-        31,
-        56
-      ],
-      "kind": "posts",
-      "variant": 0,
-      "source_crop": [
-        607,
-        425,
-        759,
-        586
-      ],
-      "source_uniform_scale": 0.3333333333333333,
-      "animation": "online_lamp",
-      "collision": "none"
-    },
-    {
-      "id": "posts_0_lamp",
-      "file": "posts_0_lamp.svg",
-      "canvas": [
-        61,
-        64
-      ],
-      "pivot": [
-        31,
-        56
-      ],
-      "kind": "posts_lamp",
-      "variant": 0,
-      "collision": "none"
-    },
-    {
-      "id": "posts_1",
-      "file": "posts_1.svg",
-      "canvas": [
-        69,
-        62
-      ],
-      "pivot": [
-        25,
-        53
-      ],
-      "kind": "posts",
-      "variant": 1,
-      "source_crop": [
-        779,
-        432,
-        956,
-        587
-      ],
-      "source_uniform_scale": 0.3333333333333333,
-      "animation": "online_lamp",
-      "collision": "none"
-    },
-    {
-      "id": "posts_1_lamp",
-      "file": "posts_1_lamp.svg",
-      "canvas": [
-        69,
-        62
-      ],
-      "pivot": [
-        25,
-        53
-      ],
-      "kind": "posts_lamp",
-      "variant": 1,
-      "collision": "none"
-    },
-    {
-      "id": "posts_2",
-      "file": "posts_2.svg",
-      "canvas": [
-        51,
-        75
-      ],
-      "pivot": [
-        23,
-        67
-      ],
-      "kind": "posts",
-      "variant": 2,
-      "source_crop": [
-        962,
-        393,
-        1083,
-        588
-      ],
-      "source_uniform_scale": 0.3333333333333333,
-      "animation": "online_lamp",
-      "collision": "none"
-    },
-    {
-      "id": "posts_2_lamp",
-      "file": "posts_2_lamp.svg",
-      "canvas": [
-        51,
-        75
-      ],
-      "pivot": [
-        23,
-        67
-      ],
-      "kind": "posts_lamp",
-      "variant": 2,
       "collision": "none"
     },
     {
@@ -615,5 +612,6 @@
       "collision": "none",
       "animation": "pickup_sparkles_0.28_to_0.48_seconds"
     }
-  ]
+  ],
+  "source": "tools/reference_art/cosmic/platforms.png"
 }

@@ -46,7 +46,7 @@ func run() -> void:
  hud.begin_adventure();hud.buttons[0].pressed.emit()
  check(WorldState.tutorial_pauses_enabled() and hud.starting,"first player opting in enables tutorial pauses")
  await frames(100)
- check(hud.important_active and get_tree().paused and hud.important_key=="tip:COSTA DOS VENTOS","opted-in first gameplay pauses on movement tutorial")
+ check(hud.important_active and get_tree().paused and hud.important_key=="tip:PLANETA ALIENÍGENA","opted-in first gameplay pauses on movement tutorial")
  hud.important_age=.3;hud.dismiss_important_notice();hud._process(0)
  hud.notice("PONTO BRISA • Progresso salvo");hud._process(.3)
  check(hud.important_active and get_tree().paused,"opted-in milestone also pauses")

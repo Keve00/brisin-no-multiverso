@@ -1,0 +1,76 @@
+{
+  "engine": "4.5.1",
+  "tests": [
+    {
+      "scene": "coast_extension",
+      "checks": 10,
+      "ok": true
+    },
+    {
+      "scene": "enemy_placement",
+      "checks": 1811,
+      "ok": true
+    },
+    {
+      "scene": "checkpoint_totems",
+      "checks": 27,
+      "ok": true
+    },
+    {
+      "scene": "menu_animation",
+      "checks": 28,
+      "ok": true
+    },
+    {
+      "scene": "portal_transition",
+      "checks": 23,
+      "ok": true
+    },
+    {
+      "scene": "tutorial_choice",
+      "checks": 18,
+      "ok": true
+    },
+    {
+      "scene": "integration",
+      "checks": 26,
+      "ok": true
+    },
+    {
+      "scene": "important_notices",
+      "checks": 27,
+      "ok": true
+    },
+    {
+      "scene": "combat_svg",
+      "checks": 36,
+      "ok": true
+    },
+    {
+      "scene": "context_hints",
+      "checks": 34,
+      "ok": true
+    },
+    {
+      "scene": "ui_integration",
+      "checks": 43,
+      "ok": true
+    },
+    {
+      "scene": "cosmic_assets",
+      "checks": 1139,
+      "ok": true
+    },
+    {
+      "scene": "scenery_svg",
+      "ok": true
+    },
+    {
+      "scene": "enemy_animation",
+      "ok": true
+    }
+  ],
+  "ok": true,
+  "checks": 3222,
+  "evidence": "Headless physics/logic, real OpenGL rendered menu and five gameplay captures, SVG geometry validation. Physical-device FPS and audible playback were not measured."
+}

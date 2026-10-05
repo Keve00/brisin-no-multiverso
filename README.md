@@ -1,8 +1,7 @@
-# Brisin no Multiverso
+# Brisin — Conexão de Outro Mundo
 
-Jogo de plataforma 2D em pixel art feito em **Godot 4.5.1**. Brisin viaja por
-mundos paralelos para restabelecer suas conexões. Esta versão contém o
-**Vertical Slice 0.1 do Mundo 1 — Costa dos Ventos Conectados**, com uma fase
+Jogo de plataforma 2D em pixel art feito em **Godot 4.5.1**. Brisin explora um planeta alienígena para restabelecer sua rede de comunicação. Esta branch contém o
+**Vertical Slice 0.1 — Conexão de Outro Mundo**, com uma fase
 jogável de 15.235 pixels e transformação de Offline para Online.
 
 **[Jogar no navegador](https://brisinho-costa-web.armandocorreiadeoliv.chatgpt.site)**
@@ -12,7 +11,7 @@ jogável de 15.235 pixels e transformação de Offline para Online.
 - Movimento, pulo variável, coyote time e jump buffer.
 - Dash aéreo, correntes de vento, rail de sinal e plataformas móveis.
 - Checkpoint, respawn e progresso salvo localmente.
-- Doze Ruídozinhos distribuídos em plataformas, com patrulha, atordoamento,
+- Nove variações coloridas de Ruídozinho distribuídas em plataformas, com patrulha, atordoamento,
   reação e derrota.
 - Pulso de sinal e lançamento de chips SIM brancos.
 - Gemas laranja pulsantes, plataformas desmoronáveis e áreas Online.
@@ -23,7 +22,7 @@ jogável de 15.235 pixels e transformação de Offline para Online.
 - Arte SVG animada pelo Godot: cenário em camadas, plantas, vento, mar,
   plataformas, efeitos de combate e interações.
 
-A Costa é a fase integrada. Mundos 2 e 3 ainda são expansões futuras; variações
+O planeta alienígena é a fase integrada. Mundos 2 e 3 ainda são expansões futuras; variações
 presentes no catálogo de assets não são necessariamente usadas no percurso.
 
 ## Requisitos
@@ -66,10 +65,11 @@ godot --path godot
 Se o executável tiver outro nome ou não estiver no PATH, substitua `godot` pelo
 caminho dele. No Windows, o editor também abre `project.godot` por duplo clique.
 
-A branch `main` contém a versão web normal com o menu aprovado. A branch
-`feat/mobile-adaptation` contém a adaptação mobile com controles por toque e
-HUD legível. O ZIP v17 na raiz é uma entrega antiga; abra o projeto atual em
-`godot/project.godot`.
+Este repositório é privado. O clone HTTPS exige autenticação de uma conta com
+acesso; para um serviço de deploy, cadastre a chave pública em **Settings →
+Deploy keys**, mantenha a privada no serviço e use
+`git@github.com:Keve00/brisin-no-multiverso.git`. Somente leitura basta para
+clonar e atualizar o deploy. Chaves privadas nunca fazem parte do projeto.
 
 ## Controles
 
@@ -209,6 +209,10 @@ Arte rígida conserva escala uniforme e pivôs; comprimento de plataforma/água
 Este repositório reúne o código, os assets e a documentação para continuar
 o desenvolvimento do jogo.
 
-## Sincronização de 05/10/2026
+## Tema extraterrestre — 05/10/2026
 
-Código e assets correspondem à versão publicada e verificada. Metadados de hospedagem, caches e binários gerados PCK/WASM/ZIP ficam fora deste repositório portátil. `tools/export_web.py` recupera o runtime por SHA256 e reconstrói o build.
+Branch `feat/planeta-extraterrestre`. Título aprovado: **Conexão de Outro Mundo**, sem a frase de rodapé. O menu mantém o aceno e a preparação para correr; cenário, nove famílias de plataformas, vegetação, checkpoint, farol, turbina, Nó, rail e portal usam a arte extraterrestre.
+
+Cristal, Esporo, Magnético, Escavador, Plasma, Satélite, Corrompido, Sentinela e Orbital têm cinco estados animados e preservam o combate atual. As variações são visuais, sem novos poderes. O percurso continua com 15.235 pixels; movimento, chips, pulso, checkpoint e entrada de portal de 1,8 s foram preservados.
+
+A fonte dos conceitos fica em `tools/reference_art/cosmic/`. Execute `python tools/build_cosmic_assets.py` para regenerar a arte. O processo produz SVGs com paths reais, canvases/pivôs documentados e SpriteFrames; não utiliza bitmaps embutidos ou SMIL. Consulte `godot/docs/cosmic_integration.md`. O ZIP editável inclui os conceitos novos, projeto, scripts e documentação; omite referências costeiras antigas e PNGs de fundo que não são mais usados.

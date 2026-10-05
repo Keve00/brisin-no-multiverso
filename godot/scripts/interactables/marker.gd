@@ -17,6 +17,15 @@ const GEM = preload("res://assets/world_01/svg/gem_orange.svg")
 const GEM_GLOW = preload("res://assets/world_01/svg/gem_glow.svg")
 const GEM_SPARKLE = preload("res://assets/world_01/svg/gem_sparkle.svg")
 signal activated(kind: String, id: String)
+const ALIEN_CHECKPOINT_OFF = preload("res://assets/world_01/interactive/checkpoint_base_off.svg")
+const ALIEN_CHECKPOINT_ON = preload("res://assets/world_01/interactive/checkpoint_base_on.svg")
+const ALIEN_FLAG_OFF = preload("res://assets/world_01/interactive/checkpoint_flag_off.svg")
+const ALIEN_FLAG_ON = preload("res://assets/world_01/interactive/checkpoint_flag_on.svg")
+var alien_flags: Dictionary = {}
+func _ready() -> void:
+ for state_name in ["off","on"]:
+  alien_flags[state_name]=[]
+  for index in 8: alien_flags[state_name].append(load("res://assets/world_01/interactive/checkpoint_flag_%s_%02d.svg"%[state_name,index]))
 var kind := "fragment"
 var id := ""
 var active := false
@@ -73,13 +82,11 @@ func _draw() -> void:
     draw_colored_polygon(PackedVector2Array([center+Vector2(0,-16)*factor,center+Vector2(12,0)*factor,center+Vector2(0,16)*factor,center+Vector2(-12,0)*factor]),Color("ff921b"))
   "checkpoint":
    if art:
-    # All checkpoints share the approved compact coastal SVG, each owning state.
-    var bounds:=Rect2(-TOTEM_PIVOT*TOTEM_SCALE,CHECKPOINT_BASE.get_size()*TOTEM_SCALE)
-    draw_texture_rect(CHECKPOINT_BASE,bounds,false)
-    draw_texture_rect(CHECKPOINT_CORE_ON if active else CHECKPOINT_CORE_OFF,bounds,false)
-    if active:
-     var frame:=0 if WorldState.reduced_flash else int(floor(time*4.0))%8
-     draw_texture_rect(CHECKPOINT_SIGNALS[frame],bounds,false)
+    var bounds:=Rect2(Vector2(-54,-134),Vector2(128,140))
+    draw_texture_rect(ALIEN_CHECKPOINT_ON if active else ALIEN_CHECKPOINT_OFF,bounds,false)
+    var frame:=0 if WorldState.reduced_flash else int(time*5.0)%8
+    var state_name:="on" if active else "off"
+    draw_texture_rect(alien_flags[state_name][frame],bounds,false)
     return
    draw_rect(Rect2(-20,-7,40,7),Color("32506a"))
    draw_line(Vector2(0,-8),Vector2(0,-82),cyan if active else Color("b0bacc"),5)

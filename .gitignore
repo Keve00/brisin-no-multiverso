@@ -14,6 +14,13 @@ dist/*.zip.tmp
 # Generated editable bundle is packaged for hosting from the source scripts.
 dist/Brisin_SVGs_e_Interacoes.zip
 
+godot/docs/cosmic_qa/
+godot/assets/enemies/cosmic/**/*.import
+godot/assets/background_svg/cosmic*.import
+godot/assets/ui/cosmic*.import
+godot/assets/world_01/interactive/checkpoint_flag_*_*.import
+godot/assets/world_01/platforms/cosmic*.import
+
 .openai/
 .sites-runtime/
 dist/index.pck

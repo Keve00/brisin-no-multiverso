@@ -32,7 +32,7 @@ func tutorial_pauses_enabled() -> bool:
 
 # One-shot handoff after the title animation; deliberately never saved.
 var skip_intro_once := false
-const SAVE_PATH = "user://brisinho_v01.json"
+const SAVE_PATH = "user://brisin_cosmic_v01.json"
 func _ready() -> void:
  setup_inputs()
  blockout = "--blockout" in OS.get_cmdline_user_args()

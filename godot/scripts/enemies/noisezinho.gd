@@ -1,6 +1,7 @@
 extends Node2D
 signal defeated
 const ANIMATIONS = preload("res://assets/enemies/ruiduzinho/spriteframes.tres")
+var variant := "cristal"
 var left := 1740.0
 var right := 1940.0
 var speed := 65.0
@@ -25,10 +26,10 @@ func _ready() -> void:
  process_physics_priority = 10
  sprite = AnimatedSprite2D.new()
  sprite.name = "RuiduzinhoSprite"
- sprite.sprite_frames = ANIMATIONS
+ sprite.sprite_frames = load("res://assets/enemies/cosmic/"+variant+"/spriteframes.tres")
  sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
- sprite.scale = Vector2(2,2)
- sprite.offset = Vector2(0,-16)
+ sprite.scale = Vector2.ONE
+ sprite.offset = Vector2(0,-48)
  sprite.animation_finished.connect(_on_animation_finished)
  add_child(sprite)
  _bind_support()
@@ -114,7 +115,7 @@ func _physics_process(dt: float) -> void:
  if stunned>0:
   position.x = clampf(position.x+recoil*dt,left,right)
   recoil = move_toward(recoil,0,600*dt)
- sprite.modulate = Color("FFD84D") if stunned>0 else Color.WHITE
+ sprite.modulate = Color.WHITE
  sprite.flip_h = direction<0
  if player and player.state not in ["RESPAWN","DISABLED"]:
   var delta := player.position-position
