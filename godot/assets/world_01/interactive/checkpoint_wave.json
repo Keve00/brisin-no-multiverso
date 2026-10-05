@@ -1,0 +1,19 @@
+{
+  "frames_per_state": 12,
+  "fps": 8,
+  "duration_seconds": 1.5,
+  "canvas": [
+    128,
+    128
+  ],
+  "pivot": [
+    64,
+    64
+  ],
+  "stationary_columns": [
+    64,
+    66
+  ],
+  "max_tip_shift_pixels": 5,
+  "runtime": "Godot frame selection, continuous Offline and Online"
+}

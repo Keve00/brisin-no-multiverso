@@ -1,0 +1,96 @@
+{
+  "engine": "4.5.1.stable.official.f62fdbde1",
+  "mode": "headless physics/logic; not physical-device performance or visual approval",
+  "tests": [
+    {
+      "scene": "integration",
+      "profile": "desktop",
+      "passed_checks": 26,
+      "exit_code": 0,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "scene": "coast_extension",
+      "profile": "desktop",
+      "passed_checks": 10,
+      "exit_code": 0,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "scene": "enemy_placement",
+      "profile": "desktop",
+      "passed_checks": 1811,
+      "exit_code": 0,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "scene": "checkpoint_totems",
+      "profile": "desktop",
+      "passed_checks": 27,
+      "exit_code": 0,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "scene": "menu_animation",
+      "profile": "desktop",
+      "passed_checks": 28,
+      "exit_code": 0,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "scene": "portal_transition",
+      "profile": "desktop",
+      "passed_checks": 23,
+      "exit_code": 0,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "scene": "tutorial_choice",
+      "profile": "desktop",
+      "passed_checks": 18,
+      "exit_code": 0,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "scene": "important_notices",
+      "profile": "desktop",
+      "passed_checks": 27,
+      "exit_code": 0,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "scene": "context_hints",
+      "profile": "desktop",
+      "passed_checks": 34,
+      "exit_code": 0,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "scene": "combat_svg",
+      "profile": "desktop",
+      "passed_checks": 36,
+      "exit_code": 0,
+      "errors": [],
+      "ok": true
+    },
+    {
+      "scene": "ui_integration",
+      "profile": "desktop",
+      "passed_checks": 43,
+      "exit_code": 0,
+      "errors": [],
+      "ok": true
+    }
+  ],
+  "passed_checks": 2083,
+  "ok": true
+}

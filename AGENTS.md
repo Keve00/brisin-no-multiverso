@@ -110,7 +110,7 @@ Detalhes confirmados nas soluções desta rodada:
 - O disparo aceito inicia gesto SVG de 0,30 s: soltura, avanço da mão e retorno. Preserve índice e fase da animação de locomoção ao trocar texturas; caminhar, correr e saltar não podem congelar, deslocar pés ou alterar colisão. Mão e corpo compartilham canvas 144 × 128, pivô de fonte 72,120, escala uniforme e direção capturada no disparo; filhos visuais seguem o wrapper do portal.
 - Ao extrair pernas de frames existentes, recortar apenas a região inferior pode separar quadris/corpo e apagar tons marrons claros. Preserve os tons da paleta, conecte os quadris às pernas em todos os frames e revise poses de corrida e salto renderizadas. Não embuta PNG no SVG nem normalize cada frame pela altura do bounding box.
 - Recarga rejeitada não reinicia gesto nem emite outro chip. Pausa congela gesto; término, RESPAWN e DISABLED removem a mão e restauram os sprites normais. Blockout não exibe a camada SVG isolada.
-- A informação **[F / Y] SOLTA CHIPS** aparece no único espaço transitório abaixo do HUD ao encontrar inimigo vivo ao alcance. A dica de longo alcance exige direção correta, altura compatível, recarga pronta e varredura livre do corpo 24 × 28; não basta um raio sem espessura. Pulse/dash/chip compartilham o mesmo ID e orçamento de leitura do encontro, evitando que trocar de opção reinicie os 4,5 s.
+- A informação **[F] SOLTA CHIPS** aparece no único espaço transitório abaixo do HUD ao encontrar inimigo vivo ao alcance. A dica de longo alcance exige direção correta, altura compatível, recarga pronta e varredura livre do corpo 24 × 28; não basta um raio sem espessura. Pulse/dash/chip compartilham o mesmo ID e orçamento de leitura do encontro, evitando que trocar de opção reinicie os 4,5 s.
 - Intensidade maior de atmosfera mantém origem/parallax e atua apenas no Node2D do fundo. A revisão aprovada usa multiplicador 1,35 sobre o perfil original: pico 37,8%, céu alto 3,38%, borda inferior 18,23%. Guarde o perfil original e gerador para evitar multiplicação acumulada ao regenerar.
 
 
@@ -145,8 +145,62 @@ Detalhes confirmados nas soluções desta rodada:
 
 - Aparência raster não prova arquivo PNG: siga a textura realmente carregada pela cena, confira extensão, geometria e ausência de `<image>`/base64. Farol e portal de `interactive/` já usam paths SVG verdadeiros com estados off/on e pivôs iguais. PNGs legados presentes no catálogo não implicam uso na fase. Uma nova imagem para aprovação é necessária quando a investigação confirma arte raster ou quando o usuário solicita redesign; não refaça silenciosamente um SVG aprovado.
 - Remover um ornamento significa remover sua instância e atualização: o traço amarelo deste menu vinha de `ui/wind.svg`, não das gemas. O pacote amarelo também foi retirado. Gemas do menu têm cinco tamanhos base diferentes e escalas uniformes; ao aumentar tamanhos, audite a órbita inteira contra rosto, mão, botões e bordas. A órbita desta revisão usa raios186×174 para proteger as gemas maiores.
-- Checkpoint, início de conexão e costa Online têm primeira leitura com pausa e chime original próprio. Dicas contextuais e debug continuam transitórios. Confirmação por mouse/Enter/A/Esc retoma uma única vez, sem deixar salto/ataque pressionado; leitura mínima0,25s evita confirmação acidental do mesmo frame. Volume de efeitos é respeitado, inclusive zero.
+- Checkpoint, início de conexão e costa Online têm primeira leitura com pausa e chime original próprio. Todas as dicas contextuais também pausam na primeira leitura; debug continua transitório. Confirmação em Entendi por mouse/Enter/A retoma uma única vez, sem deixar salto/ataque pressionado; leitura mínima0,25s evita confirmação acidental do mesmo frame. Volume de efeitos é respeitado, inclusive zero.
 - Registre primeira leitura por tipo semântico apenas ao confirmar, salve com o progresso e limpe em nova aventura. Eventos recebidos atrás de outro menu aguardam na fila com texto original, sem roubar sua pausa. Repetições não empilham nem tocam o som novamente; saída de cena libera somente a pausa que o aviso possui. Mantenha a janela abaixo do HUD e fora da silhueta do personagem.
 - Gameplay define PROCESS_MODE_PAUSABLE explicitamente; HUD e áudio continuam ALWAYS. Teste congelamento real de posição, relógio e recarga, incluindo cena embutida num host ALWAYS. Pausa iniciada por marcador físico deve ser agendada para a fase idle. Teste primeira leitura separadamente dos avisos já reconhecidos e atravesse a fase confirmando os novos avisos.
 - No Godot4.5.1, retomar SceneTree em callback de física/deferred pode executar step sem flush de queries e gerar `p_elem->_root` duplicado. A confirmação só solicita retomada; o HUD ALWAYS a conclui em `_process`. Verifique também logs nativos do percurso: exit0 e asserts aprovados não bastam se ainda houver ERROR. Não altere registro/disable_mode de colisões para esconder esse erro.
 - Sprite recém-criado precisa selecionar uma animação existente antes do primeiro tick. Uma pausa antecipada pode conservar `default` mesmo após remover essa animação; trocar SpriteFrames e restaurar esse nome dispara erro. Inicialize `walk` e só preserve nome/frame quando o destino contém a animação.
+
+## Logo aprovado — 03/10/2026
+
+- Use o logo BRISIN com símbolo de vento do SVG canônico em `tools/reference_art/brisin-logo.svg`. Menu e carregamento web compartilham esse asset, com fundo transparente e escala uniforme. Não regenere o logo a partir da fonte bitmap nem acrescente texto que esteja cortado na referência.
+- O logo tem canvas 442 × 209; ajuste a área reservada em cada tela à proporção original, protegendo subtítulo e botões. Mantenha as cópias Godot/web idênticas após gerar ou exportar a interface.
+
+- Subtítulo do menu precisa ter tamanho legível (24 px) e espaço próprio abaixo do logo. Preserve ao menos 14 px entre áreas, 34 px antes do primeiro botão e 20 px entre botões; confira também o estado com quatro ações ao continuar uma aventura.
+
+## Disparo de chips — tecla aprovada em 03/10/2026
+
+- No teclado, chips usam F; no controle, Y. Remova o atalho anterior B ao instalar os inputs. Dicas contextuais, menu de controles, rodapé web e documentação devem indicar F/Y sem duplicar os eventos após reinício.
+
+- Todos os avisos de gameplay, incluindo dicas contextuais, pausam na primeira leitura por tipo semântico. Somente Entendi (mouse/Enter/A) confirma; Esc não dispensa. Confirmações persistem e nova aventura limpa todas.
+
+- Configure TextureRect.EXPAND_IGNORE_SIZE antes da textura e do tamanho para não herdar o mínimo nativo. Confira tamanho efetivo no Godot, além da prévia CPU. Logo termina em y184, subtítulo inicia em y202 e primeira ação em y272. Ao substituir membros, limpe os resíduos da fonte e coloque o ombro dentro do corpo; uma única silhueta conectada não garante uma junção visual limpa.
+
+- Corpo e rosto do Brisin no menu usam a célula original em resolução completa, com padding 16 px, canvas 176 × 160, pivô (88,136), escala uniforme 2 e offset (0,-56). Não reduzir para depois ampliar, pois isso perde detalhes e cria blocos no contorno. Dicas contextuais de chip devem dizer F no teclado; Y é identificado na seção GAMEPAD, sem parecer uma segunda tecla de teclado.
+
+- A lateral esquerda do corpo no menu deve formar uma superfície laranja opaca contínua entre a vela e o ombro. Ao remover braços da fonte, reconstrua o recorte: conectividade da silhueta inteira não detecta concavidades que parecem buracos. Verifique essa área em todas as poses e em render sobre fundo contrastante.
+
+## Tutorial opcional — primeira visita
+
+- Pausas de avisos exigem primeira sessão do jogador e escolha explícita FAZER TUTORIAL. Ofereça FAZER TUTORIAL / PULAR TUTORIAL antes de começar apenas quando tutorial_choice_made for falso.
+- Persistir has_played e tutorial_opted_in separadamente do progresso da aventura. Saves legados não comprovam uma decisão explícita: tutorial_choice_made começa falso e exige FAZER / PULAR antes de iniciar, sem ativar pausas automaticamente. Nova aventura não apaga a escolha nem oferece tutorial novamente.
+- tutorial_session_active é temporário; carregar um save numa visita posterior não retoma pausas de tutorial. Sem tutorial, eventos e dicas continuam transitórios. Confirmações e fila só pausam se a mesma condição estiver habilitada.
+
+- Não use has_played, checkpoint ou existência do save para suprimir a escolha de tutorial. Persistir tutorial_choice_made somente após o clique em FAZER / PULAR. Testar save legado e save da versão 25 com progresso antes de iniciar; a animação de início não pode começar antes dessa decisão.
+
+- Checkpoints adicionais usam posição e ID próprios no JSON; não reutilizar a coordenada do primeiro checkpoint ao salvar ou retornar. Em expansões, manter IDs existentes das gemas e acrescentar novas entradas ao fim para preservar saves.
+
+- Cada checkpoint adicional precisa ter totem SVG visível, pivô no chão, escala uniforme e estado independente. A arte do checkpoint primário não pode alternar lendo os demais marcadores. Validar ativação física, gravação, morte/respawn e recarga para cada ID, além do percurso até o portal.
+
+## Totem costeiro aprovado — 03/10/2026
+
+- O conceito aprovado em `tools/reference_art/approved-checkpoint.png` substitui as bandeiras de checkpoint. Todos os IDs, inclusive brisa_01, usam pedra costeira, moldura laranja, núcleo âmbar/ciano e pulsos pequenos. Não reintroduzir o mastro/bandeira grande.
+- Canvas 80×128, pivô (40,125), escala uniforme 1: corpo visível de aproximadamente105px. Núcleo e sinal têm camadas próprias; só o sinal anima a4fps, com base fixa. Flashes reduzidos mantêm sinal estático. SVG deve conter paths reais, sem PNG/base64.
+- Expansão de15% sobre13248 resulta em15235px após arredondamento ao pixel inteiro. Adicionar ilhas ao fim preservando coordenadas, IDs e progresso anteriores; portal acompanha o novo limite.
+
+## Portal e módulos de chão — revisão de 03/10/2026
+
+- Separar vento inteiro da camada modular: um limiar só para ciano claro deixa contornos escuros e folhas no chão, repetindo o efeito em toda a ilha. Verificar ambas as variantes renderizadas em plataformas largas; efeito tem uma instância central e canvas próprio.
+- Recortar padding lateral vazio da camada de chão pela faixa de contato, sem stretch. Toda família de piso plano precisa ter arte nos dois extremos e ao longo de toda a superfície; preencher interrupções decorativas do conceito com módulos vizinhos antes de repetir. O recorte não altera colisões ou o tamanho lógico da fase.
+- Portal deve iniciar entrada com a mesma textura, pivô, escala e orientação do núcleo visível. Não trocar por outra espiral nem por uma nova moldura. Animação pode acelerar o núcleo durante atração e contrair a abertura no fim; moldura fica imóvel. Conferir amostras dos transforms reais, pausa, cancelamento, modo reduzido e conclusão única em1,8s.
+
+## Lateral esquerda do menu — regressão de 03/10/2026
+
+- Verificar três pontos dentro do torso não prova ausência de um buraco ao lado deles. A região reconstruída agora abrange o recorte completo entre a ponta inferior da vela e o ombro: linhas90–105 do canvas176×160, borda esquerda60+max(0,y−92). Preserve o contorno externo e remova a borda antiga onde ela ficou interna.
+- Verificar o interior dessa região transformado em todas as278 poses de aceno, piscada, preparação e corrida. Revisar renders sobre fundo contrastante, incluindo aceno com braço elevado e frames extremos. Silhueta conectada e importação sem erro não bastam. Confirmar também os30 encaixes exatos aceno→preparação e30 encaixes preparação→corrida.
+
+## Menu aprovado compartilhado com a web normal — 05/10/2026
+
+- Por solicitação explícita do usuário, o menu aprovado do mobile também é o menu da web normal. Ação principal larga laranja, Nova Aventura larga quando há progresso, Configurações/Controles lado a lado. Reutilizar os SVGs/fontes de `assets/ui/mobile/` e a referência `tools/reference_art/approved-mobile-menu.png`.
+- Avatar escala uniforme2,6, ilha2,4, pés(902,456), pivô original(100,64). Névoa reduzida só no fundo do menu; gameplay conserva atmosfera, física, inputs e progresso. Texto creme com contorno escuro. Logo canônico432×204 em(150,24).
+- Manter teclado/gamepad, foco visível, preparação finita e escolha explícita de tutorial. Capturar o menu no renderizador e repetir menu_animation/ui_integration antes de exportar/publicar.

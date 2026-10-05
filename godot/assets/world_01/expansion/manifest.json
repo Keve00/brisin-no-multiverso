@@ -1,0 +1,113 @@
+{
+  "status": "catalog_only",
+  "pixel_filter": "nearest",
+  "source_uniform_scale": 0.25,
+  "source": "small_island.png 488x514; same mapping factor X and Y, transparent final half-row; near-neutral opaque checker residue excluded before palette reduction",
+  "assets": [
+    {
+      "id": "island_crystal",
+      "canvas": [
+        160,
+        176
+      ],
+      "pivot": [
+        80,
+        77
+      ],
+      "common": [
+        "island_crystal_base"
+      ],
+      "offline": [
+        "island_crystal_signal_off"
+      ],
+      "online": [
+        "island_crystal_signal_on"
+      ],
+      "recommended_scale": 2,
+      "animations": {
+        "signal": "opacity steps at 6 fps; no XY stretch",
+        "flags": "integer +/-1 px vertical movement, 1.2 second loop"
+      }
+    },
+    {
+      "id": "island_relay",
+      "canvas": [
+        160,
+        176
+      ],
+      "pivot": [
+        80,
+        77
+      ],
+      "common": [
+        "island_relay_base"
+      ],
+      "offline": [
+        "island_relay_signal_off"
+      ],
+      "online": [
+        "island_relay_signal_on"
+      ],
+      "recommended_scale": 2,
+      "animations": {
+        "signal": "opacity steps at 6 fps; no XY stretch",
+        "flags": "integer +/-1 px vertical movement, 1.2 second loop"
+      }
+    },
+    {
+      "id": "connection_node",
+      "canvas": [
+        80,
+        112
+      ],
+      "pivot": [
+        40,
+        104
+      ],
+      "common": [
+        "connection_node_base"
+      ],
+      "offline": [
+        "connection_node_core_off",
+        "connection_node_signal_off"
+      ],
+      "online": [
+        "connection_node_core_on",
+        "connection_node_signal_on"
+      ],
+      "recommended_scale": 2,
+      "animations": {
+        "signal": "opacity steps at 6 fps; no XY stretch",
+        "flags": "integer +/-1 px vertical movement, 1.2 second loop"
+      }
+    },
+    {
+      "id": "checkpoint_beacon",
+      "canvas": [
+        80,
+        112
+      ],
+      "pivot": [
+        29,
+        106
+      ],
+      "common": [
+        "checkpoint_beacon_base"
+      ],
+      "offline": [
+        "checkpoint_beacon_flag_off",
+        "checkpoint_beacon_signal_off"
+      ],
+      "online": [
+        "checkpoint_beacon_flag_on",
+        "checkpoint_beacon_signal_on"
+      ],
+      "recommended_scale": 2,
+      "animations": {
+        "signal": "opacity steps at 6 fps; no XY stretch",
+        "flags": "integer +/-1 px vertical movement, 1.2 second loop"
+      },
+      "integration": "Superseded after visual rejection; runtime checkpoints now use checkpoint_coastal, approved 03/10/2026."
+    }
+  ]
+}

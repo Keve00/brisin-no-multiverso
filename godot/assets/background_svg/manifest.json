@@ -1,0 +1,77 @@
+{
+  "source_dimensions": [
+    2172,
+    724
+  ],
+  "grid": 2,
+  "palette_colours": 256,
+  "rotors": [
+    {
+      "pivot": [
+        1318,
+        270
+      ],
+      "radius": 41,
+      "speed": 0.26,
+      "phase": 0.0,
+      "canvas": 92,
+      "local_pivot": [
+        46,
+        46
+      ]
+    },
+    {
+      "pivot": [
+        1364,
+        339
+      ],
+      "radius": 27,
+      "speed": 0.32,
+      "phase": 0.0,
+      "canvas": 64,
+      "local_pivot": [
+        32,
+        32
+      ]
+    },
+    {
+      "pivot": [
+        1418,
+        317
+      ],
+      "radius": 33,
+      "speed": 0.23,
+      "phase": 0.0,
+      "canvas": 76,
+      "local_pivot": [
+        38,
+        38
+      ]
+    }
+  ],
+  "beacons": [
+    [
+      949,
+      397
+    ],
+    [
+      1255,
+      315
+    ],
+    [
+      1610,
+      396
+    ]
+  ],
+  "rectangle_counts": {
+    "sky": 62238,
+    "coast": 37238,
+    "sea": 31321,
+    "masts": 345,
+    "sea_glints": 1333,
+    "rotor_0": 100,
+    "rotor_1": 46,
+    "rotor_2": 85
+  },
+  "composition": "single panorama; no mirrored repeats; SVG paths only"
+}

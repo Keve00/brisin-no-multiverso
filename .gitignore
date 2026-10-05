@@ -1,0 +1,21 @@
+godot/.godot/
+.sites-runtime/
+godot/docs/*.png
+godot/docs/test_results.json
+
+dist/index.pck-*
+
+godot/docs/*.png.import
+
+tools/__pycache__/
+
+dist/*.zip.tmp
+
+# Generated editable bundle is packaged for hosting from the source scripts.
+dist/Brisin_SVGs_e_Interacoes.zip
+
+.openai/
+.sites-runtime/
+dist/index.pck
+dist/index.wasm.part*
+dist/Brisin_SVGs_e_Interacoes.zip

@@ -1,0 +1,506 @@
+{
+  "coastal": [
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        127,
+        71
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        3,
+        130
+      ],
+      "source_crop": [
+        32,
+        118,
+        302,
+        357
+      ],
+      "source_contact_y": 217,
+      "uniform_source_scale": 0.5
+    },
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        86,
+        71
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        3,
+        89
+      ],
+      "source_crop": [
+        337,
+        118,
+        529,
+        357
+      ],
+      "source_contact_y": 217,
+      "uniform_source_scale": 0.5
+    }
+  ],
+  "sand": [
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        134,
+        70
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        1,
+        135
+      ],
+      "source_crop": [
+        590,
+        121,
+        867,
+        358
+      ],
+      "source_contact_y": 220,
+      "uniform_source_scale": 0.5
+    },
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        92,
+        71
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        4,
+        96
+      ],
+      "source_crop": [
+        892,
+        165,
+        1092,
+        360
+      ],
+      "source_contact_y": 220,
+      "uniform_source_scale": 0.5
+    }
+  ],
+  "steps": [
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        137,
+        91
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        0,
+        137
+      ],
+      "source_crop": [
+        1130,
+        122,
+        1403,
+        359
+      ],
+      "source_contact_y": 178,
+      "uniform_source_scale": 0.5
+    },
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        102,
+        86
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        0,
+        102
+      ],
+      "source_crop": [
+        1450,
+        143,
+        1653,
+        358
+      ],
+      "source_contact_y": 187,
+      "uniform_source_scale": 0.5
+    }
+  ],
+  "thin": [
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        131,
+        47
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        3,
+        134
+      ],
+      "source_crop": [
+        32,
+        443,
+        305,
+        584
+      ],
+      "source_contact_y": 491,
+      "uniform_source_scale": 0.5
+    },
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        84,
+        46
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        3,
+        87
+      ],
+      "source_crop": [
+        343,
+        438,
+        527,
+        584
+      ],
+      "source_contact_y": 492,
+      "uniform_source_scale": 0.5
+    }
+  ],
+  "cracked": [
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        106,
+        59
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        6,
+        112
+      ],
+      "source_crop": [
+        600,
+        435,
+        827,
+        597
+      ],
+      "source_contact_y": 479,
+      "uniform_source_scale": 0.5
+    },
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        88,
+        59
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        4,
+        92
+      ],
+      "source_crop": [
+        875,
+        438,
+        1073,
+        597
+      ],
+      "source_contact_y": 481,
+      "uniform_source_scale": 0.5
+    }
+  ],
+  "raft": [
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        130,
+        42
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        6,
+        136
+      ],
+      "source_crop": [
+        1137,
+        461,
+        1417,
+        565
+      ],
+      "source_contact_y": 482,
+      "uniform_source_scale": 0.5
+    },
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        100,
+        42
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        8,
+        108
+      ],
+      "source_crop": [
+        1424,
+        452,
+        1652,
+        565
+      ],
+      "source_contact_y": 482,
+      "uniform_source_scale": 0.5
+    }
+  ],
+  "wood_bridge": [
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        162,
+        57
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        4,
+        166
+      ],
+      "source_crop": [
+        23,
+        682,
+        358,
+        858
+      ],
+      "source_contact_y": 744,
+      "uniform_source_scale": 0.5
+    },
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        83,
+        57
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        2,
+        85
+      ],
+      "source_crop": [
+        369,
+        684,
+        545,
+        858
+      ],
+      "source_contact_y": 744,
+      "uniform_source_scale": 0.5
+    }
+  ],
+  "signal": [
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        96,
+        80
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        6,
+        102
+      ],
+      "source_crop": [
+        613,
+        684,
+        827,
+        855
+      ],
+      "source_contact_y": 696,
+      "uniform_source_scale": 0.5
+    },
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        87,
+        65
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        8,
+        95
+      ],
+      "source_crop": [
+        863,
+        685,
+        1066,
+        824
+      ],
+      "source_contact_y": 696,
+      "uniform_source_scale": 0.5
+    }
+  ],
+  "wind_island": [
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        96,
+        71
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        26,
+        122
+      ],
+      "source_crop": [
+        1135,
+        665,
+        1401,
+        857
+      ],
+      "source_contact_y": 715,
+      "uniform_source_scale": 0.5
+    },
+    {
+      "canvas": [
+        200,
+        176
+      ],
+      "pivot": [
+        100,
+        64
+      ],
+      "ground_size": [
+        84,
+        71
+      ],
+      "cap": 24,
+      "surface_crop_x": [
+        5,
+        89
+      ],
+      "source_crop": [
+        1420,
+        665,
+        1658,
+        856
+      ],
+      "source_contact_y": 715,
+      "uniform_source_scale": 0.5
+    }
+  ]
+}

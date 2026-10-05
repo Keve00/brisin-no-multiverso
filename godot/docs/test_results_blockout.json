@@ -1,0 +1,32 @@
+{
+  "engine": "4.5.1-stable (official)",
+  "failed": [],
+  "mode": "blockout",
+  "passed": [
+    "spawn seguro no piso",
+    "aceleração até velocidade configurada",
+    "desaceleração",
+    "pulo",
+    "pulo variável ao soltar",
+    "janela de coyote depois da borda",
+    "coyote permite pular depois da borda",
+    "jump buffer dispara ao aterrissar",
+    "dash aéreo",
+    "somente um dash por salto",
+    "vento levanta personagem",
+    "entrada automática no rail",
+    "saída do rail por pulo",
+    "saída automática segura do rail",
+    "checkpoint salva posição",
+    "queda e retorno ao checkpoint",
+    "stomp derrota Ruídozinho",
+    "dash derrota Ruídozinho",
+    "pulso interrompe inimigo",
+    "coleta fragmento",
+    "ponte desligada antes da conexão",
+    "pulso inicia conexão do Nó",
+    "conexão energiza ponte e portal",
+    "percurso spawn → vento → inimigo → checkpoint → rail → dash → Nó sem teleporte",
+    "portal conclui demo após reconexão"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "canvas": [
+    80,
+    128
+  ],
+  "pivot": [
+    40,
+    125
+  ],
+  "scale": 1,
+  "source": "tools/reference_art/approved-checkpoint.png",
+  "technique": "palette sampled pixel paths, no embedded raster; Godot animates signal frames at 4fps",
+  "body_height": 105,
+  "signal_frames": 8,
+  "reduced_flash": "static signal frame 0 and stable core"
+}

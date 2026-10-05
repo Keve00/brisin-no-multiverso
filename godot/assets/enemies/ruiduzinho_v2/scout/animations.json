@@ -1,0 +1,363 @@
+{
+  "name": "Ruídozinho batedor",
+  "variant": "scout",
+  "version": "0.2-concept",
+  "description": "Antena de sinal bifurcada, núcleo ciano e receptor lateral.",
+  "canvas": [
+    64,
+    64
+  ],
+  "ground_pivot": [
+    32,
+    54
+  ],
+  "centered_sprite_offset": [
+    0,
+    -22
+  ],
+  "texture_filter": "nearest",
+  "recommended_scale": 1,
+  "palette": [
+    "#211633",
+    "#3C2059",
+    "#682F9F",
+    "#813FBF",
+    "#9555DF",
+    "#AB64F1",
+    "#C997FF",
+    "#C600DC",
+    "#EC73FF",
+    "#51D3DF",
+    "#B6F3EF",
+    "#55476D",
+    "#867699"
+  ],
+  "provenance": "Redesenho manual da silhueta, rosto e antena da reconstrução Ruídozinho v0.1; não é cópia pixel a pixel.",
+  "animations": {
+    "idle": {
+      "frames": [
+        "frames/idle/00.svg",
+        "frames/idle/01.svg",
+        "frames/idle/02.svg",
+        "frames/idle/03.svg",
+        "frames/idle/04.svg",
+        "frames/idle/05.svg",
+        "frames/idle/06.svg",
+        "frames/idle/07.svg"
+      ],
+      "fps": 8,
+      "loop": true,
+      "bounds": [
+        [
+          16,
+          7,
+          50,
+          54
+        ],
+        [
+          13,
+          7,
+          53,
+          54
+        ],
+        [
+          13,
+          6,
+          53,
+          54
+        ],
+        [
+          16,
+          6,
+          50,
+          54
+        ],
+        [
+          16,
+          6,
+          50,
+          54
+        ],
+        [
+          13,
+          7,
+          53,
+          54
+        ],
+        [
+          13,
+          7,
+          53,
+          54
+        ],
+        [
+          16,
+          7,
+          50,
+          54
+        ]
+      ],
+      "duration_seconds": 1.0
+    },
+    "patrol": {
+      "frames": [
+        "frames/patrol/00.svg",
+        "frames/patrol/01.svg",
+        "frames/patrol/02.svg",
+        "frames/patrol/03.svg",
+        "frames/patrol/04.svg",
+        "frames/patrol/05.svg",
+        "frames/patrol/06.svg",
+        "frames/patrol/07.svg"
+      ],
+      "fps": 12,
+      "loop": true,
+      "bounds": [
+        [
+          16,
+          7,
+          50,
+          54
+        ],
+        [
+          13,
+          6,
+          53,
+          54
+        ],
+        [
+          13,
+          6,
+          53,
+          54
+        ],
+        [
+          16,
+          7,
+          50,
+          54
+        ],
+        [
+          16,
+          7,
+          50,
+          54
+        ],
+        [
+          13,
+          6,
+          53,
+          54
+        ],
+        [
+          13,
+          6,
+          53,
+          54
+        ],
+        [
+          16,
+          7,
+          50,
+          54
+        ]
+      ],
+      "duration_seconds": 0.6666666666666666
+    },
+    "alert": {
+      "frames": [
+        "frames/alert/00.svg",
+        "frames/alert/01.svg",
+        "frames/alert/02.svg",
+        "frames/alert/03.svg",
+        "frames/alert/04.svg",
+        "frames/alert/05.svg"
+      ],
+      "fps": 10,
+      "loop": false,
+      "bounds": [
+        [
+          16,
+          7,
+          50,
+          54
+        ],
+        [
+          16,
+          7,
+          50,
+          54
+        ],
+        [
+          16,
+          6,
+          50,
+          54
+        ],
+        [
+          16,
+          6,
+          50,
+          54
+        ],
+        [
+          16,
+          6,
+          50,
+          54
+        ],
+        [
+          16,
+          6,
+          50,
+          54
+        ]
+      ],
+      "duration_seconds": 0.6
+    },
+    "hit": {
+      "frames": [
+        "frames/hit/00.svg",
+        "frames/hit/01.svg",
+        "frames/hit/02.svg",
+        "frames/hit/03.svg",
+        "frames/hit/04.svg",
+        "frames/hit/05.svg"
+      ],
+      "fps": 12,
+      "loop": false,
+      "bounds": [
+        [
+          16,
+          7,
+          50,
+          54
+        ],
+        [
+          10,
+          7,
+          53,
+          54
+        ],
+        [
+          10,
+          7,
+          53,
+          54
+        ],
+        [
+          16,
+          7,
+          50,
+          54
+        ],
+        [
+          16,
+          7,
+          50,
+          54
+        ],
+        [
+          16,
+          7,
+          50,
+          54
+        ]
+      ],
+      "duration_seconds": 0.5
+    },
+    "defeated": {
+      "frames": [
+        "frames/defeated/00.svg",
+        "frames/defeated/01.svg",
+        "frames/defeated/02.svg",
+        "frames/defeated/03.svg",
+        "frames/defeated/04.svg",
+        "frames/defeated/05.svg",
+        "frames/defeated/06.svg",
+        "frames/defeated/07.svg",
+        "frames/defeated/08.svg",
+        "frames/defeated/09.svg",
+        "frames/defeated/10.svg",
+        "frames/defeated/11.svg"
+      ],
+      "fps": 12,
+      "loop": false,
+      "bounds": [
+        [
+          16,
+          7,
+          50,
+          54
+        ],
+        [
+          16,
+          7,
+          50,
+          54
+        ],
+        [
+          16,
+          7,
+          50,
+          54
+        ],
+        [
+          15,
+          6,
+          51,
+          53
+        ],
+        [
+          14,
+          6,
+          52,
+          53
+        ],
+        [
+          13,
+          5,
+          53,
+          52
+        ],
+        [
+          12,
+          6,
+          54,
+          53
+        ],
+        [
+          11,
+          6,
+          55,
+          53
+        ],
+        [
+          10,
+          6,
+          56,
+          53
+        ],
+        [
+          9,
+          7,
+          57,
+          54
+        ],
+        [
+          22,
+          50,
+          44,
+          54
+        ],
+        [
+          22,
+          50,
+          44,
+          54
+        ]
+      ],
+      "duration_seconds": 1.0
+    }
+  }
+}

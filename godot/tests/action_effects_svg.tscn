@@ -1,0 +1,4 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="Script" path="res://tests/action_effects_svg.gd" id="1"]
+[node name="ActionEffectsSVGTest" type="Node"]
+script = ExtResource("1")

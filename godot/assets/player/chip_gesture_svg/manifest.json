@@ -1,0 +1,32 @@
+{
+  "canvas": [
+    144,
+    128
+  ],
+  "source_ground_pivot": [
+    72,
+    120
+  ],
+  "visual_origin": [
+    72,
+    120
+  ],
+  "duration": 0.3,
+  "release_frame": 0,
+  "hand_frames": 6,
+  "body_frames": {
+    "run": 24,
+    "walk": 24,
+    "jump": 16
+  },
+  "source": "walk.png frame0 body, current locomotion frame legs; approved menu palette/rig",
+  "technique": "SVG body textures preserve locomotion frame index; separate attached SVG hand follows release and returns; no SMIL or raster embedding",
+  "shoulder": [
+    92,
+    80
+  ],
+  "release_palm": [
+    106,
+    84
+  ]
+}

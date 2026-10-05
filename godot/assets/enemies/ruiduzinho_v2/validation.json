@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "canvas": [
+    64,
+    64
+  ],
+  "ground_pivot": [
+    32,
+    54
+  ],
+  "variants": [
+    {
+      "variant": "classic",
+      "frames": 40,
+      "nonempty_frames": 40
+    },
+    {
+      "variant": "scout",
+      "frames": 40,
+      "nonempty_frames": 40
+    },
+    {
+      "variant": "shield",
+      "frames": 40,
+      "nonempty_frames": 40
+    }
+  ],
+  "total_frames": 120,
+  "all_frames_nonempty": true,
+  "validation": "XML, no raster embeds, bounds >=2px margin, fixed palette, PNG rendered from actual SVG using Inkscape."
+}

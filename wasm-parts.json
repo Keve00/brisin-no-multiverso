@@ -1,0 +1,18 @@
+{
+  "size": 38034280,
+  "sha256": "6498359ba889796a0d95a2f71113ac184badc0f2d84cf28f4103c7e399d2d547",
+  "parts": [
+    {
+      "name": "index.wasm.part0",
+      "size": 16777216
+    },
+    {
+      "name": "index.wasm.part1",
+      "size": 16777216
+    },
+    {
+      "name": "index.wasm.part2",
+      "size": 4479848
+    }
+  ]
+}

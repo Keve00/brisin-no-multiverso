@@ -1,24 +1,9 @@
 # Brisin no Multiverso
 
-> **Entrega atual: versão 17.** O código, assets SVG, áudio, testes e ferramentas
-> estão em `Brisin_v17_projeto_editavel.zip`. O arquivo preserva a estrutura completa
-> do projeto; extraia a pasta `Brisin/` antes de executar os comandos deste guia.
-> Os binários web podem ser reconstruídos pelas ferramentas incluídas.
-
-```bash
-git clone https://github.com/Keve00/brisin-no-multiverso.git
-cd brisin-no-multiverso
-python -m zipfile -e Brisin_v17_projeto_editavel.zip projeto
-cd projeto/Brisin
-```
-
-No Windows, também é possível extrair o ZIP pelo Explorador de Arquivos.
-Importe `projeto/Brisin/godot/project.godot` no Godot 4.5.1.
-
 Jogo de plataforma 2D em pixel art feito em **Godot 4.5.1**. Brisin viaja por
 mundos paralelos para restabelecer suas conexões. Esta versão contém o
 **Vertical Slice 0.1 do Mundo 1 — Costa dos Ventos Conectados**, com uma fase
-jogável de 9.600 pixels e transformação de Offline para Online.
+jogável de 15.235 pixels e transformação de Offline para Online.
 
 **[Jogar no navegador](https://brisinho-costa-web.armandocorreiadeoliv.chatgpt.site)**
 
@@ -81,9 +66,10 @@ godot --path godot
 Se o executável tiver outro nome ou não estiver no PATH, substitua `godot` pelo
 caminho dele. No Windows, o editor também abre `project.godot` por duplo clique.
 
-Se o repositório estiver privado, o clone HTTPS exige uma conta com acesso.
-Para deploy por SSH, mantenha chaves privadas fora do código e configure
-a chave pública nas configurações do repositório.
+A branch `main` contém a versão web normal com o menu aprovado. A branch
+`feat/mobile-adaptation` contém a adaptação mobile com controles por toque e
+HUD legível. O ZIP v17 na raiz é uma entrega antiga; abra o projeto atual em
+`godot/project.godot`.
 
 ## Controles
 
@@ -210,15 +196,19 @@ Arte rígida conserva escala uniforme e pivôs; comprimento de plataforma/água
 
 ## Documentação
 
-- GDD do Mundo 1: `godot/docs/GDD_mundo_1.md` (dentro do ZIP)
+- [GDD do Mundo 1](godot/docs/GDD_mundo_1.md)
 - [Regras de desenvolvimento](AGENTS.md)
-- Integração de assets: `godot/docs/asset_integration.md` (dentro do ZIP)
-- Combate e chips: `godot/docs/combat_svg.md` (dentro do ZIP)
-- Gesto de lançamento: `godot/docs/chip_gesture.md` (dentro do ZIP)
-- Cenário e atmosfera: `godot/docs/background_svg.md` (dentro do ZIP)
-- Mar em SVG: `godot/docs/sea_svg.md` (dentro do ZIP)
-- Auditoria da transição do portal: `godot/docs/portal_transition_audit.md` (dentro do ZIP)
-- Créditos/licenças do runtime Godot: `godot/docs/GODOT_COPYRIGHT.txt` (dentro do ZIP)
+- [Integração de assets](godot/docs/asset_integration.md)
+- [Combate e chips](godot/docs/combat_svg.md)
+- [Gesto de lançamento](godot/docs/chip_gesture.md)
+- [Cenário e atmosfera](godot/docs/background_svg.md)
+- [Mar em SVG](godot/docs/sea_svg.md)
+- [Auditoria da transição do portal](godot/docs/portal_transition_audit.md)
+- [Créditos/licenças do runtime Godot](godot/docs/GODOT_COPYRIGHT.txt)
 
 Este repositório reúne o código, os assets e a documentação para continuar
 o desenvolvimento do jogo.
+
+## Sincronização de 05/10/2026
+
+Código e assets correspondem à versão publicada e verificada. Metadados de hospedagem, caches e binários gerados PCK/WASM/ZIP ficam fora deste repositório portátil. `tools/export_web.py` recupera o runtime por SHA256 e reconstrói o build.

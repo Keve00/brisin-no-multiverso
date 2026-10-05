@@ -1,0 +1,998 @@
+{
+  "source_images": {
+    "farol.png": {
+      "size": [
+        2048,
+        1143
+      ],
+      "alpha": "quadriculado embutido; máscara de fundo neutro"
+    },
+    "Ilhas flutuantes.png": {
+      "size": [
+        2048,
+        1143
+      ],
+      "alpha": "quadriculado embutido; máscara de fundo neutro"
+    },
+    "Turbina.png": {
+      "size": [
+        2048,
+        1143
+      ],
+      "alpha": "quadriculado embutido; máscara de fundo neutro"
+    },
+    "Jangada plataforma.png": {
+      "size": [
+        2048,
+        1143
+      ],
+      "alpha": "quadriculado embutido; máscara de fundo neutro"
+    },
+    "Rail de sinal.png": {
+      "size": [
+        2048,
+        1143
+      ],
+      "alpha": "quadriculado embutido; máscara de fundo neutro"
+    },
+    "portal.png": {
+      "size": [
+        2048,
+        1143
+      ],
+      "alpha": "quadriculado embutido; máscara de fundo neutro"
+    }
+  },
+  "animations": {
+    "run": {
+      "fps": 12,
+      "frames": 24,
+      "cell": [
+        144,
+        128
+      ],
+      "pivot": [
+        72,
+        120
+      ],
+      "source": "run-brisinho.mp4",
+      "metadata": [
+        {
+          "source_frame": 13,
+          "bbox": [
+            155,
+            82,
+            489,
+            546
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2155
+        },
+        {
+          "source_frame": 14,
+          "bbox": [
+            155,
+            81,
+            506,
+            563
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2075
+        },
+        {
+          "source_frame": 15,
+          "bbox": [
+            152,
+            82,
+            514,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2075
+        },
+        {
+          "source_frame": 16,
+          "bbox": [
+            155,
+            81,
+            477,
+            563
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2075
+        },
+        {
+          "source_frame": 17,
+          "bbox": [
+            155,
+            82,
+            489,
+            546
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2155
+        },
+        {
+          "source_frame": 18,
+          "bbox": [
+            155,
+            82,
+            506,
+            563
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2079
+        },
+        {
+          "source_frame": 19,
+          "bbox": [
+            152,
+            82,
+            514,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2075
+        },
+        {
+          "source_frame": 20,
+          "bbox": [
+            155,
+            80,
+            478,
+            563
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.207
+        },
+        {
+          "source_frame": 21,
+          "bbox": [
+            155,
+            82,
+            489,
+            546
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2155
+        },
+        {
+          "source_frame": 22,
+          "bbox": [
+            155,
+            81,
+            506,
+            563
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2075
+        },
+        {
+          "source_frame": 23,
+          "bbox": [
+            152,
+            82,
+            514,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2075
+        },
+        {
+          "source_frame": 24,
+          "bbox": [
+            155,
+            80,
+            478,
+            563
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.207
+        },
+        {
+          "source_frame": 25,
+          "bbox": [
+            155,
+            84,
+            477,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2083
+        },
+        {
+          "source_frame": 26,
+          "bbox": [
+            152,
+            77,
+            515,
+            544
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2141
+        },
+        {
+          "source_frame": 27,
+          "bbox": [
+            155,
+            85,
+            478,
+            565
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2083
+        },
+        {
+          "source_frame": 28,
+          "bbox": [
+            155,
+            77,
+            496,
+            535
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2183
+        },
+        {
+          "source_frame": 29,
+          "bbox": [
+            155,
+            85,
+            477,
+            565
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2083
+        },
+        {
+          "source_frame": 30,
+          "bbox": [
+            151,
+            77,
+            515,
+            544
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2141
+        },
+        {
+          "source_frame": 31,
+          "bbox": [
+            155,
+            85,
+            478,
+            565
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2083
+        },
+        {
+          "source_frame": 32,
+          "bbox": [
+            155,
+            77,
+            496,
+            535
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2183
+        },
+        {
+          "source_frame": 33,
+          "bbox": [
+            155,
+            85,
+            477,
+            565
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2083
+        },
+        {
+          "source_frame": 34,
+          "bbox": [
+            152,
+            78,
+            514,
+            544
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2146
+        },
+        {
+          "source_frame": 35,
+          "bbox": [
+            155,
+            80,
+            478,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2066
+        },
+        {
+          "source_frame": 36,
+          "bbox": [
+            155,
+            82,
+            490,
+            546
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2155
+        }
+      ]
+    },
+    "walk": {
+      "fps": 12,
+      "frames": 24,
+      "cell": [
+        144,
+        128
+      ],
+      "pivot": [
+        72,
+        120
+      ],
+      "source": "walk- brisinho.mp4",
+      "metadata": [
+        {
+          "source_frame": 13,
+          "bbox": [
+            155,
+            82,
+            473,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2075
+        },
+        {
+          "source_frame": 14,
+          "bbox": [
+            155,
+            84,
+            478,
+            563
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2088
+        },
+        {
+          "source_frame": 15,
+          "bbox": [
+            155,
+            85,
+            461,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2088
+        },
+        {
+          "source_frame": 16,
+          "bbox": [
+            155,
+            82,
+            461,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2075
+        },
+        {
+          "source_frame": 17,
+          "bbox": [
+            155,
+            80,
+            461,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2066
+        },
+        {
+          "source_frame": 18,
+          "bbox": [
+            155,
+            79,
+            461,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2062
+        },
+        {
+          "source_frame": 19,
+          "bbox": [
+            155,
+            81,
+            460,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.207
+        },
+        {
+          "source_frame": 20,
+          "bbox": [
+            155,
+            82,
+            466,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2075
+        },
+        {
+          "source_frame": 21,
+          "bbox": [
+            155,
+            85,
+            468,
+            562
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2096
+        },
+        {
+          "source_frame": 22,
+          "bbox": [
+            155,
+            86,
+            473,
+            563
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2096
+        },
+        {
+          "source_frame": 23,
+          "bbox": [
+            155,
+            83,
+            462,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2079
+        },
+        {
+          "source_frame": 24,
+          "bbox": [
+            155,
+            81,
+            461,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.207
+        },
+        {
+          "source_frame": 25,
+          "bbox": [
+            155,
+            79,
+            461,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2062
+        },
+        {
+          "source_frame": 26,
+          "bbox": [
+            155,
+            81,
+            460,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.207
+        },
+        {
+          "source_frame": 27,
+          "bbox": [
+            155,
+            83,
+            463,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2079
+        },
+        {
+          "source_frame": 28,
+          "bbox": [
+            155,
+            86,
+            460,
+            562
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2101
+        },
+        {
+          "source_frame": 29,
+          "bbox": [
+            155,
+            84,
+            460,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2083
+        },
+        {
+          "source_frame": 30,
+          "bbox": [
+            155,
+            82,
+            461,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2075
+        },
+        {
+          "source_frame": 31,
+          "bbox": [
+            155,
+            80,
+            461,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2066
+        },
+        {
+          "source_frame": 32,
+          "bbox": [
+            155,
+            80,
+            460,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2066
+        },
+        {
+          "source_frame": 33,
+          "bbox": [
+            155,
+            82,
+            471,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2075
+        },
+        {
+          "source_frame": 34,
+          "bbox": [
+            155,
+            84,
+            477,
+            563
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2088
+        },
+        {
+          "source_frame": 35,
+          "bbox": [
+            155,
+            84,
+            467,
+            562
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2092
+        },
+        {
+          "source_frame": 36,
+          "bbox": [
+            155,
+            82,
+            460,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2075
+        }
+      ]
+    },
+    "jump": {
+      "fps": 12,
+      "frames": 16,
+      "cell": [
+        144,
+        128
+      ],
+      "pivot": [
+        72,
+        120
+      ],
+      "source": "salto-brisinho.mp4",
+      "metadata": [
+        {
+          "source_frame": 13,
+          "bbox": [
+            151,
+            172,
+            496,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2551
+        },
+        {
+          "source_frame": 14,
+          "bbox": [
+            144,
+            188,
+            504,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.266
+        },
+        {
+          "source_frame": 15,
+          "bbox": [
+            140,
+            196,
+            508,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2717
+        },
+        {
+          "source_frame": 16,
+          "bbox": [
+            136,
+            205,
+            512,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2786
+        },
+        {
+          "source_frame": 17,
+          "bbox": [
+            135,
+            209,
+            514,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2817
+        },
+        {
+          "source_frame": 18,
+          "bbox": [
+            134,
+            214,
+            515,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2857
+        },
+        {
+          "source_frame": 19,
+          "bbox": [
+            134,
+            215,
+            516,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2865
+        },
+        {
+          "source_frame": 20,
+          "bbox": [
+            133,
+            217,
+            516,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2882
+        },
+        {
+          "source_frame": 22,
+          "bbox": [
+            133,
+            217,
+            516,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2882
+        },
+        {
+          "source_frame": 30,
+          "bbox": [
+            133,
+            215,
+            516,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2865
+        },
+        {
+          "source_frame": 31,
+          "bbox": [
+            134,
+            213,
+            515,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2849
+        },
+        {
+          "source_frame": 32,
+          "bbox": [
+            135,
+            206,
+            513,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2793
+        },
+        {
+          "source_frame": 33,
+          "bbox": [
+            137,
+            201,
+            511,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2755
+        },
+        {
+          "source_frame": 34,
+          "bbox": [
+            143,
+            188,
+            504,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.266
+        },
+        {
+          "source_frame": 35,
+          "bbox": [
+            148,
+            176,
+            499,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2577
+        },
+        {
+          "source_frame": 36,
+          "bbox": [
+            152,
+            155,
+            488,
+            564
+          ],
+          "pivot": [
+            72,
+            120
+          ],
+          "scale": 0.2445
+        }
+      ]
+    }
+  },
+  "missing": [
+    "tileset",
+    "Ruídozinho",
+    "checkpoint",
+    "Nó de Sinal",
+    "fragmentos",
+    "idle/dash/hit dedicados",
+    "áudio original"
+  ]
+}

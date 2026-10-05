@@ -1,0 +1,296 @@
+{
+  "source": "exec-d1fdcf1c-274d-4457-9a1a-2f8668f6d398.png",
+  "grid": "1 logical px = 2 source px",
+  "assets": {
+    "turbine_base_off": {
+      "canvas": [
+        128,
+        160
+      ],
+      "pivot": [
+        64,
+        156
+      ]
+    },
+    "turbine_rotor_off": {
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ]
+    },
+    "turbine_base_on": {
+      "canvas": [
+        128,
+        160
+      ],
+      "pivot": [
+        64,
+        156
+      ]
+    },
+    "turbine_rotor_on": {
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ]
+    },
+    "lighthouse_base_off": {
+      "canvas": [
+        116,
+        156
+      ],
+      "pivot": [
+        63,
+        153
+      ]
+    },
+    "lighthouse_lamp_off": {
+      "canvas": [
+        20,
+        20
+      ],
+      "pivot": [
+        10,
+        10
+      ]
+    },
+    "lighthouse_base_on": {
+      "canvas": [
+        116,
+        156
+      ],
+      "pivot": [
+        63,
+        153
+      ]
+    },
+    "lighthouse_lamp_on": {
+      "canvas": [
+        20,
+        20
+      ],
+      "pivot": [
+        10,
+        10
+      ]
+    },
+    "checkpoint_base_off": {
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ]
+    },
+    "checkpoint_flag_off": {
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ]
+    },
+    "checkpoint_lamp_off": {
+      "canvas": [
+        24,
+        24
+      ],
+      "pivot": [
+        12,
+        12
+      ]
+    },
+    "checkpoint_base_on": {
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        54,
+        134
+      ]
+    },
+    "checkpoint_flag_on": {
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ]
+    },
+    "checkpoint_lamp_on": {
+      "canvas": [
+        24,
+        24
+      ],
+      "pivot": [
+        12,
+        12
+      ]
+    },
+    "node_frame_off": {
+      "canvas": [
+        120,
+        130
+      ],
+      "pivot": [
+        63,
+        127
+      ]
+    },
+    "node_core_off": {
+      "canvas": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        32
+      ]
+    },
+    "node_frame_on": {
+      "canvas": [
+        120,
+        130
+      ],
+      "pivot": [
+        63,
+        127
+      ]
+    },
+    "node_core": {
+      "canvas": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        32
+      ]
+    },
+    "portal_frame_off": {
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        62,
+        136
+      ]
+    },
+    "portal_core_off": {
+      "canvas": [
+        80,
+        80
+      ],
+      "pivot": [
+        40,
+        40
+      ]
+    },
+    "portal_frame_on": {
+      "canvas": [
+        128,
+        140
+      ],
+      "pivot": [
+        62,
+        136
+      ]
+    },
+    "portal_core": {
+      "canvas": [
+        80,
+        80
+      ],
+      "pivot": [
+        40,
+        40
+      ]
+    },
+    "rail_post_off": {
+      "canvas": [
+        42,
+        52
+      ],
+      "pivot": [
+        30,
+        24
+      ]
+    },
+    "rail_segment_off": {
+      "canvas": [
+        24,
+        18
+      ],
+      "pivot": [
+        0,
+        9
+      ]
+    },
+    "rail_post_on": {
+      "canvas": [
+        42,
+        52
+      ],
+      "pivot": [
+        30,
+        24
+      ]
+    },
+    "rail_segment_on": {
+      "canvas": [
+        24,
+        18
+      ],
+      "pivot": [
+        0,
+        9
+      ]
+    },
+    "rail_packet": {
+      "canvas": [
+        12,
+        12
+      ],
+      "pivot": [
+        6.0,
+        6.0
+      ]
+    },
+    "node_halo": {
+      "canvas": [
+        80,
+        80
+      ],
+      "pivot": [
+        40.0,
+        40.0
+      ]
+    },
+    "lighthouse_beam": {
+      "canvas": [
+        192,
+        48
+      ],
+      "pivot": [
+        0,
+        24
+      ]
+    }
+  }
+}

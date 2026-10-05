@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="96" viewBox="0 0 192 96" shape-rendering="crispEdges">
+<!-- Right-facing wake; player origin is (160,48). The wake renders behind the sprite to keep the face readable. -->
+<path fill="#241508" d="M24 20h56v-4h48v4h24v4h16v8h12v8h8v16h-8v8h-12v8h-16v4h-24v4H80v-4H24V64H8v-8H0V40h8v-8h16z"/>
+<path fill="#FF7A00" d="M24 24h56v-4h48v4h24v4h16v8h12v8h4v8h-4v8h-12v8h-16v4h-24v4H80v-4H24v-8H12v-8H4V40h8v-8h12z"/>
+<path fill="#FFD84D" d="M52 24h76v4h24v4h16v8h8v4h-12v-4h-16v-4h-24v-4H52zM52 64h72v-4h24v-4h16v-4h12v4h-8v8h-16v4h-24v4H52z"/>
+<path fill="#FFFFFF" d="M20 40h72v4H20zM0 48h112v4H0zM28 56h52v4H28zM112 28h16v4h-16zM148 36h12v4h-12zM144 60h12v4h-12z"/>
+</svg>

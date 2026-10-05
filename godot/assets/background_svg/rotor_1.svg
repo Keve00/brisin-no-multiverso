@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" shape-rendering="crispEdges">
+<title>Brisin — panorama aprovado, geometria vetorial em grade de 2px</title>
+
+<path fill="#9b89bb" d="M20 15h2v2h-2z"/>
+<path fill="#27318d" d="M22 15h2v2h-2zM30 27h2v2h-2z"/>
+<path fill="#4b459d" d="M20 17h2v2h-2zM24 19h2v2h-2zM22 21h2v2h-2z"/>
+<path fill="#a594c0" d="M22 17h2v2h-2z"/>
+<path fill="#c2acd8" d="M22 19h2v2h-2z"/>
+<path fill="#d3bbdd" d="M24 21h2v2h-2zM28 27h2v2h-2z"/>
+<path fill="#2e3a99" d="M26 21h2v2h-2z"/>
+<path fill="#b8aad7" d="M24 23h2v2h-2z"/>
+<path fill="#937ec1" d="M26 23h2v2h-2z"/>
+<path fill="#b4a2da" d="M26 25h2v2h-2z"/>
+<path fill="#7c66b6" d="M28 25h2v2h-2zM38 29h2v2h-2z"/>
+<path fill="#4352b4" d="M26 27h2v2h-2z"/>
+<path fill="#252682" d="M36 29h2v2h-2zM36 33h2v2h-2zM40 33h2v2h-2z"/>
+<path fill="#776eb9" d="M40 29h2v2h-2zM32 35h2v2h-2z"/>
+<path fill="#8176bd" d="M42 29h2v2h-2z"/>
+<path fill="#837ec1" d="M44 29h2v2h-2zM50 29h2v2h-2zM42 31h2v2h-2z"/>
+<path fill="#8787c2" d="M46 29h4v2h-4zM22 41h2v2h-2z"/>
+<path fill="#8182bc" d="M52 29h2v2h-2z"/>
+<path fill="#75f9fd" d="M30 31h2v2h-2z"/>
+<path fill="#13eaf3" d="M32 31h2v2h-2z"/>
+<path fill="#c5c0dc" d="M36 31h2v2h-2z"/>
+<path fill="#aea0d4" d="M38 31h2v2h-2z"/>
+<path fill="#8daad8" d="M40 31h2v2h-2z"/>
+<path fill="#4452b0" d="M44 31h2v2h-2z"/>
+<path fill="#504da0" d="M46 31h2v2h-2zM20 43h2v2h-2z"/>
+<path fill="#454c9f" d="M48 31h2v2h-2zM20 47h2v2h-2z"/>
+<path fill="#8f8ac9" d="M28 35h2v2h-2z"/>
+<path fill="#aa99cb" d="M24 39h2v2h-2z"/>
+<path fill="#b8a5d5" d="M24 41h2v2h-2z"/>
+<path fill="#ad9cd4" d="M22 43h2v2h-2z"/>
+<path fill="#4149aa" d="M24 43h2v2h-2z"/>
+<path fill="#cbc3dd" d="M20 45h2v2h-2z"/>
+<path fill="#9b97c5" d="M18 47h2v2h-2z"/>
+</svg>

@@ -1,0 +1,130 @@
+[gd_resource type="SpriteFrames" load_steps=65 format=3]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_00.svg" id="body_run_0"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_01.svg" id="body_run_1"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_02.svg" id="body_run_2"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_03.svg" id="body_run_3"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_04.svg" id="body_run_4"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_05.svg" id="body_run_5"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_06.svg" id="body_run_6"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_07.svg" id="body_run_7"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_08.svg" id="body_run_8"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_09.svg" id="body_run_9"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_10.svg" id="body_run_10"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_11.svg" id="body_run_11"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_12.svg" id="body_run_12"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_13.svg" id="body_run_13"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_14.svg" id="body_run_14"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_15.svg" id="body_run_15"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_16.svg" id="body_run_16"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_17.svg" id="body_run_17"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_18.svg" id="body_run_18"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_19.svg" id="body_run_19"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_20.svg" id="body_run_20"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_21.svg" id="body_run_21"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_22.svg" id="body_run_22"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_run_23.svg" id="body_run_23"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_00.svg" id="body_walk_0"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_01.svg" id="body_walk_1"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_02.svg" id="body_walk_2"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_03.svg" id="body_walk_3"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_04.svg" id="body_walk_4"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_05.svg" id="body_walk_5"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_06.svg" id="body_walk_6"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_07.svg" id="body_walk_7"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_08.svg" id="body_walk_8"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_09.svg" id="body_walk_9"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_10.svg" id="body_walk_10"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_11.svg" id="body_walk_11"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_12.svg" id="body_walk_12"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_13.svg" id="body_walk_13"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_14.svg" id="body_walk_14"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_15.svg" id="body_walk_15"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_16.svg" id="body_walk_16"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_17.svg" id="body_walk_17"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_18.svg" id="body_walk_18"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_19.svg" id="body_walk_19"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_20.svg" id="body_walk_20"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_21.svg" id="body_walk_21"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_22.svg" id="body_walk_22"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_walk_23.svg" id="body_walk_23"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_jump_00.svg" id="body_jump_0"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_jump_01.svg" id="body_jump_1"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_jump_02.svg" id="body_jump_2"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_jump_03.svg" id="body_jump_3"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_jump_04.svg" id="body_jump_4"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_jump_05.svg" id="body_jump_5"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_jump_06.svg" id="body_jump_6"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_jump_07.svg" id="body_jump_7"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_jump_08.svg" id="body_jump_8"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_jump_09.svg" id="body_jump_9"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_jump_10.svg" id="body_jump_10"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_jump_11.svg" id="body_jump_11"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_jump_12.svg" id="body_jump_12"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_jump_13.svg" id="body_jump_13"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_jump_14.svg" id="body_jump_14"]
+[ext_resource type="Texture2D" path="res://assets/player/chip_gesture_svg/body_jump_15.svg" id="body_jump_15"]
+[resource]
+animations = [{"frames":[{"duration":1.0,"texture":ExtResource("body_run_0")},
+{"duration":1.0,"texture":ExtResource("body_run_1")},
+{"duration":1.0,"texture":ExtResource("body_run_2")},
+{"duration":1.0,"texture":ExtResource("body_run_3")},
+{"duration":1.0,"texture":ExtResource("body_run_4")},
+{"duration":1.0,"texture":ExtResource("body_run_5")},
+{"duration":1.0,"texture":ExtResource("body_run_6")},
+{"duration":1.0,"texture":ExtResource("body_run_7")},
+{"duration":1.0,"texture":ExtResource("body_run_8")},
+{"duration":1.0,"texture":ExtResource("body_run_9")},
+{"duration":1.0,"texture":ExtResource("body_run_10")},
+{"duration":1.0,"texture":ExtResource("body_run_11")},
+{"duration":1.0,"texture":ExtResource("body_run_12")},
+{"duration":1.0,"texture":ExtResource("body_run_13")},
+{"duration":1.0,"texture":ExtResource("body_run_14")},
+{"duration":1.0,"texture":ExtResource("body_run_15")},
+{"duration":1.0,"texture":ExtResource("body_run_16")},
+{"duration":1.0,"texture":ExtResource("body_run_17")},
+{"duration":1.0,"texture":ExtResource("body_run_18")},
+{"duration":1.0,"texture":ExtResource("body_run_19")},
+{"duration":1.0,"texture":ExtResource("body_run_20")},
+{"duration":1.0,"texture":ExtResource("body_run_21")},
+{"duration":1.0,"texture":ExtResource("body_run_22")},
+{"duration":1.0,"texture":ExtResource("body_run_23")}],"loop":true,"name":&"run","speed":12.0},
+{"frames":[{"duration":1.0,"texture":ExtResource("body_walk_0")},
+{"duration":1.0,"texture":ExtResource("body_walk_1")},
+{"duration":1.0,"texture":ExtResource("body_walk_2")},
+{"duration":1.0,"texture":ExtResource("body_walk_3")},
+{"duration":1.0,"texture":ExtResource("body_walk_4")},
+{"duration":1.0,"texture":ExtResource("body_walk_5")},
+{"duration":1.0,"texture":ExtResource("body_walk_6")},
+{"duration":1.0,"texture":ExtResource("body_walk_7")},
+{"duration":1.0,"texture":ExtResource("body_walk_8")},
+{"duration":1.0,"texture":ExtResource("body_walk_9")},
+{"duration":1.0,"texture":ExtResource("body_walk_10")},
+{"duration":1.0,"texture":ExtResource("body_walk_11")},
+{"duration":1.0,"texture":ExtResource("body_walk_12")},
+{"duration":1.0,"texture":ExtResource("body_walk_13")},
+{"duration":1.0,"texture":ExtResource("body_walk_14")},
+{"duration":1.0,"texture":ExtResource("body_walk_15")},
+{"duration":1.0,"texture":ExtResource("body_walk_16")},
+{"duration":1.0,"texture":ExtResource("body_walk_17")},
+{"duration":1.0,"texture":ExtResource("body_walk_18")},
+{"duration":1.0,"texture":ExtResource("body_walk_19")},
+{"duration":1.0,"texture":ExtResource("body_walk_20")},
+{"duration":1.0,"texture":ExtResource("body_walk_21")},
+{"duration":1.0,"texture":ExtResource("body_walk_22")},
+{"duration":1.0,"texture":ExtResource("body_walk_23")}],"loop":true,"name":&"walk","speed":12.0},
+{"frames":[{"duration":1.0,"texture":ExtResource("body_jump_0")},
+{"duration":1.0,"texture":ExtResource("body_jump_1")},
+{"duration":1.0,"texture":ExtResource("body_jump_2")},
+{"duration":1.0,"texture":ExtResource("body_jump_3")},
+{"duration":1.0,"texture":ExtResource("body_jump_4")},
+{"duration":1.0,"texture":ExtResource("body_jump_5")},
+{"duration":1.0,"texture":ExtResource("body_jump_6")},
+{"duration":1.0,"texture":ExtResource("body_jump_7")},
+{"duration":1.0,"texture":ExtResource("body_jump_8")},
+{"duration":1.0,"texture":ExtResource("body_jump_9")},
+{"duration":1.0,"texture":ExtResource("body_jump_10")},
+{"duration":1.0,"texture":ExtResource("body_jump_11")},
+{"duration":1.0,"texture":ExtResource("body_jump_12")},
+{"duration":1.0,"texture":ExtResource("body_jump_13")},
+{"duration":1.0,"texture":ExtResource("body_jump_14")},
+{"duration":1.0,"texture":ExtResource("body_jump_15")}],"loop":true,"name":&"jump","speed":12.0}]

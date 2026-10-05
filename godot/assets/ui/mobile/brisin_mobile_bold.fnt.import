@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://cd3nxho6wg48d"
+path="res://.godot/imported/brisin_mobile_bold.fnt-f8e85a55ca78fce97e97a59361763c15.fontdata"
+
+[deps]
+
+source_file="res://assets/ui/mobile/brisin_mobile_bold.fnt"
+dest_files=["res://.godot/imported/brisin_mobile_bold.fnt-f8e85a55ca78fce97e97a59361763c15.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

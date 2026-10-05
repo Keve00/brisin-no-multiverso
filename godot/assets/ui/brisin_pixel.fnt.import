@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://df3be6c6dhpnd"
+path="res://.godot/imported/brisin_pixel.fnt-3e3954c325ee3e3f18ffe415195d8d6e.fontdata"
+
+[deps]
+
+source_file="res://assets/ui/brisin_pixel.fnt"
+dest_files=["res://.godot/imported/brisin_pixel.fnt-3e3954c325ee3e3f18ffe415195d8d6e.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2
