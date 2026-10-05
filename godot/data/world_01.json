@@ -241,7 +241,9 @@
     [
       916,
       1000,
-      520
+      520,
+      false,
+      "etzinho"
     ],
     [
       3240,
@@ -266,7 +268,9 @@
     [
       5950,
       6050,
-      340
+      340,
+      false,
+      "etzinho"
     ],
     [
       6240,
@@ -316,7 +320,9 @@
     [
       14080,
       14180,
-      280
+      280,
+      false,
+      "etzinho"
     ],
     [
       14580,
@@ -1292,6 +1298,7 @@
     "satelite",
     "corrompido",
     "sentinela",
-    "orbital"
+    "orbital",
+    "etzinho"
   ]
 }

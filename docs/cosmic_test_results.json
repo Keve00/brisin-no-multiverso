@@ -72,5 +72,15 @@
   ],
   "ok": true,
   "checks": 3222,
-  "evidence": "Headless physics/logic, real OpenGL rendered menu and five gameplay captures, SVG geometry validation. Physical-device FPS and audible playback were not measured."
+  "evidence": "Headless physics/logic, real OpenGL rendered menu and five gameplay captures, SVG geometry validation. Physical-device FPS and audible playback were not measured.",
+  "portal_enemy_fix": {
+    "portal_entry": "0 failures; reproduced jump entry failure before fix",
+    "portal_transition": "23 checks / 0 failures",
+    "cosmic_assets": "1219 checks / 0 failures",
+    "enemy_animation": "0 failures",
+    "enemy_placement": "1811 checks / 0 failures",
+    "integration": "26 passed / 0 failed",
+    "context_hints": "34 passed / 0 failed",
+    "visual_review": "All ten variants rendered in OpenGL across idle/patrol/alert/hit/defeated; Etzinho concept approved by user."
+  }
 }

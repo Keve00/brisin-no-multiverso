@@ -30,6 +30,10 @@ var kind := "fragment"
 var id := ""
 var active := false
 var portal_rearm_needed := false
+const PORTAL_OPENING := Rect2(-58,-157,116,150)
+func overlaps_portal() -> bool:
+ var body := Rect2(player.position-position+Vector2(-26,-56),Vector2(52,56))
+ return PORTAL_OPENING.intersects(body)
 var player: BrisinhoPlayer
 var time := 0.0
 var art := false
@@ -44,7 +48,7 @@ func _physics_process(dt: float) -> void:
  time += dt
  if not is_instance_valid(player) or player.state in ["DISABLED","RESPAWN"]: return
  var distance := player.position.distance_to(position)
- if kind == "portal" and portal_rearm_needed and distance>=85:
+ if kind == "portal" and portal_rearm_needed and not overlaps_portal():
   portal_rearm_needed = false
  if kind == "fragment" and not active and distance<48:
   active = true
@@ -53,7 +57,7 @@ func _physics_process(dt: float) -> void:
  if kind == "checkpoint" and not active and distance<60:
   active = true
   activated.emit(kind,id)
- if kind == "portal" and not active and not portal_rearm_needed and WorldState.connection == WorldState.Connection.ONLINE and distance<65:
+ if kind == "portal" and not active and not portal_rearm_needed and WorldState.connection == WorldState.Connection.ONLINE and overlaps_portal():
   # The world accepts and latches the entry; failed/blocked calls remain usable.
   activated.emit(kind,id)
  queue_redraw()

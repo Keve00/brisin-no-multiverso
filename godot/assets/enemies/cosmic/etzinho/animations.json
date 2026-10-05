@@ -1,0 +1,44 @@
+{
+  "variant": "etzinho",
+  "canvas": [
+    128,
+    128
+  ],
+  "ground_pivot": [
+    64,
+    112
+  ],
+  "sprite_offset": [
+    0,
+    -48
+  ],
+  "scale": 1,
+  "states": {
+    "idle": [
+      8,
+      8,
+      true
+    ],
+    "patrol": [
+      8,
+      12,
+      true
+    ],
+    "alert": [
+      6,
+      10,
+      false
+    ],
+    "hit": [
+      6,
+      12,
+      false
+    ],
+    "defeated": [
+      12,
+      12,
+      false
+    ]
+  },
+  "behavior": "Existing grounded patrol/combat; variants are cosmetic."
+}

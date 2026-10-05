@@ -213,3 +213,6 @@ Detalhes confirmados nas soluções desta rodada:
 - Nove Ruídozinhos com animações de repouso, patrulha, alerta, dano e derrota. Variações são cosméticas nesta entrega; não inventar resistências ou ataques sem um design solicitado.
 - Background não contém Brisin, inimigos, gemas, portais ou plataformas de gameplay pintados. Névoa permanece no fundo; todos os efeitos animam no Godot, não via SMIL.
 - Progresso do planeta usa arquivo próprio, preservando o save da versão costeira. A geometria do percurso e os controles são mantidos nesta migração.
+
+- Portal: testar entrada real por marcador durante salto, além da chamada direta da transição. A abertura visível deve interceptar o corpo; manter bloqueio Offline, cancelamento e conclusão única persistida.
+- Ruídozinhos: não dividir silhuetas variadas numa linha fixa para animar pés. Preservar olhos/boca opacos e quantizar a paleta sem o fundo da prancha. Etzinho é a décima variação cosmética aprovada por solicitação do usuário.

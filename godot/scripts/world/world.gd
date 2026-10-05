@@ -123,6 +123,7 @@ func _ready() -> void:
   patrol.position = Vector2(patrol.left+30,float(spec[2]))
   patrol.player = player
   patrol.variant = str(level.get("enemy_variants",["cristal"])[enemies.size()%level.get("enemy_variants",["cristal"]).size()])
+  if spec.size()>4: patrol.variant = str(spec[4])
   var online_only_enemy: bool = spec.size()>3 and bool(spec[3])
   patrol.set_meta("online_only",online_only_enemy)
   patrol.visible = not online_only_enemy or WorldState.connection==WorldState.Connection.ONLINE
@@ -382,8 +383,10 @@ func context_tip() -> Dictionary:
     var gap: float = next.position.x-edge
     if gap>90 and gap<350 and absf(next.position.y-body.position.y)<100:
      return {"id":"gap_"+str(i), "title":"DASH DE SINAL", "text":"[ESPAÇO / A] PULE • [SHIFT / X] DASH", "icon":"bolt"}
- if WorldState.connection == WorldState.Connection.ONLINE and pos.distance_to(point(level.portal))<260:
-  return {"id":"portal", "title":"PLANETA RECONECTADO", "text":"ENTRE NO PORTAL PARA CONCLUIR A MISSÃO", "icon":"signal"}
+ if pos.distance_to(point(level.portal))<260:
+  if WorldState.connection == WorldState.Connection.ONLINE:
+   return {"id":"portal", "title":"PLANETA RECONECTADO", "text":"ENTRE NO PORTAL PARA CONCLUIR A MISSÃO", "icon":"signal"}
+  return {"id":"portal_offline", "title":"PORTAL SEM SINAL", "text":"ATIVE O NÓ DE SINAL COM [E / B] PARA ABRIR O PORTAL", "icon":"signal"}
  if WorldState.checkpoint_id=="spawn" and elapsed<8 and absf(pos.x-float(level.spawn[0]))<220 and absf(pos.y-float(level.spawn[1]))<100:
   return {"id":"move", "title":"PLANETA ALIENÍGENA", "text":"[A / D] MOVER • [ESPAÇO / A] PULAR", "icon":"bolt"}
  return {}

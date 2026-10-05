@@ -27,7 +27,7 @@ func run()->void:
   check(enemy.sprite.scale==Vector2.ONE and enemy.sprite.offset==Vector2(0,-48),"enemy keeps physical size and ground pivot")
   for state in ["idle","patrol","alert","hit","defeated"]:
    check(enemy.sprite.sprite_frames.has_animation(state),"encounter has complete state lifecycle")
- check(variants.size()==9,"all nine approved palettes appear in reachable encounters")
+ check(variants.size()==world.level.enemy_variants.size(),"all approved variants including Etzinho appear in reachable encounters")
  for marker in world.markers:
   if marker.kind!="checkpoint":continue
   check(marker.alien_flags.off.size()==8 and marker.alien_flags.on.size()==8,"checkpoint has both cloth animation states")

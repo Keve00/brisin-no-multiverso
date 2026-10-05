@@ -40,7 +40,24 @@ def extract(file,box,div=2,colors=48):
     bg=(a[:,:,0]<42)&(a[:,:,1]<65)&(a[:,:,2]>a[:,:,0]*1.5)
     if file=='menu.png':
         bg=(a[:,:,2]>a[:,:,0]*1.25)&(a[:,:,2]>a[:,:,1]*1.1)
-    q=rgb.quantize(colors=colors,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE).convert('RGB')
+    if file=='enemies.png':
+        # Only remove board pixels reachable from the crop edge. Dark eyes,
+        # mouths and enclosed purple shading belong to the character.
+        exterior=np.zeros(bg.shape,dtype=bool);todo=deque()
+        h,w=bg.shape
+        for x,y in [(x,y) for x in range(w) for y in [0,h-1]]+[(x,y) for y in range(h) for x in [0,w-1]]:
+            if bg[y,x] and not exterior[y,x]:exterior[y,x]=True;todo.append((x,y))
+        while todo:
+            x,y=todo.popleft()
+            for nx,ny in [(x-1,y),(x+1,y),(x,y-1),(x,y+1)]:
+                if 0<=nx<w and 0<=ny<h and bg[ny,nx] and not exterior[ny,nx]:
+                    exterior[ny,nx]=True;todo.append((nx,ny))
+        bg=exterior
+    if file=='enemies.png':
+        samples=Image.fromarray(a[~bg].astype('uint8').reshape(1,-1,3))
+        palette=samples.quantize(colors=colors,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE)
+        q=rgb.quantize(palette=palette,dither=Image.Dither.NONE).convert('RGB')
+    else:q=rgb.quantize(colors=colors,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE).convert('RGB')
     rgba=np.zeros((*a.shape[:2],4),np.uint8);rgba[:,:,:3]=np.array(q);rgba[:,:,3]=np.where(bg,0,255)
     # Drop isolated scraps from adjacent cells, retaining approved effect specks.
     seen=set()
@@ -228,8 +245,15 @@ def enemies():
     boxes=[(169,36,477,300),(643,42,908,298),(1049,42,1380,300),(165,380,473,615),(650,377,912,616),(1026,359,1404,616),(150,697,475,935),(628,686,928,936),(1026,694,1448,938)]
     specs={'idle':(8,8,True),'patrol':(8,12,True),'alert':(6,10,False),'hit':(6,12,False),'defeated':(12,12,False)}
     previews=[];labels=[]
+    names.append('etzinho');boxes.append(None)
     for name,box in zip(names,boxes):
-        raw=extract('enemies.png',box,4,40);raw=raw.crop(raw.getbbox())
+        if name=='etzinho':
+            raw=Image.open(REF/'etzinho.png').convert('RGBA')
+            raw=raw.crop(raw.getbbox())
+            raw=raw.resize((round(raw.width*74/raw.height),74),Image.Resampling.NEAREST)
+            alpha=raw.getchannel('A').point(lambda v:255 if v>=128 else 0)
+            raw=raw.convert('RGB').quantize(colors=16,dither=Image.Dither.NONE).convert('RGBA');raw.putalpha(alpha)
+        else:raw=extract('enemies.png',box,4,96);raw=raw.crop(raw.getbbox())
         base=Image.new('RGBA',(128,128));base.alpha_composite(raw,(64-raw.width//2,112-raw.height))
         folder=out/name;ext=[];anim=[];idx=0
         for state,(count,fps,loop) in specs.items():
@@ -237,13 +261,12 @@ def enemies():
                 im=Image.new('RGBA',(128,128));dx=0;dy=0
                 if state in ['idle','patrol','alert']:dy=-1 if i%8 in [2,3,4] else 0
                 if state=='hit':dx=[0,-2,-1,1,0,0][i]
-                # Feet retain baseline; the body breathes independently.
-                im.alpha_composite(base.crop((0,0,128,106)),(dx,dy))
-                feet=base.crop((0,106,128,128))
+                # Transform the complete silhouette. Splitting at a shared
+                # scanline severed legs on differently shaped variants.
                 if state=='patrol':
                     step=[0,1,1,0,-1,-1,-1,0][i]
-                    im.alpha_composite(feet.crop((0,0,64,22)),(step,106));im.alpha_composite(feet.crop((64,0,128,22)),(64-step,106))
-                else:im.alpha_composite(feet,(0,106))
+                    dx=step
+                im.alpha_composite(base,(dx,0))
                 d=ImageDraw.Draw(im)
                 if state in ['hit','alert'] and i in [1,2,3]:
                     for x,y in [(24,69),(101,60)]:
