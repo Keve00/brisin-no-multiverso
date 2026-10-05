@@ -82,5 +82,14 @@
     "integration": "26 passed / 0 failed",
     "context_hints": "34 passed / 0 failed",
     "visual_review": "All ten variants rendered in OpenGL across idle/patrol/alert/hit/defeated; Etzinho concept approved by user."
+  },
+  "full_animation_revision": {
+    "cosmic_animation": "561 checks / 0 failures for all ten variants",
+    "cosmic_assets": "1219 checks / 0 failures",
+    "combat": "36 passed / 0 failed",
+    "enemy_placement": "1811 checks / 0 failures",
+    "integration": "26 passed / 0 failed, full route and portal conclusion",
+    "etzinho_height": "100px, up from74px (~35%)",
+    "review": "Actual OpenGL renders and SVG-derived GIF of all five states; stable canvas and foot pivot; terminal transparent frames are intentional."
   }
 }

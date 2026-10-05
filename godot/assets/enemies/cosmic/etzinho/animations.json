@@ -40,5 +40,7 @@
       false
     ]
   },
+  "motion": "Continuous inverse pixel rig: breathing/blink, alternating feet, antenna sway, alert lean, recoil, shrink/disintegration",
+  "visual_height": 100,
   "behavior": "Existing grounded patrol/combat; variants are cosmetic."
 }

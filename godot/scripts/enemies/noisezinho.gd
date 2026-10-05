@@ -126,7 +126,8 @@ func _physics_process(dt: float) -> void:
     player.bounce()
    elif stunned<=0: player.hurt()
 func combat_bounds() -> Rect2:
- # Actual visible body rather than its ground pivot: 52 x 56 px silhouette.
+ # The larger alien's torso/head remain hittable by chips and pulse.
+ if variant == "etzinho": return Rect2(global_position+Vector2(-30,-86),Vector2(60,86))
  return Rect2(global_position+Vector2(-26,-56),Vector2(52,56))
 func receive_pulse(origin: Vector2) -> void:
  if not alive or not visible: return

@@ -9,6 +9,10 @@ from collections import defaultdict, deque
 import json, math
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
+try:
+    from cosmic_enemy_motion import pose
+except ImportError:
+    from tools.cosmic_enemy_motion import pose
 
 ROOT = Path(__file__).resolve().parents[1]
 REF = ROOT/'tools/reference_art/cosmic'
@@ -243,42 +247,26 @@ def dim(im):
 def enemies():
     out=ASSETS/'enemies/cosmic';names=['cristal','esporo','magnetico','escavador','plasma','satelite','corrompido','sentinela','orbital']
     boxes=[(169,36,477,300),(643,42,908,298),(1049,42,1380,300),(165,380,473,615),(650,377,912,616),(1026,359,1404,616),(150,697,475,935),(628,686,928,936),(1026,694,1448,938)]
+    face_eyes=[[(275,207),(329,207)],[(716,209),(773,209)],[(1180,204),(1237,204)],[(275,516),(332,516)],[(717,519),(773,519)],[(1197,534),(1257,534)],[(268,828),(325,828)],[(720,822),(779,822)],[(1176,846),(1233,846)],[]]
     specs={'idle':(8,8,True),'patrol':(8,12,True),'alert':(6,10,False),'hit':(6,12,False),'defeated':(12,12,False)}
     previews=[];labels=[]
     names.append('etzinho');boxes.append(None)
-    for name,box in zip(names,boxes):
+    for name,box,source_eyes in zip(names,boxes,face_eyes):
+        eyes=[]
         if name=='etzinho':
             raw=Image.open(REF/'etzinho.png').convert('RGBA')
             raw=raw.crop(raw.getbbox())
-            raw=raw.resize((round(raw.width*74/raw.height),74),Image.Resampling.NEAREST)
+            raw=raw.resize((round(raw.width*100/raw.height),100),Image.Resampling.NEAREST)
             alpha=raw.getchannel('A').point(lambda v:255 if v>=128 else 0)
             raw=raw.convert('RGB').quantize(colors=16,dither=Image.Dither.NONE).convert('RGBA');raw.putalpha(alpha)
-        else:raw=extract('enemies.png',box,4,96);raw=raw.crop(raw.getbbox())
+        else:
+            raw=extract('enemies.png',box,4,96);sx=raw.width/(box[2]-box[0]);sy=raw.height/(box[3]-box[1]);crop=raw.getbbox();raw=raw.crop(crop)
+            eyes=[(64-raw.width//2+round((x-box[0])*sx)-crop[0],112-raw.height+round((y-box[1])*sy)-crop[1]) for x,y in source_eyes]
         base=Image.new('RGBA',(128,128));base.alpha_composite(raw,(64-raw.width//2,112-raw.height))
         folder=out/name;ext=[];anim=[];idx=0
         for state,(count,fps,loop) in specs.items():
             for i in range(count):
-                im=Image.new('RGBA',(128,128));dx=0;dy=0
-                if state in ['idle','patrol','alert']:dy=-1 if i%8 in [2,3,4] else 0
-                if state=='hit':dx=[0,-2,-1,1,0,0][i]
-                # Transform the complete silhouette. Splitting at a shared
-                # scanline severed legs on differently shaped variants.
-                if state=='patrol':
-                    step=[0,1,1,0,-1,-1,-1,0][i]
-                    dx=step
-                im.alpha_composite(base,(dx,0))
-                d=ImageDraw.Draw(im)
-                if state in ['hit','alert'] and i in [1,2,3]:
-                    for x,y in [(24,69),(101,60)]:
-                        d.rectangle((x-3,y,x+3,y+1),fill='#ffd84d');d.rectangle((x,y-3,x+1,y+3),fill='#fff3cd')
-                if state=='defeated' and i>=2:
-                    scattered=Image.new('RGBA',(128,128));phase=i-2
-                    for y in range(0,128,3):
-                        for x in range(0,128,3):
-                            if (x*17+y*11)%29<phase*3:continue
-                            piece=im.crop((x,y,x+3,y+3));nx=x+round((x-64)*phase/18);ny=y-round(phase*1.5)
-                            if 0<=nx<125 and 0<=ny<125:scattered.alpha_composite(piece,(nx,ny))
-                    im=scattered
+                im=pose(base,name,state,i,count,eyes)
                 path=folder/'frames'/state/f'{i:02}.svg';write(path,im,[64,112]);idx+=1
                 ext.append(f'[ext_resource type="Texture2D" path="res://assets/enemies/cosmic/{name}/frames/{state}/{i:02}.svg" id="{idx}"]')
                 if i==min(3,count-1):previews.append(im);labels.append(name+' '+state)
@@ -286,7 +274,7 @@ def enemies():
             frames=', '.join('{"duration":1.0,"texture":ExtResource("'+str(n)+'")}' for n in range(first,idx+1))
             anim.append('{"frames":['+frames+'],"loop":'+str(loop).lower()+',"name":&"'+state+'","speed":'+str(float(fps))+'}')
         (folder/'spriteframes.tres').write_text(f'[gd_resource type="SpriteFrames" load_steps={idx+1} format=3]\n\n'+'\n\n'.join(ext)+'\n\n[resource]\nanimations = ['+',\n'.join(anim)+']\n')
-        (folder/'animations.json').write_text(json.dumps({'variant':name,'canvas':[128,128],'ground_pivot':[64,112],'sprite_offset':[0,-48],'scale':1,'states':specs,'behavior':'Existing grounded patrol/combat; variants are cosmetic.'},indent=2))
+        (folder/'animations.json').write_text(json.dumps({'variant':name,'canvas':[128,128],'ground_pivot':[64,112],'sprite_offset':[0,-48],'scale':1,'states':specs,'motion':'Continuous inverse pixel rig: breathing/blink, alternating feet, antenna sway, alert lean, recoil, shrink/disintegration', 'visual_height':100 if name=='etzinho' else raw.height,'behavior':'Existing grounded patrol/combat; variants are cosmetic.'},indent=2))
     sheet('enemies',previews,labels,cols=5,cell=(170,170))
     return names
 

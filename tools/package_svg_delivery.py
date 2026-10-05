@@ -20,7 +20,7 @@ O carregador, manifesto WASM e verificadores estão incluídos; o helper baixa
 o runtime compatível e reconstrói o PCK local. Os binários web gerados não
 fazem parte deste ZIP editável.
 
-A versão extraterrestre inclui nove Ruídozinhos coloridos com cinco estados,
+A versão extraterrestre inclui nove Ruídozinhos coloridos e Etzinhos maiores com cinco estados animados,
 menu sem frase de rodapé e todas as famílias de plataformas, objetos interativos e cenário/efeitos,
 o panorama vetorial aprovado com atmosfera, menu e bandeiras animados,
 dash/pulso opacos em SVG, chips SIM brancos (F / Y) com gesto de lançamento, dicas contextuais
@@ -30,7 +30,7 @@ e faíscas. As animações de gameplay são controladas por GDScript.
 
 Consulte Brisin/godot/docs/asset_integration.md para integração, validação e
 limitações. Os documentos por família registram canvases, pivôs e tempos.
-As variações disponíveis não são todas instanciadas na fase.
+As dez variações aparecem na fase; Etzinho está em três patrulhas.
 
 Os geradores em Brisin/tools exigem Python, Pillow e Inkscape para renderizar.
 As referências mobile aprovadas ficam no repositório em tools/reference_art;

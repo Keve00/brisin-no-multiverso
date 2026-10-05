@@ -15,7 +15,8 @@ func run()->void:
  for asset in manifest.assets:
   var path:String="res://"+String(asset.path).trim_prefix("godot/")
   var content:=FileAccess.get_file_as_string(path)
-  check(("<path" in content or path.ends_with("_deco.svg")) and not "<image" in content and not "base64" in content,"vector geometry: "+path)
+  var terminal_empty:bool=path.contains("/frames/defeated/") and int(asset.colors)==0
+  check(("<path" in content or path.ends_with("_deco.svg") or terminal_empty) and not "<image" in content and not "base64" in content,"vector geometry: "+path)
   var texture:Texture2D=load(path)
   check(texture.get_size()==Vector2(asset.canvas[0],asset.canvas[1]),"canvas matches metadata: "+path)
  var world=load("res://scenes/world_01/world_01.tscn").instantiate()
