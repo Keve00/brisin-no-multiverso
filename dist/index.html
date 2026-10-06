@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#241508">
 <meta name="description" content="Jogue Brisin na Conexão de Outro Mundo. Restaure a rede de um planeta alienígena e alcance o portal.">
 <title>Brisin — Conexão de Outro Mundo</title>
@@ -10,6 +10,16 @@
 <style>
 @font-face{font-family:BrisinPixel;src:url('brisin_pixel.ttf') format('truetype');font-display:swap}
 *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#100a04;color:#fff3cd;font:24px/1.5 BrisinPixel,monospace}body{min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;gap:10px}header,footer{width:min(1152px,96vw);display:flex;align-items:center;justify-content:space-between;gap:16px}header strong{font-size:24px;color:#ffd84d}header small{font-size:12px;color:#ffb000;margin-left:16px}button{font:24px BrisinPixel,monospace;color:#fff3cd;background:#3b220c;border:2px solid #ffb000;border-radius:0;padding:10px 16px;cursor:pointer;box-shadow:3px 3px 0 #000}button:hover{background:#7a3000}button:focus-visible{outline:3px solid #ffd84d;outline-offset:3px}.stage{position:relative;width:min(1152px,96vw,calc((100dvh - 118px) * 1.777778));aspect-ratio:16/9;overflow:hidden;background:#241508;border:3px solid #ffb000;box-shadow:6px 6px 0 #000}#canvas{display:block;width:100%;height:100%;outline:0;touch-action:none}footer{justify-content:center;flex-wrap:wrap;font-size:12px;color:#d9ad75;gap:4px 16px}kbd{font:inherit;color:#ffd84d}#status{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(#100a0466,#100a04dd),url('cosmic-bg.svg') center/cover}.loading{text-align:center;padding:32px;max-width:90%;background:#241508ef;border:3px solid #ffb000;box-shadow:6px 6px 0 #000}.loading h1{margin:0 0 12px;line-height:0}.loading .logo{display:block;margin:0 auto;width:min(360px,50vw);height:auto;image-rendering:pixelated}.loading p{margin:8px 0 16px;color:#fff3cd;font-size:24px}progress{appearance:none;width:min(340px,65vw);height:16px;border:2px solid #ffd84d;background:#100a04;accent-color:#ff7a00}progress::-webkit-progress-bar{background:#100a04}progress::-webkit-progress-value{background:repeating-linear-gradient(90deg,#ff7a00 0 12px,#ffb000 12px 14px)}progress::-moz-progress-bar{background:#ff7a00}.notice{white-space:pre-line;color:#fff3cd;max-width:580px}.stage:fullscreen{width:100%;height:100%;aspect-ratio:auto;border:0;display:flex;align-items:center;justify-content:center}.stage:fullscreen #canvas{width:min(100vw,calc(100dvh * 1.777778));height:auto;aspect-ratio:16/9}noscript{position:absolute;inset:0;display:grid;place-content:center;background:#241508}@media(max-width:600px){body{padding:10px}header small{display:none}header,footer{width:96vw}header strong{font-size:24px}.stage{width:96vw}footer{font-size:12px}.loading{padding:16px}.loading p{font-size:12px}}
+
+html{overscroll-behavior:none}#canvas{image-rendering:pixelated;user-select:none;-webkit-user-select:none}
+#rotate-device{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:24px;text-align:center;background:#241508;font-size:24px}
+#rotate-device[hidden]{display:none}#rotate-device button{min-height:48px}#rotate-device small{font-size:16px}
+body.touch-device{padding:max(4px,env(safe-area-inset-top)) max(4px,env(safe-area-inset-right)) max(4px,env(safe-area-inset-bottom)) max(4px,env(safe-area-inset-left));height:var(--view-height,100dvh);min-height:0;overflow:hidden;gap:0}
+.touch-device header,.touch-device footer{display:none}
+.touch-device .stage{--available-height:calc(var(--view-height,100dvh) - max(4px,env(safe-area-inset-top)) - max(4px,env(safe-area-inset-bottom)));width:min(1152px,calc(100vw - max(4px,env(safe-area-inset-left)) - max(4px,env(safe-area-inset-right))),calc(var(--available-height) * 1.777778));border:0;box-shadow:none;flex-shrink:0}
+.touch-device .stage:fullscreen{width:100%;height:100%;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+.touch-device .stage:fullscreen #canvas{width:min(100%,calc((100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom)) * 1.777778));height:auto;aspect-ratio:16/9}
+.touch-device .loading{padding:16px}.touch-device .loading .logo{width:min(300px,48vw)}.touch-device .loading p{font-size:16px}
 </style>
 </head>
 <body>
@@ -20,6 +30,7 @@
 <noscript>Ative o JavaScript para jogar Brisin.</noscript>
 </main>
 <footer><span><kbd>A / D</kbd> ou <kbd>← →</kbd> mover</span><span><kbd>Espaço</kbd> pular</span><span><kbd>Shift</kbd> dash</span><span><kbd>E</kbd> pulso</span><span><kbd>F</kbd> chips</span><span><kbd>Esc</kbd> pausa</span><span>Clique no jogo para ativar o áudio</span></footer>
+<script src="mobile-shell.js"></script>
 <script src="index.js"></script>
 <script>
 'use strict';
@@ -29,13 +40,13 @@ const overlay = document.querySelector('#status');
 const progress = document.querySelector('#progress');
 const notice = document.querySelector('#notice');
 const loadingText = document.querySelector('#loading-text');
-const engine = new Engine({executable:'index',mainPack:'index.pck',canvas,canvasResizePolicy:0,focusCanvas:true,args:[],fileSizes:{'index.pck':11612692,'index.wasm':38034280},ensureCrossOriginIsolationHeaders:false});
+const engine = new Engine({executable:'index',mainPack:'index.pck',canvas,canvasResizePolicy:0,focusCanvas:true,args:['--','--mobile'],fileSizes:{'index.pck':8085892,'index.wasm':38034280},ensureCrossOriginIsolationHeaders:false});
 function fail(error){
  console.error(error);
  progress.hidden = true;
  loadingText.textContent = 'Não foi possível iniciar o jogo.';
  notice.hidden = false;
- notice.textContent = 'Atualize a página e confira se a aceleração gráfica está habilitada no navegador. Use Chrome, Edge ou Firefox com WebGL 2.\n' + (error instanceof Error ? error.message : String(error));
+ notice.textContent = 'Atualize a página e confira se a aceleração gráfica está habilitada no navegador. Use Chrome, Safari, Edge ou Firefox com WebGL 2.\n' + (error instanceof Error ? error.message : String(error));
 }
 document.querySelector('#fullscreen').addEventListener('click',async()=>{
  try{if(document.fullscreenElement)await document.exitFullscreen();else await stage.requestFullscreen();canvas.focus();}catch(error){console.warn(error);}
