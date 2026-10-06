@@ -251,3 +251,7 @@ Detalhes confirmados nas soluções desta rodada:
 
 ## Conexão de Outro Mundo mobile
 - Preservar mapa, portal e dez personagens do planeta. Branch feat/planeta-extraterrestre-mobile.
+
+## Gemas sem resíduos da prancha
+
+- O SVG compartilhado por gemas da fase, menu e HUD não deve conter fundo da prancha, sombra solta ou fragmentos de outra célula. Preserve facetas laranja, canvas/pivô, halo luminoso e contorno de um pixel preso à silhueta. A limpeza deve fazer parte do gerador para sobreviver à regeneração.
