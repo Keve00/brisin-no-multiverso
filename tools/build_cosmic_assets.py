@@ -237,9 +237,33 @@ def interactive():
         seg=Image.new('RGBA',(24,18));d=ImageDraw.Draw(seg)
         d.rectangle((0,6,23,11),fill='#302544');d.rectangle((0,7,23,9),fill='#38dced' if state=='on' else '#654487');d.rectangle((2,7,6,8),fill='#e4ffff' if state=='on' else '#9f61ba')
         write(out/f'rail_segment_{state}.svg',seg,[0,9])
-    gem=fit(extract('interactive.png',(1133,510,1204,637),2),(48,56),(24,52),43)
-    write(ASSETS/'world_01/svg/gem_orange.svg',gem,[24,28])
+    build_gem()
     sheet('interactive',ims,names,cols=5,cell=(220,250))
+
+def build_gem():
+    # Keep the approved facets at their existing size and pivot. The source
+    # board/shadow must never become part of a floating collectible.
+    im=fit(extract('interactive.png',(1133,510,1204,637),2),(48,56),(24,52),43)
+    a=np.array(im);rgb=a[:,:,:3].astype(np.int16)
+    warm=(a[:,:,3]>0)&(rgb[:,:,0]>90)&(rgb[:,:,0]>rgb[:,:,2]*1.35)&(rgb[:,:,1]>rgb[:,:,2]*.5)
+    seen=set();components=[]
+    for y,x in zip(*np.where(warm)):
+        if (x,y) in seen:continue
+        todo=[(x,y)];part=[];seen.add((x,y))
+        while todo:
+            px,py=todo.pop();part.append((px,py))
+            for nx,ny in [(px-1,py),(px+1,py),(px,py-1),(px,py+1)]:
+                if 0<=ny<im.height and 0<=nx<im.width and warm[ny,nx] and (nx,ny) not in seen:
+                    seen.add((nx,ny));todo.append((nx,ny))
+        components.append(part)
+    body=np.zeros(warm.shape,dtype=bool)
+    for x,y in max(components,key=len):body[y,x]=True
+    edge=body.copy()
+    edge[1:,:]|=body[:-1,:];edge[:-1,:]|=body[1:,:]
+    edge[:,1:]|=body[:,:-1];edge[:,:-1]|=body[:,1:]
+    a[:,:,3]=np.where(edge,255,0)
+    a[edge & ~body,:3]=[33,20,47]
+    return write(ASSETS/'world_01/svg/gem_orange.svg',Image.fromarray(a),[24,28])
 
 def dim(im):
     a=np.array(im);a[:,:,:3]=(a[:,:,:3].astype(float)*.58).astype('uint8');return Image.fromarray(a)

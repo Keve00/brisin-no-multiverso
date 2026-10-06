@@ -218,3 +218,7 @@ Detalhes confirmados nas soluções desta rodada:
 - Ruídozinhos: não dividir silhuetas variadas numa linha fixa para animar pés. Preservar olhos/boca opacos e quantizar a paleta sem o fundo da prancha. Etzinho é a décima variação cosmética aprovada por solicitação do usuário.
 
 - Animações aprovadas: rig contínuo por mapeamento inverso; passos alternados, respiração/piscada e movimentos distintos nos cinco estados. Etzinho tem100px de altura (~35% maior) e combate60×86; não voltar à translação de uma pose única. Validar as dez variantes em cosmic_animation.
+
+## Gemas sem resíduos da prancha
+
+- O SVG compartilhado por gemas da fase, menu e HUD não deve conter fundo da prancha, sombra solta ou fragmentos de outra célula. Preserve facetas laranja, canvas/pivô, halo luminoso e contorno de um pixel preso à silhueta. A limpeza deve fazer parte do gerador para sobreviver à regeneração.
