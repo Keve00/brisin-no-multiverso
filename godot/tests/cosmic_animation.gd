@@ -19,6 +19,9 @@ func run() -> void:
     var texture=frames.get_frame_texture(state,i)
     unique[FileAccess.get_file_as_string(texture.resource_path).hash()]=true
     check(texture.get_size()==Vector2(128,128),name+" canvas stays fixed")
+    if name=="etzinho" and state in ["idle","patrol","alert"]:
+     var used:Rect2i=texture.get_image().get_used_rect()
+     check(abs(used.end.y-112)<=1,"Etzinho foot meets ground: "+state+str(i))
    check(unique.size()>=4,name+" "+state+" has distinct poses")
    check(frames.get_animation_loop(state)==(state in ["idle","patrol"]),name+" finite/loop lifecycle")
   var body:Rect2=enemy.combat_bounds()

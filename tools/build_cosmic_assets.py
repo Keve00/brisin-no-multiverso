@@ -259,6 +259,7 @@ def enemies():
             raw=raw.resize((round(raw.width*100/raw.height),100),Image.Resampling.NEAREST)
             alpha=raw.getchannel('A').point(lambda v:255 if v>=128 else 0)
             raw=raw.convert('RGB').quantize(colors=16,dither=Image.Dither.NONE).convert('RGBA');raw.putalpha(alpha)
+            raw=raw.crop(raw.getbbox()) # Discard faint alpha margins before anchoring feet.
         else:
             raw=extract('enemies.png',box,4,96);sx=raw.width/(box[2]-box[0]);sy=raw.height/(box[3]-box[1]);crop=raw.getbbox();raw=raw.crop(crop)
             eyes=[(64-raw.width//2+round((x-box[0])*sx)-crop[0],112-raw.height+round((y-box[1])*sy)-crop[1]) for x,y in source_eyes]

@@ -11,11 +11,11 @@ def blink(base,name,eyes):
     im=base.copy();d=ImageDraw.Draw(im)
     if name=='etzinho':
         # Individually authored eyelids follow the approved angled alien eyes.
-        skin=base.getpixel((62,46))
-        d.polygon([(53,48),(73,55),(72,69),(55,61)],fill=skin)
-        d.line([(55,56),(70,62)],fill='#251033',width=2)
-        d.polygon([(79,54),(89,49),(89,66),(78,69)],fill=skin)
-        d.line([(79,63),(88,58)],fill='#251033',width=2)
+        skin=base.getpixel((59,56))
+        d.polygon([(50,58),(70,65),(69,79),(52,71)],fill=skin)
+        d.line([(52,66),(67,72)],fill='#251033',width=2)
+        d.polygon([(76,64),(86,59),(86,76),(75,79)],fill=skin)
+        d.line([(76,73),(85,68)],fill='#251033',width=2)
         return im
     # Authored face landmarks avoid selecting similarly colored body pixels.
     for cx,cy in eyes:
@@ -40,7 +40,7 @@ def pose(base,name,state,i,count,eyes=()):
     elif state=='patrol':
         stride=math.sin(phase)
         # The alien has articulated long legs; robot feet use a shorter rig.
-        hip=88 if name=='etzinho' else 100
+        hip=98 if name=='etzinho' else 100
         leg=smooth((y-hip)/(112-hip))
         side=np.tanh((x-64)/7)
         sx-=side*stride*leg*(6 if name=='etzinho' else 4)

@@ -48,3 +48,7 @@ Etzinho aparece nas patrulhas x916–1000 (início), x5950–6050 (após o Nó) 
 Todos os dez personagens possuem rig contínuo de pixels com respiração/piscada, passos alternados e balanço de corpo/antenas, inclinação de alerta, recuo de dano e contração/desintegração. O mapeamento inverso preserva a superfície e os encaixes dos membros, sem cortes fixos. Etzinho foi ampliado uniformemente de74 para100px de altura (~35%); seu combate usa área60×86 para corresponder à cabeça/corpo. Canvas128×128, pivô64,112 e pés no chão permanecem. Durações e lifecycle não mudaram.
 
 `cosmic_animation` valida poses distintas, ciclos, canvas, dano/atordoamento, retomada, derrota e reset para as dez variantes. Prévia gerada dos SVGs finais: `cosmic_animations.gif`.
+
+## Alinhamento dos Etzinhos
+
+O recorte considera a transparência após a quantização. Os pés das animações idle, patrol e alert ficam no pivô y=112, alinhados à superfície. Verificação: cosmic_animation, 583 checks sem falhas.

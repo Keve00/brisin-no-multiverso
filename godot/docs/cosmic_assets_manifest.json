@@ -6681,7 +6681,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 14
+      "colors": 15
     },
     {
       "path": "godot/assets/enemies/cosmic/etzinho/frames/defeated/03.svg",
@@ -6720,7 +6720,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 15
+      "colors": 14
     },
     {
       "path": "godot/assets/enemies/cosmic/etzinho/frames/defeated/06.svg",
@@ -6746,7 +6746,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 13
+      "colors": 14
     },
     {
       "path": "godot/assets/enemies/cosmic/etzinho/frames/defeated/08.svg",
@@ -6772,7 +6772,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 12
+      "colors": 13
     },
     {
       "path": "godot/assets/enemies/cosmic/etzinho/frames/defeated/10.svg",
@@ -6785,7 +6785,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 8
+      "colors": 4
     },
     {
       "path": "godot/assets/enemies/cosmic/etzinho/frames/defeated/11.svg",
