@@ -319,8 +319,16 @@ func build_title_gems() -> void:
   var glow := Sprite2D.new()
   glow.name="GemHalo"
   glow.texture=load("res://assets/world_01/svg/gem_glow.svg")
-  glow.z_index=-1
+  # Share the gem's depth so the halo is not buried beneath the island.
+  glow.show_behind_parent=true
+  var light := CanvasItemMaterial.new()
+  light.blend_mode=CanvasItemMaterial.BLEND_MODE_ADD
+  glow.material=light
   gem.add_child(glow)
+  var sparkle := Sprite2D.new()
+  sparkle.name="GemSparkle"
+  sparkle.texture=load("res://assets/world_01/svg/gem_sparkle.svg")
+  gem.add_child(sparkle)
   title_screen.add_child(gem)
   title_gems.append(gem)
  update_title_gems(0.0)
@@ -340,7 +348,11 @@ func update_title_gems(dt: float) -> void:
   gem.z_index=3 if sin(phase)>=0.0 else 1
   var pulse := 0.015 if WorldState.reduced_flash else 0.05
   gem.scale=Vector2.ONE*MENU_GEM_SCALES[index]*0.9*(1.0+pulse*sin(title_gem_clock*1.6+index))
-  gem.get_node("GemHalo").modulate.a=0.12 if WorldState.reduced_flash else 0.25+0.05*sin(title_gem_clock*1.6+index)
+  var shine := (1.0+sin(title_gem_clock*1.6+index))*0.5
+  var halo: Sprite2D=gem.get_node("GemHalo")
+  halo.modulate.a=0.6 if WorldState.reduced_flash else 0.65+0.3*shine
+  halo.scale=Vector2.ONE*(1.3 if WorldState.reduced_flash else 1.3+0.1*shine)
+  gem.get_node("GemSparkle").modulate.a=0.4 if WorldState.reduced_flash else 0.45+0.4*shine
 func resume() -> void:
  if starting or important_active: return
  Audio.set_menu_active(false)

@@ -40,7 +40,7 @@ const overlay = document.querySelector('#status');
 const progress = document.querySelector('#progress');
 const notice = document.querySelector('#notice');
 const loadingText = document.querySelector('#loading-text');
-const engine = new Engine({executable:'index',mainPack:'index.pck',canvas,canvasResizePolicy:0,focusCanvas:true,args:['--','--mobile'],fileSizes:{'index.pck':6730284,'index.wasm':38034280},ensureCrossOriginIsolationHeaders:false});
+const engine = new Engine({executable:'index',mainPack:'index.pck',canvas,canvasResizePolicy:0,focusCanvas:true,args:['--','--mobile'],fileSizes:{'index.pck':6725820,'index.wasm':38034280},ensureCrossOriginIsolationHeaders:false});
 function fail(error){
  console.error(error);
  progress.hidden = true;
