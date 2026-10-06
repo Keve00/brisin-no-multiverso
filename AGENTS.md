@@ -218,3 +218,36 @@ Detalhes confirmados nas soluções desta rodada:
 - Ruídozinhos: não dividir silhuetas variadas numa linha fixa para animar pés. Preservar olhos/boca opacos e quantizar a paleta sem o fundo da prancha. Etzinho é a décima variação cosmética aprovada por solicitação do usuário.
 
 - Animações aprovadas: rig contínuo por mapeamento inverso; passos alternados, respiração/piscada e movimentos distintos nos cinco estados. Etzinho tem100px de altura (~35% maior) e combate60×86; não voltar à translação de uma pose única. Validar as dez variantes em cosmic_animation.
+
+## Adaptação mobile — candidata de 05/10/2026
+
+- Manter a candidata em `feat/mobile-adaptation` até avaliação. A implementação web em paisagem não comprova compatibilidade física, ergonomia, áudio audível ou FPS em Android/iPhone; registrar esses itens como pendentes até medir.
+- `GameCommands` combina input físico e donos por dedo sem emitir releases no InputMap. Preservar a intensidade analógica do gamepad. Limpar donos/edges em pausa, interrupção, morte, DISABLED e saída de cena; teclas físicas seguradas ao retomar exigem release antes de voltar a agir.
+- Coordenadas de ScreenTouch/ScreenDrag já pertencem ao viewport. Em testes headless usar `Viewport.push_input(event, true)` para coordenadas lógicas; `Input.parse_input_event` aplica a transformação da janela e pode produzir coordenadas inválidas no display headless.
+- Medir alvos de toque na escala CSS do canvas ajustado, não no backing store de1152px. Direcional admite zona neutra/arraste; cada dedo é independente. Arrastar entre pulo e dash não exige manter três botões simultaneamente.
+- Pulo completo por toque é o padrão provisório; altura variável e repetição de chips são opções. Assistência mobile usa coyote0,16/buffer0,18 no tuning, mantendo os valores desktop. Velocidade, gravidade, recargas, alcance, IDs e mapa são compartilhados.
+- Menu mobile usa duas colunas e escala uniforme1,4 para personagem/ilha, sem alterar SVG, canvas ou pivô; desktop conserva a composição2×. Gems usam órbita e escala uniformemente menores. Conferir poses sobre fundo contrastante em aparelho antes da aprovação visual final.
+- Shell web respeita safe-area-inset, viewport dinâmico e proporção16:9. Retrato, perda de foco e troca de aplicativo congelam gameplay; retomar exige ação explícita. Interromper também congela a animação finita do título. Não tornar fullscreen/orientation lock obrigatórios.
+- Preferências mobile sobrevivem a nova aventura e saves legados recebem defaults. Salvar também coleta e interrupções; falha de FileAccess informa sem encerrar a partida. Não assumir que cache ou virtual FS garante persistência após limpeza de dados do navegador.
+- Qualidade leve reduz frequência/ripples do fundo e densidade de ecos, preservando física e corpos dos ataques. Headless não mede ganho de FPS.
+- Repetir `mobile_input`, `mobile_ui`, `mobile_route`, tutorial e regressões afetadas com saves isolados e `-- --test`. Examinar logs por ERROR além do exit code. Retomadas de testes após física devem entrar pela fase idle para evitar a regressão nativa já registrada.
+
+## Menu e controles mobile aprovados — 05/10/2026
+
+- Referências canônicas: `tools/reference_art/approved-mobile-menu.png` e `approved-mobile-controls.png`. Menu tem duas ações largas à esquerda (a principal laranja), Configurações/Controles na mesma linha abaixo e personagem/ilha à direita. Não voltar ao grid de quatro ações espalhado sobre a ilustração.
+- Controles têm contornos octogonais escalonados, sombra curta, ícones grandes e letras creme com peso maior. Pulo é maior e laranja; Dash fica à esquerda, Chip acima de Dash e Pulso acima de Pulo. Direções separadas no canto inferior esquerdo; pausa isolada no topo direito. Manter margem lógica32px e ampliar alvos pela escala CSS quando necessário.
+- SVGs de UI mobile são geometria vetorial real; `tools/build_mobile_ui.py` gera molduras e ícones. A fonte mobile é um peso maior dos glifos originais, com as mesmas métricas relativas, sem substituir a fonte desktop.
+- Esta revisão substitui a antiga escala mobile1,4: avatar2,6 e ilha2,4, ambos uniformes, pés em(902,456), ilha com pivô(100,64) em(662,302,4). Aceno/preparação/corrida preservam canvas e offset originais. Menu mobile reduz somente sua névoa decorativa; atmosfera do gameplay e menu desktop conservam os valores anteriores.
+- Conferir texto nos estados sem progresso/com progresso e alvos48px CSS, espaçamento e bounds com escalas0,42/0,48/0,67/1,0, preferências100/112,5/125%, espelhamento e posição alta/baixa. A revisão usa capturas reais do Godot; não apresentar conceito gerado como screenshot do jogo.
+- Capturas visuais desligam e liberam também Audio.menu_music antes de sair; senão o renderer com áudio Dummy reporta recurso Ogg pendente, mesmo quando as suites headless passam.
+
+## Leitura do HUD mobile — 05/10/2026
+
+- Dimensionar a tinta visível da fonte, não só o tamanho nominal: a fonte original ocupa15/24 da linha. O HUD usa ao menos14px CSS de tinta para objetivos/avisos e16px para contador; texto secundário12px.
+- Reservar largura para COSTA • CONECTANDO e contador completo00 /49; configurar fonte/tamanho antes do retângulo para evitar que mínimo da label antiga alargue o novo contador e invada Pausa após resize.
+- Avisos usam fonte pesada, quebra de linha por palavras e moldura modular que acompanha o texto real (incluindo mensagens longas de erro). Não esticar a arte inteira de uma placa como imagem; o frame é nine-slice.
+- Posicionar dicas sem encobrir o personagem, cabeçalho ou botões de toque. Na leitura pausada, manter Entendi legível e esconder rodapé redundante sobre o cenário. Confirmar continua sendo a única ação que retoma tutorial.
+- Contador mobile usa zero sem barra diagonal. Checar Offline/Conectando/Online e textos de conexão, vento, rail e erro de save nas escalas0,42/0,48/0,67/1,0. Usar `mobile_hud.tscn`, save isolado e captura real484×272; nominal14px não prova tinta14px.
+
+## Conexão de Outro Mundo mobile
+- Preservar mapa, portal e dez personagens do planeta. Branch feat/planeta-extraterrestre-mobile.

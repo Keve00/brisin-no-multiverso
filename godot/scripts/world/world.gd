@@ -145,6 +145,10 @@ func _ready() -> void:
  hud.set_script(HUD)
  hud.world = self
  add_child(hud)
+ var touch = preload("res://scenes/ui/mobile_controls.tscn").instantiate()
+ touch.hud = hud
+ touch.world = self
+ add_child(touch)
  set_art(not WorldState.blockout)
  apply_connection()
  online_blend = 1 if WorldState.connection == WorldState.Connection.ONLINE else 0
@@ -201,6 +205,7 @@ func on_marker(kind: String, id: String) -> void:
   "fragment":
    if id in WorldState.fragments: return
    WorldState.fragments.append(id)
+   WorldState.save_progress()
    WorldState.fragment_collected.emit(1)
    Audio.play("pickup")
    for marker in markers:

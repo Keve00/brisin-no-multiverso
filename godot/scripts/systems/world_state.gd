@@ -1,4 +1,5 @@
 extends Node
+signal save_failed
 signal sector_connected(sector_id: String)
 signal checkpoint_reached(checkpoint_id: String)
 signal fragment_collected(amount: int)
@@ -16,6 +17,21 @@ var sfx_volume := 0.55
 var seen_important_notices: Array = []
 # Player-level preference survives new adventures. Pausing belongs only to the
 # first opted-in play session, never restored automatically on later visits.
+var mobile_enabled := false
+var mobile_portrait := false
+var interrupted := false
+var interruption_reason := ""
+var control_scale := 1.0
+var control_lift := 0.0
+var controls_mirrored := false
+var variable_jump := false
+var chip_repeat := false
+var mobile_assist := true
+var low_quality := false
+var save_error := false
+var host_state: Dictionary = {}
+var host_sequence := 0
+var host_clock := 0.0
 var has_played := false
 var tutorial_choice_made := false
 var tutorial_opted_in := false
@@ -34,9 +50,12 @@ func tutorial_pauses_enabled() -> bool:
 var skip_intro_once := false
 const SAVE_PATH = "user://brisin_cosmic_v01.json"
 func _ready() -> void:
+ process_mode = Node.PROCESS_MODE_ALWAYS
  setup_inputs()
  blockout = "--blockout" in OS.get_cmdline_user_args()
  load_progress()
+ mobile_enabled = "--mobile" in OS.get_cmdline_user_args() or (not OS.has_feature("web") and DisplayServer.is_touchscreen_available())
+ refresh_host()
 func setup_inputs() -> void:
  # Explicit controller confirmation also works without an OS-reported device.
  # Install before the gameplay guard so restored InputMaps keep menu support.
@@ -81,7 +100,12 @@ func save_progress() -> void:
  data["has_played"]=has_played
  data["tutorial_opted_in"]=tutorial_opted_in
  data["tutorial_choice_made"]=tutorial_choice_made
- if f: f.store_string(JSON.stringify(data))
+ data["mobile_preferences"]={"scale":control_scale,"lift":control_lift,"mirrored":controls_mirrored,"variable_jump":variable_jump,"repeat":chip_repeat,"assist":mobile_assist,"low_quality":low_quality}
+ if f:
+  f.store_string(JSON.stringify(data))
+  save_error = f.get_error()!=OK
+ else: save_error = true
+ if save_error: save_failed.emit()
 func load_progress() -> void:
  if "--test" in OS.get_cmdline_user_args() or "--fresh" in OS.get_cmdline_user_args(): return
  if not FileAccess.file_exists(SAVE_PATH): return
@@ -89,6 +113,15 @@ func load_progress() -> void:
  if not data is Dictionary: return
  restore_progress(data)
 func restore_progress(data: Dictionary) -> void:
+ var mobile = data.get("mobile_preferences",{})
+ if mobile is Dictionary:
+  control_scale=clampf(float(mobile.get("scale",1.0)),1.0,1.25)
+  control_lift=clampf(float(mobile.get("lift",0.0)),0,1)
+  controls_mirrored=bool(mobile.get("mirrored",false))
+  variable_jump=bool(mobile.get("variable_jump",false))
+  chip_repeat=bool(mobile.get("repeat",false))
+  mobile_assist=bool(mobile.get("assist",true))
+  low_quality=bool(mobile.get("low_quality",false))
  # Playing a previous version does not prove the player chose a tutorial.
  has_played=bool(data.get("has_played",true))
  tutorial_choice_made=bool(data.get("tutorial_choice_made",false))
@@ -113,3 +146,51 @@ func reset_progress() -> void:
  seen_important_notices.clear()
  completed = false
  save_progress()
+
+
+func mobile_css_scale() -> float:
+ if OS.has_feature("web"):
+  return maxf(0.25,float(host_state.get("scale",1.0)))
+ var screen: Vector2 = Vector2(DisplayServer.window_get_size())
+ if screen.x<=0 or screen.y<=0: return 1.0
+ return maxf(0.25,minf(screen.x/1152.0,screen.y/648.0))
+
+func refresh_host() -> void:
+ if OS.has_feature("web"):
+  var raw = JavaScriptBridge.eval("JSON.stringify(window.brisinHost || {})")
+  var parsed = JSON.parse_string(str(raw))
+  if parsed is Dictionary:
+   host_state=parsed
+   mobile_enabled=mobile_enabled or bool(parsed.get("touch",false))
+   mobile_portrait=mobile_enabled and bool(parsed.get("portrait",false))
+   var sequence := int(parsed.get("interrupt",0))
+   if sequence != host_sequence:
+    host_sequence=sequence
+    request_interruption("PARTIDA INTERROMPIDA")
+ elif mobile_enabled:
+  var size := DisplayServer.window_get_size()
+  if size.x>0 and size.y>0: mobile_portrait=size.y>size.x
+ if mobile_portrait: request_interruption("GIRE PARA JOGAR EM PAISAGEM")
+
+func request_interruption(reason: String) -> void:
+ if not interrupted: save_progress()
+ interrupted=true
+ interruption_reason=reason
+ GameCommands.clear()
+
+func resume_mobile() -> bool:
+ refresh_host()
+ if mobile_portrait or bool(host_state.get("hidden",false)): return false
+ interrupted=false
+ GameCommands.clear()
+ return true
+
+func _process(dt: float) -> void:
+ host_clock += dt
+ if host_clock >= 0.15:
+  host_clock=0
+  refresh_host()
+
+func _notification(what: int) -> void:
+ if what == NOTIFICATION_APPLICATION_FOCUS_OUT or what == NOTIFICATION_APPLICATION_PAUSED:
+  request_interruption("PARTIDA INTERROMPIDA")

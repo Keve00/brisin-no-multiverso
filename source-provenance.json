@@ -1,0 +1,11 @@
+{
+  "source_project_id": "appgprj_6abd3d6754bc8191816f41876ad6c460",
+  "source_branch": "feat/planeta-extraterrestre-mobile",
+  "cosmic_base_commit": "b894461ee9e3f0cc97e9db2e93b96c6514817ce9",
+  "mobile_controls_base_commit": "87741e613fcff06fa21d21756c2dd9d60144589f",
+  "theme": "Conex\u00e3o de Outro Mundo",
+  "entry_arguments": [
+    "--",
+    "--mobile"
+  ]
+}

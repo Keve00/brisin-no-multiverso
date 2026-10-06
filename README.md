@@ -216,3 +216,7 @@ Branch `feat/planeta-extraterrestre`. Título aprovado: **Conexão de Outro Mund
 Cristal, Esporo, Magnético, Escavador, Plasma, Satélite, Corrompido, Sentinela e Orbital têm cinco estados animados e preservam o combate atual. As variações são visuais, sem novos poderes. O percurso continua com 15.235 pixels; movimento, chips, pulso, checkpoint e entrada de portal de 1,8 s foram preservados.
 
 A fonte dos conceitos fica em `tools/reference_art/cosmic/`. Execute `python tools/build_cosmic_assets.py` para regenerar a arte. O processo produz SVGs com paths reais, canvases/pivôs documentados e SpriteFrames; não utiliza bitmaps embutidos ou SMIL. Consulte `godot/docs/cosmic_integration.md`. O ZIP editável inclui os conceitos novos, projeto, scripts e documentação; omite referências costeiras antigas e PNGs de fundo que não são mais usados.
+
+## Versão mobile extraterrestre
+
+Branch `feat/planeta-extraterrestre-mobile`: controles por toque, HUD aprovado, safe area, orientação e pausas da edição mobile anterior com os assets e a fase de Conexão de Outro Mundo.

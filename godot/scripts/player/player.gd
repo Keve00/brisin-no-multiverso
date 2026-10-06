@@ -88,6 +88,7 @@ func set_art(enabled: bool) -> void:
  visual.visible = enabled
 func change_state(next: String) -> void:
  if state != next:
+  if next == "DISABLED": GameCommands.clear()
   state = next
   state_changed.emit(next)
 func begin_rail(start: Vector2, finish: Vector2) -> void:
@@ -107,6 +108,7 @@ func jump() -> void:
  Audio.play("jump")
 func die() -> void:
  if state in ["RESPAWN","DISABLED"]: return
+ GameCommands.clear()
  change_state("RESPAWN")
  respawn_time = 0.28
  velocity = Vector2.ZERO
@@ -155,17 +157,17 @@ func _physics_process(dt: float) -> void:
    respawned.emit()
   animate(dt)
   return
- var attack_axis := Input.get_axis("move_left","move_right")
+ var attack_axis := GameCommands.axis()
  if attack_axis != 0: facing = signf(attack_axis)
- if Input.is_action_just_pressed("chip"):
+ if GameCommands.just_pressed("chip"):
   launch_chip()
- if Input.is_action_just_pressed("pulse") and pulse_time <= 0:
+ if GameCommands.just_pressed("pulse") and pulse_time <= 0:
   pulse_time = 0.55
   action_effects.start_pulse(global_position+Vector2(0,-35))
   pulsed.emit(global_position+Vector2(0,-35))
   Audio.play("pulse")
  if state == "RAIL":
-  if Input.is_action_just_pressed("jump"):
+  if GameCommands.just_pressed("jump"):
    rail_lock = 0.4
    velocity.x = tuning.speed
    jump()
@@ -179,15 +181,15 @@ func _physics_process(dt: float) -> void:
     change_state("FALL")
    animate(dt)
    return
- var axis := Input.get_axis("move_left","move_right")
+ var axis := GameCommands.axis()
  if axis != 0: facing = signf(axis)
- if Input.is_action_just_pressed("jump"): buffer = tuning.jump_buffer
+ if GameCommands.just_pressed("jump"): buffer = (tuning.mobile_jump_buffer if WorldState.mobile_enabled and WorldState.mobile_assist else tuning.jump_buffer)
  else: buffer = maxf(0,buffer-dt)
  if is_on_floor():
-  coyote = tuning.coyote_time
+  coyote = (tuning.mobile_coyote_time if WorldState.mobile_enabled and WorldState.mobile_assist else tuning.coyote_time)
   dash_available = true
  else: coyote = maxf(0,coyote-dt)
- if Input.is_action_just_pressed("dash") and dash_available and cooldown <= 0:
+ if GameCommands.just_pressed("dash") and dash_available and cooldown <= 0:
   dash_available = false
   dash_time = tuning.dash_duration
   cooldown = tuning.dash_cooldown
@@ -205,7 +207,7 @@ func _physics_process(dt: float) -> void:
   velocity += wind*dt
   velocity.y = maxf(velocity.y,-560)
   if buffer > 0 and coyote > 0: jump()
-  if Input.is_action_just_released("jump") and velocity.y < -170: velocity.y *= 0.48
+  if GameCommands.just_released("jump") and velocity.y < -170 and not (GameCommands.last_touch_jump and WorldState.mobile_enabled and not WorldState.variable_jump): velocity.y *= 0.48
  move_and_slide()
  if not was_floor and is_on_floor():
   land_time = 0.10

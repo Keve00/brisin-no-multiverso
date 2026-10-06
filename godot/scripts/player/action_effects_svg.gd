@@ -61,14 +61,14 @@ func _process(dt: float) -> void:
    echo_clock -= dt
    if echo_clock <= 0:
     echoes.append({"position":dash_origin,"age":0.0,"direction":dash_direction})
-    echo_clock = 0.070 if WorldState.reduced_flash else 0.035
+    echo_clock = 0.070 if (WorldState.reduced_flash or WorldState.low_quality) else 0.035
  for echo in echoes: echo.age += dt
  echoes = echoes.filter(func(echo: Dictionary) -> bool: return echo.age < ECHO_DURATION)
  queue_redraw()
 
 func _draw() -> void:
  if ring_texture == null: return
- var spark_count := 4 if WorldState.reduced_flash else 8
+ var spark_count := 4 if (WorldState.reduced_flash or WorldState.low_quality) else 8
  for echo in echoes:
   # Solid sparks shrink and despawn; accessibility changes density, not color.
   var size: float = lerpf(0.7,0.25,float(echo.age)/ECHO_DURATION)

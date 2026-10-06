@@ -1,0 +1,38 @@
+{
+  "engine": "4.5.1",
+  "theme": "Conex\u00e3o de Outro Mundo",
+  "tests": [
+    {
+      "scene": "mobile_input",
+      "passed_checks": 120,
+      "failures": 0
+    },
+    {
+      "scene": "mobile_ui",
+      "passed_checks": 58,
+      "failures": 0
+    },
+    {
+      "scene": "mobile_hud",
+      "passed_checks": 73,
+      "failures": 0
+    },
+    {
+      "scene": "mobile_route",
+      "passed_checks": 26,
+      "failures": 0
+    },
+    {
+      "scene": "cosmic_assets",
+      "passed_checks": 1219,
+      "failures": 0
+    },
+    {
+      "scene": "cosmic_animation",
+      "passed_checks": 583,
+      "failures": 0
+    }
+  ],
+  "portal_entry_failures": 0,
+  "ok": true
+}

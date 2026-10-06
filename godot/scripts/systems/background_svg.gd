@@ -8,6 +8,7 @@ const RELAYS = [Vector2(203,110),Vector2(384,216),Vector2(697,191),Vector2(974,2
 const ATMOSPHERE = preload("res://assets/background_svg/atmosphere.svg")
 var world: Node2D
 var clock := 0.0
+var redraw_budget := 0.0
 var artwork_enabled := true
 var atmosphere_strength := 1.0
 func _ready() -> void:
