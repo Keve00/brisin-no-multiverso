@@ -17,6 +17,12 @@ var bridge_packets: Array[Sprite2D] = []
 var node_core: Sprite2D
 var node_halo: Sprite2D
 var node_frame: Sprite2D
+var node_signal: Sprite2D
+var node_particles: Array[Sprite2D] = []
+var node_panels: Array[Sprite2D] = []
+const NODE_SCALE := 0.7
+const NODE_PIVOT := Vector2(80,212)
+const NODE_CORE := Vector2(80,117)
 var portal_frame: Sprite2D
 var portal_rotor: Node2D
 var portal_core: Sprite2D
@@ -67,25 +73,36 @@ func _ready() -> void:
   packet.z_index=2
   bridge_packets.append(packet)
  var node_pos: Vector2= world.point(world.level.node)
- node_frame=at_pivot(self,"node_frame_off",node_pos,Vector2(63,127),1.0)
- node_core=piece(self,"node_core_off",node_pos+Vector2(0,-50))
- node_halo=piece(self,"node_halo",node_core.position)
+ node_frame=at_pivot(self,"node_frame_off",node_pos,NODE_PIVOT,NODE_SCALE)
+ node_core=piece(self,"node_core_off",node_pos+(NODE_CORE-NODE_PIVOT)*NODE_SCALE,NODE_SCALE)
+ node_halo=piece(self,"node_halo",node_core.position,NODE_SCALE)
+ node_signal=at_pivot(self,"node_signal",node_pos,NODE_PIVOT,NODE_SCALE)
+ node_signal.z_index=2
+ for i in 6:
+  var spark := piece(self,"node_spark",node_core.position,0.28)
+  spark.z_index=3
+  node_particles.append(spark)
+ for x in [-26.0,26.0]:
+  var panel := piece(self,"node_panel_fill",node_pos+Vector2(x,-36)*NODE_SCALE,NODE_SCALE)
+  panel.z_index=2
+  node_panels.append(panel)
  node_frame.z_index=1;node_core.z_index=1;node_halo.z_index=2
  var portal := Node2D.new();portal.position=world.point(world.level.portal);add_child(portal)
  portal.z_index=1
- portal_frame=at_pivot(portal,"portal_frame_off",Vector2.ZERO,Vector2(62,136),1.5)
- portal_rotor=Node2D.new();portal_rotor.position=Vector2(0,-81.0);portal.add_child(portal_rotor)
+ portal_frame=at_pivot(portal,"portal_frame_off",Vector2.ZERO,Vector2(80,152),1.5)
+ portal_frame.z_index=2
+ portal_rotor=Node2D.new();portal_rotor.position=Vector2(0,-73.5);portal.add_child(portal_rotor)
  portal_tunnel=Sprite2D.new()
  portal_tunnel.texture=load("res://assets/world_01/portal_transition/tunnel.svg")
  portal_tunnel.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
- portal_tunnel.scale=Vector2.ONE*.94
+ portal_tunnel.scale=Vector2.ONE*.67
  portal_tunnel.z_index=-2
  portal_rotor.add_child(portal_tunnel)
  portal_core=piece(portal_rotor,"portal_core_off",Vector2.ZERO,1.5)
  portal_lanes=Sprite2D.new()
  portal_lanes.texture=load("res://assets/world_01/portal_transition/arcs.svg")
  portal_lanes.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
- portal_lanes.scale=Vector2.ONE*.72
+ portal_lanes.scale=Vector2.ONE*.55
  portal_rotor.add_child(portal_lanes)
  for i in 8:
   var packet := Sprite2D.new()
@@ -136,7 +153,7 @@ func _process(dt: float) -> void:
   if marker.kind=="checkpoint" and marker.id=="brisa_01" and marker.active!=checkpoint_active:
    set_checkpoint(marker.active)
  var mix_value: float=world.online_blend
- lamp.modulate=Color(.28,.3,.38).lerp(Color.WHITE,mix_value)
+ lamp.modulate=Color(.38,.28,.24).lerp(Color.WHITE,mix_value)
  if online: rotation_clock+=dt
  var tick := floorf(clock*12)/12
  rotor.rotation=snappedf(rotation_clock*1.5,TAU/48)
@@ -155,11 +172,30 @@ func _process(dt: float) -> void:
   bridge_packets[i].position=Vector2(world.level.bridge[0]+phase*world.level.bridge[2],world.level.bridge[1]+3).round()
   bridge_packets[i].modulate.a=mix_value*.75
  var node_animated := online or connecting
- node_core.rotation=snappedf(tick*(1.1 if connecting else .5),TAU/48) if node_animated else 0.0
- var amplitude := .015 if WorldState.reduced_flash else .04
- node_core.scale=Vector2.ONE*(1.0+sin(tick*2.4)*amplitude if node_animated else 1.0)
- node_halo.rotation=snappedf(tick*.45,TAU/48) if node_animated else 0.0
- node_halo.modulate.a=(.2 if connecting else mix_value*.4)
+ # Charging runs a faster traveling sequence; Online settles into a soft pulse.
+ # Only light intensity/phase changes: the existing rotation/scale envelopes stay.
+ var energy_phase := tick*(3.6 if connecting else 2.4)
+ # Stone, cradle and ground pivot never move. Only the contained energy layers
+ # animate, sharing one authored core center and uniform scale.
+ var amplitude := .012 if WorldState.reduced_flash else .025
+ node_core.rotation=0.0
+ node_core.scale=Vector2.ONE*NODE_SCALE*(1.0+sin(energy_phase)*amplitude if node_animated else 1.0)
+ node_halo.visible=node_animated
+ node_halo.rotation=snappedf(tick*(.25 if WorldState.reduced_flash else .65),TAU/72) if node_animated else 0.0
+ node_halo.modulate=Color.WHITE
+ node_signal.visible=node_animated
+ node_signal.modulate.a=.65 if WorldState.reduced_flash else (.65+.25*sin(energy_phase))
+ for i in node_panels.size():
+  node_panels[i].visible=node_animated
+  var light := .85 if WorldState.reduced_flash else .72+.28*sin(energy_phase-i*1.4)
+  node_panels[i].modulate=Color(light,light,light,1)
+ for i in node_particles.size():
+  var spark := node_particles[i]
+  var phase := tick*(.35 if WorldState.reduced_flash else .8)+TAU*float(i)/node_particles.size()
+  var radius := 27.0+sin(phase*2.0)*2.0
+  spark.position=node_core.position+Vector2(cos(phase),sin(phase))*radius
+  spark.modulate.a=.72 if WorldState.reduced_flash else .65+.25*sin(energy_phase+i*1.1)
+  spark.visible=node_animated and (not WorldState.reduced_flash or i%3==0)
  if online: portal_motion+=dt*(.5 if WorldState.reduced_flash else 1.0)
  # The rigid frame and center stay fixed. Depth terraces, contra-rotating
  # lanes and inward packets animate only inside the existing portal opening.
@@ -174,7 +210,9 @@ func _process(dt: float) -> void:
  for i in portal_packets.size():
   var packet := portal_packets[i]
   var progress := fposmod(portal_motion*.24+float(i)/portal_packets.size(),1.0)
-  var radius := lerpf(53.0,15.0,progress)
+  var radius := lerpf(38.0,10.0,progress)
   var angle := float(i)*TAU/portal_packets.size()-portal_motion*.55-progress*1.25
   packet.position=(Vector2(cos(angle),sin(angle))*radius).round()
+  # Packets brighten toward the opening center without growing beyond its mask.
+  packet.modulate.a=.7 if WorldState.reduced_flash else lerpf(.4,1.0,sin(progress*PI))
   packet.visible=online and (not WorldState.reduced_flash or i%2==0)

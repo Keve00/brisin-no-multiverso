@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Vector-only mobile UI, matched to the approved 05/10 mockups."""
 from pathlib import Path
+import json
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'godot/assets/ui/mobile';OUT.mkdir(exist_ok=True)
 def step(x,y,w,h,c=24,s=4):
@@ -71,3 +72,17 @@ for line in (source/'brisin_pixel.fnt').read_text().splitlines():
  records.append(f"char id={g['id']} x={x} y={y} width=11 height=24 xoffset=0 yoffset=0 xadvance=12 page=0 chnl=15")
 atlas.save(OUT/'brisin_mobile_bold.png')
 (OUT/'brisin_mobile_bold.fnt').write_text('\n'.join(['info face="Brisin Mobile Bold" size=24 bold=1 italic=0 unicode=1 smooth=0 aa=0',f'common lineHeight=24 base=20 scaleW=256 scaleH={atlas.height} pages=1 packed=0','page id=0 file="brisin_mobile_bold.png"',f'chars count={len(records)}']+records)+'\n')
+# Actual alpha bounds, rather than line-height padding, center menu captions.
+ink={}
+for line in records:
+ g={k:int(v) for k,v in re.findall(r'(\w+)=(-?\d+)',line)}
+ box=atlas.crop((g['x'],g['y'],g['x']+g['width'],g['y']+g['height'])).getbbox()
+ ink[str(g['id'])]=[box[0],box[1],box[2]-box[0],box[3]-box[1]] if box else []
+regular={}
+for line in (source/'brisin_pixel.fnt').read_text().splitlines():
+ if not line.startswith('char id='):continue
+ g={k:int(v) for k,v in re.findall(r'(\w+)=(-?\d+)',line)}
+ box=original.crop((g['x'],g['y'],g['x']+g['width'],g['y']+g['height'])).getbbox()
+ regular[str(g['id'])]=[box[0],box[1],box[2]-box[0],box[3]-box[1]] if box else []
+ink['regular']=regular
+(OUT/'font_ink.json').write_text(json.dumps(ink,separators=(',',':'))+'\n')

@@ -34,6 +34,40 @@ func _ready() -> void:
  for placement in world.level.get("environment", []):
   add_decoration(placement)
 
+func supporting_surface(origin: Vector2) -> Dictionary:
+ var best:Dictionary={}
+ var score:=INF
+ for body in world.platforms:
+  if body.moving:continue
+  for collider in body._shapes:
+   var size:Vector2=collider.shape.size
+   var left:float=body.position.x+collider.position.x-size.x/2
+   var right:float=left+size.x
+   var top:float=body.position.y+collider.position.y-size.y/2
+   var outside:=maxf(left-origin.x,maxf(origin.x-right,0.0))
+   var dy:=absf(top-origin.y)
+   var candidate:=dy+outside*2
+   if dy<=64 and outside<=100 and candidate<score:
+    score=candidate
+    best={"left":left,"right":right,"top":top}
+ return best
+
+func fit_to_surface(sprite:Sprite2D, origin:Vector2, factor:float, kind:String) -> Dictionary:
+ var support:=supporting_surface(origin)
+ if support.is_empty():return {"origin":origin,"factor":factor,"support":support}
+ var ink:Rect2=Rect2(sprite.texture.get_image().get_used_rect())
+ ink.position+=sprite.offset
+ # Reserve the whole sway/reaction envelope, rather than just the roots.
+ var swing:=.13 if kind in ["palms","vegetation"] else 0.0
+ var reach:=maxf(absf(ink.position.y),absf(ink.end.y))*swing+2.0
+ var left:=ink.position.x-reach
+ var right:=ink.end.x+reach
+ var available:float=maxf(1.0,support.right-support.left-12.0)
+ factor=minf(factor,available/maxf(1.0,right-left))
+ origin.x=clampf(origin.x,support.left+6-left*factor,support.right-6-right*factor)
+ origin.y=support.top
+ return {"origin":origin,"factor":factor,"support":support}
+
 func add_decoration(placement: Array) -> void:
  if placement.size() < 5:
   push_warning("Environment placement requires kind, variant, x, y, scale")
@@ -55,14 +89,19 @@ func add_decoration(placement: Array) -> void:
  anchor.scale = Vector2.ONE * factor
  add_child(anchor)
  var sprite := layer(anchor, id, pivot)
+ var support:Dictionary={}
+ if kind in ["palms","vegetation","rocks_sand","ruins","posts"]:
+  var fitted:=fit_to_surface(sprite,origin,factor,kind)
+  origin=fitted.origin;factor=fitted.factor;support=fitted.support
+  anchor.position=origin;anchor.scale=Vector2.ONE*factor
  var lamp: Sprite2D = null
  if kind == "posts":
   lamp = layer(anchor, id + "_lamp", pivot)
-  # The cyan layer is dimmed in Offline and lit in Online; its canvas and
+  # The amber layer is dimmed in Offline and lit in Online; its canvas and
   # pivot are exactly the same as the source post, so states never jump.
-  sprite.modulate = Color(0.82, 0.84, 0.9)
+  sprite.modulate = Color(0.9, 0.82, 0.76)
  items.append({"kind":kind, "variant":variant, "origin":origin,
-  "factor":factor, "anchor":anchor, "sprite":sprite, "lamp":lamp,
+  "factor":factor, "support":support, "anchor":anchor, "sprite":sprite, "lamp":lamp,
   "phase":float(items.size()) * 1.618, "reaction":0.0,
   "height":float(entry.canvas[1]) * factor})
 
@@ -101,7 +140,7 @@ func _process(dt: float) -> void:
     var lamp: Sprite2D = item.lamp
     var amplitude := 0.035 if reduced else 0.1
     lamp.modulate.a = lerpf(0.14, 0.85 + amplitude * sin(tick * 2.1 + phase), blend)
-    sprite.modulate = Color(0.76, 0.79, 0.87).lerp(Color.WHITE, blend)
+    sprite.modulate = Color(0.87, 0.77, 0.73).lerp(Color.WHITE, blend)
    "water_props":
     if int(item.variant) == 2:
      # Continuous foam loop uses a slow opacity cycle and 1px translation.

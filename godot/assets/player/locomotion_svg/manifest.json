@@ -1,0 +1,14 @@
+{
+  "canvas": [
+    144,
+    128
+  ],
+  "pivot": [
+    72,
+    120
+  ],
+  "fps": 12,
+  "frames": 64,
+  "alpha": "original atlas, unchanged",
+  "backend": "native SVG paths / Godot SpriteFrames"
+}

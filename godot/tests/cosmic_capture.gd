@@ -10,8 +10,8 @@ func run() -> void:
  add_child(world)
  world.player.change_state("DISABLED")
  world.player.set_physics_process(false)
- for shot in [["spawn",world.point(world.level.spawn)],["wind",Vector2(1780,320)],["node_off",world.point(world.level.node)],["node_on",world.point(world.level.node)],["portal",world.point(world.level.portal)]]:
-  world.player.position=shot[1]+Vector2(-100,-3)
+ for shot in [["spawn",world.point(world.level.spawn)],["wind",Vector2(1780,320)],["node_off",world.point(world.level.node)],["node_on",world.point(world.level.node)],["signal",Vector2(6710,210)],["portal",world.point(world.level.portal)]]:
+  world.player.position=shot[1]+Vector2(0 if shot[0]=="spawn" else -100,-3)
   world.player.camera.reset_smoothing()
   if shot[0]=="node_on":
    WorldState.connection=WorldState.Connection.ONLINE

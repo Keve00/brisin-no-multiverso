@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" shape-rendering="crispEdges">
 <!-- Nano-SIM with cut top-right corner; white body stays fully opaque. -->
 <path fill="#241508" d="M2 0h14l8 8v18h-2v2H2v-2H0V2h2z"/>
-<path fill="#FFFFFF" d="M2 2h12l8 8v14h-2v2H4v-2H2z"/>
-<path fill="#FFB000" d="M6 8h10v2h2v10h-2v2H6v-2H4V10h2z"/>
-<path fill="#FFE55B" d="M6 10h10v10H6z"/>
-<path fill="#A86113" d="M10 10h2v10h-2zM6 14h10v2H6z"/>
-<path fill="#FFF6AB" d="M6 10h4v2H6zM12 16h4v2h-4z"/>
+<path fill="#fdfbe0" d="M2 2h12l8 8v14h-2v2H4v-2H2z"/>
+<path fill="#ffb000" d="M6 8h10v2h2v10h-2v2H6v-2H4V10h2z"/>
+<path fill="#ffe55b" d="M6 10h10v10H6z"/>
+<path fill="#a86113" d="M10 10h2v10h-2zM6 14h10v2H6z"/>
+<path fill="#fff6ab" d="M6 10h4v2H6zM12 16h4v2h-4z"/>
 </svg>

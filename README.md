@@ -83,7 +83,7 @@ clonar e atualizar o deploy. Chaves privadas nunca fazem parte do projeto.
 | Pausar | Esc | Start |
 
 Soltar o botão de pulo cedo reduz a altura. O dash pode ser usado uma vez no ar,
-com recarga ao aterrissar. O pulso atordoa inimigos e reconecta o Nó; chips,
+com recarga ao aterrissar. O pulso neutraliza tiros do Etzinho, atordoa inimigos e reconecta o Nó; chips,
 dash e stomp podem derrotar Ruídozinhos. As dicas aparecem abaixo do HUD quando
 uma mecânica está relevante.
 
@@ -216,3 +216,13 @@ Branch `feat/planeta-extraterrestre`. Título aprovado: **Conexão de Outro Mund
 Cristal, Esporo, Magnético, Escavador, Plasma, Satélite, Corrompido, Sentinela e Orbital têm cinco estados animados e preservam o combate atual. As variações são visuais, sem novos poderes. O percurso continua com 15.235 pixels; movimento, chips, pulso, checkpoint e entrada de portal de 1,8 s foram preservados.
 
 A fonte dos conceitos fica em `tools/reference_art/cosmic/`. Execute `python tools/build_cosmic_assets.py` para regenerar a arte. O processo produz SVGs com paths reais, canvases/pivôs documentados e SpriteFrames; não utiliza bitmaps embutidos ou SMIL. Consulte `godot/docs/cosmic_integration.md`. O ZIP editável inclui os conceitos novos, projeto, scripts e documentação; omite referências costeiras antigas e PNGs de fundo que não são mais usados.
+
+## Ataque do Etzinho — 06/10/2026
+
+Etzinho detecta Brisin a até 360 pixels quando há visão livre, para e sinaliza a mira por 0,65 s. Sua pequena arma dispara energia em direção fixa a 270 px/s, com pausa de 1,6 s entre ataques. Paredes bloqueiam visão e disparos. O pulso (E/B na web, botão PULSO no mobile) destrói projéteis ao cruzar seu anel e interrompe a mira quando alcança o inimigo. Tiros duram no máximo 480 pixels; respawn e entrada no portal limpam o combate.
+
+Testado em ambas as versões: ataque/defesa (16), combate SVG (36), animações (583), apoio dos inimigos (1811) e transição do portal (23). Mobile: controles por toque (120), informações em quatro tamanhos (90), percurso completo com defesa por toque (26). A arma e os avisos foram conferidos em capturas do renderizador Godot.
+
+## Paleta quente de todos os assets
+
+Plataformas, personagens, objetos e efeitos usam amostras da seleção de contraste aprovada. `python tools/build_warm_assets.py` transfere cores preservando geometria e transparência. Corrida, caminhada e salto também usam 64 SVGs nativos; os atlas originais ficam como fonte. O export aplica a paleta automaticamente, junto da auditoria de bordas das luzes. Consulte `godot/docs/warm_assets.md`.

@@ -45,14 +45,14 @@ func _ready() -> void:
  z_index = 7
  start_foot = player.global_position
  prepared = true
- tunnel = piece(TUNNEL, 0.94)
+ tunnel = piece(TUNNEL, 0.67)
  tunnel.z_index = -2
- for factor in [0.8, 0.52]:
+ for factor in [0.55, 0.35]:
   var arc := piece(ARCS, factor)
   arc.z_index = -1
   depth_arcs.append(arc)
- root_ring = piece(ARCS, 0.72)
- inner_ring = piece(ARCS, 0.54)
+ root_ring = piece(ARCS, 0.55)
+ inner_ring = piece(ARCS, 0.40)
  vortex = piece(SPIRAL, 1.5)
  for i in (8 if WorldState.reduced_flash else 18):
   particles.append(piece(AMBER_SPARK if i % 4 == 0 else SPARK, 0.32 if i % 3 else 0.5))
@@ -103,10 +103,10 @@ func _animate() -> void:
  var tick := age
  var charge := smoothstep(0.0, 0.35, age)
  var drift := 0.65 if WorldState.reduced_flash else 1.0
- root_ring.scale = Vector2.ONE * (0.72 * opening)
- inner_ring.scale = Vector2.ONE * (lerpf(0.45, 0.54, charge) * opening)
- vortex.scale = Vector2.ONE * (lerpf(initial_scale, 1.56, charge) * opening)
- tunnel.scale = Vector2.ONE * (0.94 * opening)
+ root_ring.scale = Vector2.ONE * (0.55 * opening)
+ inner_ring.scale = Vector2.ONE * (lerpf(0.35, 0.40, charge) * opening)
+ vortex.scale = Vector2.ONE * (lerpf(initial_scale, 1.52, charge) * opening)
+ tunnel.scale = Vector2.ONE * (0.67 * opening)
  root_ring.rotation = initial_lanes_rotation-tick * 0.9 * drift
  inner_ring.rotation = tick * 1.2 * drift
  vortex.rotation = initial_rotation + tick * 0.7 * drift + ease * ease * 2.0 * drift
@@ -120,7 +120,7 @@ func _animate() -> void:
  for i in depth_arcs.size():
   var arc := depth_arcs[i]
   var breathe := 0.012 if WorldState.reduced_flash else 0.028
-  arc.scale = Vector2.ONE * ((0.80 if i == 0 else 0.52) * opening * (1.0 + sin(tick * 4.0 + i * PI) * breathe))
+  arc.scale = Vector2.ONE * ((0.55 if i == 0 else 0.35) * opening * (1.0 + sin(tick * 4.0 + i * PI) * breathe))
   arc.rotation = tick * (-1.25 if i == 0 else 1.8) * drift
   arc.visible = root_ring.visible
  # Opaque pixel packets follow curved inbound paths. Their visible population
@@ -128,7 +128,7 @@ func _animate() -> void:
  for i in particles.size():
   var packet := particles[i]
   var progress := fposmod(age * (0.45 if WorldState.reduced_flash else 0.85) + float(i) / particles.size(), 1.0)
-  var radius := lerpf(106.0, 10.0, progress) * opening
+  var radius := lerpf(40.0, 8.0, progress) * opening
   var angle := float(i) * TAU / particles.size() - tick * 1.4 * drift - progress * 1.6
   packet.position = (Vector2(cos(angle), sin(angle)) * radius).round()
   packet.rotation = snappedf(angle, TAU / 32.0)

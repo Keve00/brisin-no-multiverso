@@ -13,6 +13,15 @@
     -48
   ],
   "scale": 1,
+  "visual_height": 100,
+  "shoulder": [
+    74,
+    80
+  ],
+  "muzzle": [
+    114,
+    73
+  ],
   "states": {
     "idle": [
       8,
@@ -29,6 +38,16 @@
       10,
       false
     ],
+    "aim": [
+      8,
+      8,
+      true
+    ],
+    "shoot": [
+      5,
+      20,
+      false
+    ],
     "hit": [
       6,
       12,
@@ -40,7 +59,7 @@
       false
     ]
   },
-  "motion": "Continuous inverse pixel rig: breathing/blink, alternating feet, antenna sway, alert lean, recoil, shrink/disintegration",
-  "visual_height": 100,
-  "behavior": "Existing grounded patrol/combat; variants are cosmetic."
+  "source": "etzinho-armed-approved.png",
+  "animation_backend": "Godot AnimatedSprite2D + articulated shoulder and muzzle flash; no SMIL",
+  "motion": "Breathing/blink, alternating legs, shoulder aim, finite recoil, pulse damage and disintegration"
 }

@@ -47,19 +47,9 @@ func _ready() -> void:
  add_child(shape)
  visual = AnimatedSprite2D.new()
  visual.position.y = -56
- visual.sprite_frames = SpriteFrames.new()
- visual.sprite_frames.remove_animation("default")
- var meta = JSON.parse_string(FileAccess.get_file_as_string("res://assets/player/animations.json")) if FileAccess.file_exists("res://assets/player/animations.json") else {}
- for anim in ["run","walk","jump"]:
-  if not meta.has(anim): continue
-  visual.sprite_frames.add_animation(anim)
-  visual.sprite_frames.set_animation_speed(anim,12)
-  var tex = load("res://assets/player/"+anim+".png")
-  for i in meta[anim]["frames"]:
-   var frame := AtlasTexture.new()
-   frame.atlas = tex
-   frame.region = Rect2(i*144,0,144,128)
-   visual.sprite_frames.add_frame(anim,frame)
+ # Native SVG frames keep the atlas canvas/feet and the existing 12fps timing.
+ visual.sprite_frames = preload("res://assets/player/locomotion_svg/spriteframes.tres")
+ visual.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
  # A first-reading pause may occur before the first locomotion tick.
  if visual.sprite_frames.has_animation("walk"): visual.animation="walk"
  add_child(visual)
@@ -240,7 +230,7 @@ func animate(_dt: float) -> void:
  var visual_facing := chip_gesture_facing if throwing else facing
  chip_hand.flip_h = visual_facing < 0
  visual.flip_h = visual_facing < 0
- visual.modulate = Color("fff3cd") if state == "DASH" else (Color(0.4,1,1) if state == "RAIL" else Color.WHITE)
+ visual.modulate = Color("fff3cd") if state == "DASH" else (Color(1,0.84,0.62) if state == "RAIL" else Color.WHITE)
  # Reduced flashes keeps the damage cue steady instead of rapidly blinking.
  visual.modulate.a = (0.65 if WorldState.reduced_flash else (0.4 if int(invulnerability*12)%2 else 1.0)) if invulnerability > 0 else 1.0
  visual.scale = Vector2(1.06,0.94) if state == "LAND" else Vector2.ONE
@@ -262,7 +252,7 @@ func _draw() -> void:
  if not art:
   draw_style_box(make_box(),Rect2(-16,-68,32,68))
   draw_circle(Vector2(facing*9,-49),4,Color.WHITE)
- if state == "RESPAWN": draw_circle(Vector2(0,-35),35,Color(0.3,0.9,1,0.2))
+ if state == "RESPAWN": draw_circle(Vector2(0,-35),35,Color(1,0.75,0.35,0.2))
 func make_box() -> StyleBoxFlat:
  var box := StyleBoxFlat.new()
  box.bg_color = Color("ee8d22")

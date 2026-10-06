@@ -42,6 +42,10 @@ def extract(file,box,div=2,colors=48):
     # Remove the navy board, including negative spaces. Purple object shading
     # has substantially more red than the board and must remain opaque.
     bg=(a[:,:,0]<42)&(a[:,:,1]<65)&(a[:,:,2]>a[:,:,0]*1.5)
+    if file=='platforms.png':
+        # The source board is blue (R~0, G~23, B~87). Preserve
+        # the dark purple rock faces instead of punching holes in them.
+        bg=(a[:,:,0]<18)&(a[:,:,2]>a[:,:,1]*2)
     if file=='menu.png':
         bg=(a[:,:,2]>a[:,:,0]*1.25)&(a[:,:,2]>a[:,:,1]*1.1)
     if file=='enemies.png':
@@ -63,6 +67,17 @@ def extract(file,box,div=2,colors=48):
         q=rgb.quantize(palette=palette,dither=Image.Dither.NONE).convert('RGB')
     else:q=rgb.quantize(colors=colors,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE).convert('RGB')
     rgba=np.zeros((*a.shape[:2],4),np.uint8);rgba[:,:,:3]=np.array(q);rgba[:,:,3]=np.where(bg,0,255)
+    if file=='enemies.png' and box==(1026,694,1448,938):
+        # Orbital rings enclose board-colored negative spaces. Keep one pixel
+        # of outline beside the bright art, and protect the dark facial ink.
+        h,w=bg.shape;yy,xx=np.indices(bg.shape)
+        dark=(a[:,:,0]<65)&(a[:,:,1]<36)&(a[:,:,2]>a[:,:,0]*.65)
+        ink=(~dark)&(~bg)
+        adjacent=np.zeros(bg.shape,dtype=bool)
+        for dx,dy in [(0,0),(-1,0),(1,0),(0,-1),(0,1)]:
+            adjacent[max(0,dy):min(h,h+dy),max(0,dx):min(w,w+dx)] |= ink[max(0,-dy):min(h,h-dy),max(0,-dx):min(w,w-dx)]
+        face=(xx>=35)&(xx<=70)&(yy>=27)&(yy<=53)
+        rgba[dark&(~adjacent)&(~face),3]=0
     # Drop isolated scraps from adjacent cells, retaining approved effect specks.
     seen=set()
     for y in range(len(rgba)):
@@ -77,6 +92,26 @@ def extract(file,box,div=2,colors=48):
             if len(part)<(12 if file=='menu.png' else 3):
                 for px,py in part:rgba[py,px,3]=0
     return Image.fromarray(rgba)
+
+def whole_plant(box,div=3):
+    im=extract('platforms.png',box,div)
+    a=np.array(im);seen=set();parts=[]
+    for y,x in zip(*np.where(a[:,:,3]>0)):
+        if (x,y) in seen:continue
+        todo=[(x,y)];part=[];seen.add((x,y))
+        while todo:
+            px,py=todo.pop();part.append((px,py))
+            for nx,ny in [(px-1,py),(px+1,py),(px,py-1),(px,py+1)]:
+                if 0<=nx<im.width and 0<=ny<im.height and a[ny,nx,3] and (nx,ny) not in seen:
+                    seen.add((nx,ny));todo.append((nx,ny))
+        parts.append(part)
+    # Canopies and glowing ornaments may be disconnected from the trunk.
+    # Retain every substantial component, removing only tiny source scraps.
+    for part in parts:
+        if len(part)<6:
+            for x,y in part:a[y,x,3]=0
+    cleaned=Image.fromarray(a)
+    return cleaned.crop(cleaned.getbbox())
 
 def fit(im,size,pivot,height):
     im=im.crop(im.getbbox());factor=min(height/im.height,(size[0]-8)/im.width)
@@ -104,10 +139,17 @@ def platforms():
       'wind_island':((1061,533,1518,769),654)}
     for kind,(box,contact) in specs.items():
         raw=extract('platforms.png',box,3)
+        if kind=='wind_island':
+            a=np.array(raw);white=(a[:,:,0]>150)&(a[:,:,1]>175)&(a[:,:,2]>170)
+            a[white,3]=0;raw=Image.fromarray(a)
         surface=round((contact-box[1])/3)
         full=Image.new('RGBA',(200,176));dx=(200-raw.width)//2;dy=64-surface
         full.alpha_composite(raw,(dx,dy))
         ground=raw.crop((0,surface,raw.width,raw.height))
+        if kind=='wind_island':
+            # Curved wind is a single overlay, never repeated with ground caps.
+            a=np.array(ground);white=(a[:,:,0]>150)&(a[:,:,1]>175)&(a[:,:,2]>170)
+            a[white,3]=0;ground=Image.fromarray(a)
         if kind!='steps':
             # Fill small painted breaks at contact; the collider stays visible.
             a=np.array(ground);present=np.where((a[:min(5,len(a)),:,3]>0).any(axis=0))[0]
@@ -118,55 +160,80 @@ def platforms():
                         cols=np.where(a[:5,:,3].any(axis=0))[0];nx=cols[np.argmin(abs(cols-x))]
                         a[:8,x]=a[:8,nx]
                 ground=Image.fromarray(a)
-        # Steps use the already documented collision shelves, with exact visual
-        # tops assembled from the approved basalt module, rather than stretch.
-        if kind=='steps':
-            ground=Image.new('RGBA',(137,95));d=ImageDraw.Draw(ground)
-            for x,w,y in [(5,68,34),(32,61,0),(75,61,11)]:
-                block=extract('platforms.png',(1035,128,1215,290),3)
-                block=block.crop((0,0,min(block.width,w),block.height))
-                ground.alpha_composite(block,(x,y))
-                d.rectangle((x,y,x+w-1,y+3),fill='#ffb54d')
-            full=Image.new('RGBA',(200,176));full.alpha_composite(ground,(32,64))
         if kind=='coastal':
             menu=Image.new('RGBA',(200,176));menu.alpha_composite(ground,((200-ground.width)//2,64))
             plant=extract('platforms.png',(630,866,776,986),4)
             menu.alpha_composite(plant,(35,64-plant.height));menu.alpha_composite(plant.transpose(Image.Transpose.FLIP_LEFT_RIGHT),(132,64-plant.height))
             write(out/'cosmic_menu.svg',menu,[100,64])
-        if kind=='wind_island':
-            # Curved wind is a single overlay, never repeated with ground caps.
-            a=np.array(ground);white=(a[:,:,0]>150)&(a[:,:,1]>175)&(a[:,:,2]>170)
-            a[white,3]=0;ground=Image.fromarray(a)
-        deco=full.copy();deco.paste((0,0,0,0),(0,64,200,176))
+        # Whole standalone plants share a root pivot. Never split their
+        # silhouettes at the platform's horizontal contact line.
+        deco=Image.new('RGBA',(200,256))
+        plants={'coastal':[(0,750,249,990)],'sand':[(428,807,598,990)],
+                'wind_island':[(428,807,598,990),(625,855,780,990)],
+                'cracked':[(625,855,780,990)]}
+        for i,plant_box in enumerate(plants.get(kind,[])):
+            plant=whole_plant(plant_box,2)
+            plant=plant.crop(plant.getbbox())
+            x=100-plant.width//2+(34 if i else 0)
+            deco.alpha_composite(plant,(x,172-plant.height))
+        if kind not in plants:
+            # Machinery keeps its complete upper layer in the same root space.
+            top=full.crop((0,0,200,64))
+            deco.alpha_composite(top,(0,106))
         for v in range(2):
             # Mirroring is intentional only for optional variation, uniform.
             f=full if v==0 else full.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
             g=ground if v==0 or kind=='steps' else ground.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
             dec=deco if v==0 else deco.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
+            if kind=='steps':
+                # Draw lower shelves first. Each variant follows its existing
+                # collider coordinates exactly; complete modules stay upright.
+                shelves=[(5,68,34),(75,61,11),(32,61,0)] if v==0 else [(2,47,39),(34,60,20),(10,57,0)]
+                g=Image.new('RGBA',(137,95))
+                block=extract('platforms.png',(1035,129,1218,290),3)
+                for x,w,y in shelves:
+                    piece=block.crop((0,0,min(block.width,w),block.height))
+                    g.alpha_composite(piece,(x,y))
+                f=Image.new('RGBA',(200,176));f.alpha_composite(g,(32,64))
+                dec=Image.new('RGBA',(200,256))
+            else:
+                # Adjacent slices share an identical six-pixel seam. Blend
+                # only edge colors into the approved source, never stretch it.
+                a=np.array(g);cap=min(24,g.width//3);left=cap;right=g.width-cap
+                reference=a[:,g.width//2].copy()
+                reference[:,3]=np.minimum(reference[:,3],np.minimum(a[:,left-1,3],a[:,right,3]))
+                for seam,direction in [(left,-1),(left,1),(right,-1),(right,1)]:
+                    for offset in range(6):
+                        x=seam+offset if direction==1 else seam-1-offset
+                        weight=(6-offset)/6
+                        old=a[:,x].copy()
+                        a[:,x,:3]=np.round(old[:,:3]*(1-weight)+reference[:,:3]*weight).astype('uint8')
+                        a[:,x,3]=reference[:,3] if offset<3 else old[:,3]
+                g=Image.fromarray(a)
             stem=f'{kind}_{v}'
-            write(out/(stem+'.svg'),f,[100,64]);write(out/(stem+'_ground.svg'),g,[0,0]);write(out/(stem+'_deco.svg'),dec,[100,64])
+            write(out/(stem+'.svg'),f,[100,64]);write(out/(stem+'_ground.svg'),g,[0,0]);write(out/(stem+'_deco.svg'),dec,[100,170])
             if kind=='wind_island':
                 fx=Image.new('RGBA',(200,176));p=ImageDraw.Draw(fx)
                 p.arc((30,43,165,93),190,350,fill='#d0ffff',width=2)
                 p.arc((18,76,179,124),10,175,fill='#f2ffff',width=2)
                 write(out/(stem+'_wind.svg'),fx,[100,64])
         meta[kind]=[{'canvas':[200,176],'pivot':[100,64],'ground_size':list(ground.size),'source_crop':list(box),'source_contact_y':contact,'uniform_source_scale':1/3,'cap':min(24,ground.width//3)}]*2
-        imgs.append(full);labels.append(kind)
+        imgs.append(f);labels.append(kind)
     (out/'manifest.json').write_text(json.dumps(meta,indent=2))
     sheet('platforms',imgs,labels)
     return full
 
 def environment():
     out=ASSETS/'world_01/environment';entries=[];ims=[];labels=[]
-    crops={'palms':[(8,766,247,986),(265,788,458,986),(467,822,623,986)],
-      'vegetation':[(630,866,776,986),(644,895,776,986),(510,856,613,986)],
+    crops={'palms':[(0,750,249,990),(250,775,429,990),(428,807,598,990)],
+      'vegetation':[(625,855,780,990),(625,855,780,990),(428,807,598,990)],
       'rocks_sand':[(798,823,891,986),(898,866,1061,986),(910,879,1051,986)],
       'ruins':[(1074,833,1247,986),(1074,833,1247,986),(1082,852,1140,986)],
       'posts':[(1255,859,1371,986),(1255,859,1371,986),(1255,859,1371,986)],
       'water_props':[(1396,889,1518,986),(1396,889,1518,986),(1396,967,1518,986)]}
     for kind,boxes in crops.items():
         for v,box in enumerate(boxes):
-            im=extract('platforms.png',box,2 if kind=='palms' else 3)
+            im=whole_plant(box,2 if kind=='palms' else 3) if kind in ['palms','vegetation'] else extract('platforms.png',box,3)
             bbox=im.getbbox();im=im.crop(bbox);im2=Image.new('RGBA',(im.width+10,im.height+10));im2.alpha_composite(im,(5,5));im=im2
             if v==1 and kind in ['ruins','posts']:im=im.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
             pivot=[im.width//2,im.height-5];name=f'{kind}_{v}'
@@ -190,6 +257,7 @@ def interactive():
       'node':([(1163,97,1317,373),(1329,94,1510,373)],(120,130),(63,127),118),
       'portal':([(20,436,270,650),(275,433,528,650)],(128,140),(62,136),128)}
     for kind,(boxes,size,pivot,height) in specs.items():
+        if kind=='portal':continue # Registered separately, without per-state fitting.
         for state,box in zip(['off','on'],boxes):
             im=fit(extract('interactive.png',box,2),size,pivot,height)
             if kind=='turbine':
@@ -239,6 +307,49 @@ def interactive():
         write(out/f'rail_segment_{state}.svg',seg,[0,9])
     build_gem()
     sheet('interactive',ims,names,cols=5,cell=(220,250))
+    build_portal()
+    from build_connection_node import main as connection_node
+    connection_node()
+
+def build_portal():
+    """Register approved states by source aperture center, not bbox center."""
+    out=ASSETS/'world_01/interactive'
+    for state,box,source_center in [
+        ('off',(20,426,290,658),(161,550)),
+        ('on',(290,426,561,658),(426,550))]:
+        raw=extract('interactive.png',box,2,96)
+        # Canvas 160, pivot (80,152); aperture (80,103). Same source scale.
+        center=((source_center[0]-box[0])/2,(source_center[1]-box[1])/2)
+        im=Image.new('RGBA',(160,160))
+        im.alpha_composite(raw,(round(80-center[0]),round(103-center[1])))
+        a=np.array(im);yy,xx=np.indices(a.shape[:2])
+        opening=(xx-80)**2+(yy-103)**2<=29**2
+        core=a.copy();core[:,:,3]=np.where(opening,core[:,:,3],0)
+        a[:,:,3]=np.where(opening,0,a[:,:,3])
+        # One-pixel overlap hides nearest-neighbor rotation gaps beneath the
+        # stationary frame; no structural pixel is ever part of the rotor.
+        canvas=Image.new('RGBA',(80,80))
+        d=ImageDraw.Draw(canvas);d.ellipse((11,11,69,69),fill='#211137')
+        canvas.alpha_composite(Image.fromarray(core).crop((40,63,120,143)),(0,0))
+        # Remove detached source-board scraps and tiny outlined specks outside
+        # the portal structure. Aperture shading stays inside the rotor.
+        seen=set()
+        for y,x in zip(*np.where(a[:,:,3]>0)):
+            if (x,y) in seen:continue
+            todo=[(x,y)];part=[];seen.add((x,y))
+            while todo:
+                px,py=todo.pop();part.append((px,py))
+                for nx,ny in [(px-1,py),(px+1,py),(px,py-1),(px,py+1)]:
+                    if 0<=nx<160 and 0<=ny<160 and a[ny,nx,3] and (nx,ny) not in seen:
+                        seen.add((nx,ny));todo.append((nx,ny))
+            if len(part)<=100 and min(py for px,py in part)<130:
+                for px,py in part:a[py,px,3]=0
+        write(out/f'portal_frame_{state}.svg',Image.fromarray(a),[80,152])
+        write(out/('portal_core.svg' if state=='on' else 'portal_core_off.svg'),canvas,[40,40])
+    (out/'portal_layout.json').write_text(json.dumps({'frame_canvas':[160,160],
+        'frame_pivot':[80,152],'aperture_center':[80,103],'aperture_radius':29,
+        'core_canvas':[80,80],'core_pivot':[40,40],'uniform_scale':1.5,
+        'world_center_offset':[0,-73.5],'source_scale':.5},indent=2))
 
 def build_gem():
     # Keep the approved facets at their existing size and pivot. The source
@@ -301,10 +412,13 @@ def enemies():
         (folder/'spriteframes.tres').write_text(f'[gd_resource type="SpriteFrames" load_steps={idx+1} format=3]\n\n'+'\n\n'.join(ext)+'\n\n[resource]\nanimations = ['+',\n'.join(anim)+']\n')
         (folder/'animations.json').write_text(json.dumps({'variant':name,'canvas':[128,128],'ground_pivot':[64,112],'sprite_offset':[0,-48],'scale':1,'states':specs,'motion':'Continuous inverse pixel rig: breathing/blink, alternating feet, antenna sway, alert lean, recoil, shrink/disintegration', 'visual_height':100 if name=='etzinho' else raw.height,'behavior':'Existing grounded patrol/combat; variants are cosmetic.'},indent=2))
     sheet('enemies',previews,labels,cols=5,cell=(170,170))
+    # Preserve the explicitly approved armed replacement on full regeneration.
+    from build_armed_etzinho import main as armed_etzinho
+    armed_etzinho()
     return names
 
 def background():
-    out=ASSETS/'background_svg';original=Image.open(REF/'background.png').convert('RGB')
+    out=ASSETS/'background_svg';original=Image.open(REF/'background-orange-approved.png').convert('RGB')
     # Resize uniformly to the existing panorama height, then crop width only.
     factor=724/original.height;original=original.resize((round(original.width*factor),724),Image.Resampling.NEAREST)
     original=original.crop(((original.width-2172)//2,0,(original.width-2172)//2+2172,724))
@@ -313,7 +427,7 @@ def background():
     # Shared full canvas; immutable geometry avoids coastline/plant drift.
     write(out/'cosmic_panorama.svg',original,[0,0])
     original.save(QA/'background.png')
-    (out/'cosmic_manifest.json').write_text(json.dumps({'canvas':[2172,724],'source':'tools/reference_art/cosmic/background.png','grid':2,'parallax':'Shared canvas, horizontal travel, no stretch'},indent=2))
+    (out/'cosmic_manifest.json').write_text(json.dumps({'canvas':[2172,724],'source':'tools/reference_art/cosmic/background-orange-approved.png','grid':2,'parallax':'Shared canvas, horizontal travel, no stretch'},indent=2))
 
 def logo():
     # The selected logo crop ends ABOVE the subtitle and excludes the footer.
@@ -326,5 +440,7 @@ def main():
     MANIFEST['approved_footer_removed']=True
     (ROOT/'godot/docs/cosmic_assets_manifest.json').write_text(json.dumps(MANIFEST,ensure_ascii=False,indent=2))
     print('Cosmic vector assets:',len(MANIFEST['assets']))
+    from build_warm_assets import main as warm_assets
+    warm_assets()
 
 if __name__=='__main__':main()

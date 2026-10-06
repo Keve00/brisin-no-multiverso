@@ -20,7 +20,7 @@ func _ready() -> void:
  _game_gain = 0.0 if _menu_active else 1.0
  _online_gain = 1.0 if WorldState.connection == WorldState.Connection.ONLINE else 0.0
  if DisplayServer.get_name() == "headless": return
- for key in ["jump","land","dash","pulse","hit","pickup","checkpoint","node","rail","portal","notice"]:
+ for key in ["jump","land","dash","pulse","hit","pickup","checkpoint","node","rail","portal","notice","alien_shot"]:
   var path = "res://assets/audio/"+key+".wav"
   if ResourceLoader.exists(path): sounds[key] = load(path)
  music = _loop_player("res://assets/audio/ambient.wav", "GameplayAmbient")

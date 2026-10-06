@@ -1,0 +1,29 @@
+{
+  "frame_canvas": [
+    160,
+    160
+  ],
+  "frame_pivot": [
+    80,
+    152
+  ],
+  "aperture_center": [
+    80,
+    103
+  ],
+  "aperture_radius": 29,
+  "core_canvas": [
+    80,
+    80
+  ],
+  "core_pivot": [
+    40,
+    40
+  ],
+  "uniform_scale": 1.5,
+  "world_center_offset": [
+    0,
+    -73.5
+  ],
+  "source_scale": 0.5
+}

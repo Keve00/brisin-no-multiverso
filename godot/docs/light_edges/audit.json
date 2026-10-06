@@ -1,0 +1,178 @@
+[
+  {
+    "asset": "assets/background_svg/beacon_glow.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/enemies/cosmic/alien_shot.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/player/effects/pulse_spark.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/ui/packet.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/ui/portal_core.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/ui/signal.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/checkpoint_coastal/core_on.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/checkpoint_coastal/signal_00.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/checkpoint_coastal/signal_01.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/checkpoint_coastal/signal_02.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/checkpoint_coastal/signal_03.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/checkpoint_coastal/signal_04.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/checkpoint_coastal/signal_05.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/checkpoint_coastal/signal_06.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/checkpoint_coastal/signal_07.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/environment/posts_0_lamp.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/environment/posts_1_lamp.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/environment/posts_2_lamp.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/expansion/checkpoint_beacon_signal_on.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/expansion/connection_node_core_on.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/expansion/connection_node_signal_on.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/expansion/island_crystal_signal_on.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/expansion/island_relay_signal_on.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/interactive/checkpoint_lamp_on.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/interactive/lighthouse_beam.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/interactive/lighthouse_lamp_on.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/interactive/node_core.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/interactive/node_halo.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/interactive/node_signal.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/interactive/node_spark.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/interactive/portal_core.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/interactive/rail_packet.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/portal_transition/arcs.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/portal_transition/spark.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/portal_transition/spark_amber.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/portal_transition/tunnel.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/svg/gem_glow.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/svg/gem_sparkle.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/svg/lighthouse_beam.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/svg/lighthouse_lamp.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/svg/node_core.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/svg/node_halo.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/svg/portal_core.svg",
+    "dark_fringe_pixels_removed": 0
+  },
+  {
+    "asset": "assets/world_01/svg/rail_packet.svg",
+    "dark_fringe_pixels_removed": 0
+  }
+]

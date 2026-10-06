@@ -52,7 +52,9 @@ func run() -> void:
  WorldState.fragments=["f_0"]
  hud.show_menu("intro")
  hud.buttons[0].pressed.emit()
- check(hud.starting and hud.start_stage=="ready" and hud.title_hero.animation=="ready_to_run" and get_tree().paused,"start/continue plays readiness while world remains paused")
+ check(hud.menu_click_busy and hud.buttons[0].disabled and hud.buttons[0].get_theme_stylebox("disabled") is StyleBoxTexture,"click retains SVG surface and locks duplicate activation")
+ await get_tree().create_timer(0.25,true).timeout
+ check(hud.starting and hud.start_stage=="ready" and hud.title_hero.animation.begins_with("ready") and get_tree().paused,"start/continue plays readiness while world remains paused")
  check(hud.buttons.all(func(button): return button.disabled and button.focus_mode==Control.FOCUS_NONE),"all title controls lock during the finite handoff")
  hud.begin_adventure(true)
  hud.settings()
@@ -73,9 +75,19 @@ func run() -> void:
  check(WorldState.checkpoint_id=="brisa_01" and WorldState.fragments==["f_0"],"continue preserves checkpoint and collected fragments")
  hud.show_menu("pause")
  hud.buttons[0].pressed.emit()
- check(not get_tree().paused and not hud.starting,"pause continue stays immediate")
+ check(hud.menu_click_busy and hud.buttons[0].disabled and hud.buttons[0].get_theme_stylebox("disabled") is StyleBoxTexture,"click retains SVG surface and locks duplicate activation")
+ await get_tree().create_timer(0.25,true).timeout
+ check(not get_tree().paused and not hud.starting,"pause continue follows the click feedback")
  hud.show_menu("intro")
- hud.settings();hud.back_menu()
+ var settings_button: Button=hud.buttons[hud.buttons.size()-2]
+ settings_button.pressed.emit()
+ settings_button.pressed.emit()
+ check(hud.title_screen.visible and hud.submenu.is_empty() and hud.menu_click_busy,"duplicate settings clicks retain the complete outgoing title during feedback")
+ await get_tree().create_timer(0.09,true).timeout
+ check(settings_button.scale.x<1 and is_equal_approx(settings_button.scale.x,settings_button.scale.y),"button and caption compress uniformly during click")
+ await get_tree().create_timer(0.18,true).timeout
+ check(hud.submenu=="settings" and hud.panel.visible and not hud.title_screen.visible,"settings opens once after click animation")
+ hud.back_menu()
  check(hud.title_hero.animation=="wave" and hud.title_screen.modulate.a==1 and not hud.starting,"returning from title settings rebuilds the wave without a stale transition")
  var gem_nodes:=0
  for child in hud.title_screen.get_children():
@@ -90,7 +102,7 @@ func run() -> void:
  world=get_tree().current_scene
  check(world!=before and not WorldState.skip_intro_once and not get_tree().paused and world.hud.game_hud.visible and not world.hud.title_screen.visible,"real new-adventure reload consumes intro bypass exactly once")
  check(not Audio._menu_active,"new-adventure reload cannot retain menu music")
- check(WorldState.checkpoint_id=="spawn" and WorldState.fragments.is_empty() and world.player.position.distance_to(WorldState.checkpoint)<10,"new adventure enters the fresh spawn with progress reset")
+ check(WorldState.checkpoint_id=="spawn" and WorldState.fragments.is_empty() and absf(world.player.position.x-WorldState.checkpoint.x)<1 and absf(world.player.position.y-WorldState.checkpoint.y)<24,"new adventure enters the fresh spawn with progress reset")
  world.hud.show_menu("intro")
  check(world.hud.title_hero.animation=="wave" and get_tree().paused,"later title openings still show the greeting")
  get_tree().paused=false

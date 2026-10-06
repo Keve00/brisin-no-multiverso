@@ -86,6 +86,10 @@ func _ready() -> void:
   var body := add_platform(level.platforms[i],false)
   if level.has("platform_styles") and i<level.platform_styles.size():
    body.configure_variant(str(level.platform_styles[i][0]),int(level.platform_styles[i][1]))
+  # Keep the final portal silhouette clear of the platform's tall foliage.
+  var portal_point:Vector2=point(level.portal)
+  if portal_point.x>=body.position.x and portal_point.x<=body.position.x+body.rect.size.x and absf(portal_point.y-body.position.y)<1:
+   body.decoration_enabled=false
   body.crumble = false
  var moving_body := add_platform(level.moving_platform,true)
  moving_body.configure_variant("raft",0)
@@ -255,7 +259,7 @@ func begin_portal_transition(id: String) -> void:
  portal_transition.set_script(PortalTransitionSVG)
  portal_transition.world = self
  portal_transition.player = player
- portal_transition.position = point(level.portal) + Vector2(0,-81.0)
+ portal_transition.position = scenery_svg.portal_rotor.global_position
  portal_transition.completed.connect(_finish_portal_transition)
  portal_transition.cancelled.connect(_cancel_portal_transition)
  add_child(portal_transition)
@@ -329,6 +333,9 @@ func _process(dt: float) -> void:
 func context_tip() -> Dictionary:
  if player.state in ["RESPAWN","DISABLED","DASH"]: return {}
  var pos := player.position
+ for alien in enemies:
+  if alien.variant == "etzinho" and alien.stunned<=0 and alien.can_see_player():
+   return {"id":"alien_attack", "title":"ETZINHO ARMADO", "text":"[E / B] PULSO • BLOQUEIE OS TIROS", "icon":"signal"}
  if WorldState.connection == WorldState.Connection.OFFLINE and player.pulse_time<=0 and pos.distance_to(point(level.node))<125:
   return {"id":"node", "title":"NÓ DE SINAL", "text":"[E / B] PULSO • RESTABELEÇA A CONEXÃO", "icon":"signal"}
  for i in enemies.size():
@@ -405,11 +412,11 @@ func _draw() -> void:
  # The physical wind region is unchanged; SVG curves show its airflow.
  if WorldState.blockout: draw_rect(wind_rect,Color(0.15,0.85,0.8,0.09))
  if online_blend>0:
-  draw_line(Vector2(5400,210),Vector2(6080,205),Color(0.25,1,1,online_blend*0.7),3)
-  for i in 16: draw_circle(Vector2(5400+i*44,205+sin(clock*2+i)*10),2,Color(0.3,1,1,online_blend*0.6))
+  draw_line(Vector2(5400,210),Vector2(6080,205),Color(1,0.82,0.42,online_blend*0.7),3)
+  for i in 16: draw_circle(Vector2(5400+i*44,205+sin(clock*2+i)*10),2,Color(1,0.9,0.65,online_blend*0.6))
  if WorldState.connection == WorldState.Connection.CONNECTING:
   var radius := (1.3-connection_timer)*500
-  draw_arc(point(level.node)+Vector2(0,-45),radius,0,TAU,80,Color(0.3,1,1,0.35 if WorldState.reduced_flash else 0.7),4)
+  draw_arc(point(level.node)+Vector2(0,-45),radius,0,TAU,80,Color(1,0.82,0.42,0.35 if WorldState.reduced_flash else 0.7),4)
  if show_hits:
   for p in platforms:
    if p.visible: draw_rect(Rect2(p.position,Vector2(p.rect.size.x,20)),Color(1,0.3,0.4,0.6),false,2)

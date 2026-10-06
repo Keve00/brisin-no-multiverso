@@ -2,6 +2,7 @@ extends CanvasLayer
 # Logical UI coordinates stay within 1152×648; texture helpers always preserve aspect.
 const UI := "res://assets/ui/"
 const MOBILE_FONT = preload("res://assets/ui/mobile/brisin_mobile_bold.fnt")
+var mobile_font_ink: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://assets/ui/mobile/font_ink.json"))
 const CREAM := Color("fff3cd")
 const AMBER := Color("ffb000")
 const YELLOW := Color("ffd84d")
@@ -28,6 +29,7 @@ var title_gem_clock := 0.0
 var title_gem_phase := 0.0
 var title_platform: Sprite2D
 var title_hero: AnimatedSprite2D
+var menu_click_busy := false
 var starting := false
 var start_stage := ""
 var start_elapsed := 0.0
@@ -136,10 +138,10 @@ func add_button(parent: Node, title: String, pos: Vector2, callback: Callable, b
  btn.size = bounds
  btn.add_theme_font_override("font",ui_font)
  btn.add_theme_font_size_override("font_size",24)
- for state in ["normal","hover","pressed","focus"]:
+ for state in ["normal","hover","pressed","focus","disabled"]:
   btn.add_theme_stylebox_override(state,style("button_pressed" if state=="pressed" else ("button_focus" if state in ["hover","focus"] else "button")))
- for state in ["font_color","font_hover_color","font_pressed_color","font_focus_color"]: btn.add_theme_color_override(state,CREAM)
- btn.pressed.connect(callback)
+ for state in ["font_color","font_hover_color","font_pressed_color","font_focus_color","font_disabled_color"]: btn.add_theme_color_override(state,CREAM)
+ btn.pressed.connect(func(): animate_menu_click(btn,callback))
  parent.add_child(btn)
  var arrow := texture(btn,"focus_arrow",Vector2(16,22),Vector2(16,16))
  arrow.name="FocusArrow"
@@ -148,6 +150,25 @@ func add_button(parent: Node, title: String, pos: Vector2, callback: Callable, b
  btn.focus_exited.connect(func(): arrow.hide())
  buttons.append(btn)
  return btn
+func animate_menu_click(button: Button, callback: Callable) -> void:
+ if menu_click_busy or starting: return
+ menu_click_busy=true
+ # Animate the complete control: native/custom caption and SVG share one pivot.
+ button.pivot_offset=button.size*0.5
+ for item in buttons:
+  item.disabled=true
+  item.focus_mode=Control.FOCUS_NONE
+ button.add_theme_stylebox_override("disabled",button.get_theme_stylebox("pressed"))
+ var motion := button.create_tween().set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+ motion.tween_property(button,"scale",Vector2.ONE*0.94,0.07).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+ motion.tween_property(button,"scale",Vector2.ONE,0.11).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+ await motion.finished
+ for item in buttons:
+  item.disabled=false
+  item.focus_mode=Control.FOCUS_ALL
+ menu_click_busy=false
+ callback.call()
+
 func focus_buttons() -> void:
  if buttons.is_empty(): return
  # Explicit wrapping makes keyboard and controller navigation deterministic.
@@ -162,18 +183,22 @@ func build_hud() -> void:
  root.add_child(game_hud)
  texture(game_hud,"objective_frame",Vector2(24,20),Vector2(360,72))
  texture(game_hud,"signal",Vector2(40,40),Vector2(24,24))
- objective = label(game_hud,"PLANETA • OFFLINE",Vector2(80,24),Vector2(288,28),24)
- label(game_hud,"RESTABELEÇA O NÓ DE SINAL",Vector2(80,54),Vector2(288,20),12).name="ObjectiveDetail"
+ objective = label(game_hud,"PLANETA • OFFLINE",Vector2(80,30),Vector2(288,28),24,true)
+ center_hud_label(objective)
+ var detail := label(game_hud,"RESTABELEÇA O NÓ DE SINAL",Vector2(80,52),Vector2(288,20),12,true)
+ detail.name="ObjectiveDetail"
+ center_hud_label(detail)
  texture(game_hud,"counter_frame",Vector2(906,20),Vector2(160,54))
  texture(game_hud,"diamond",Vector2(918,31),Vector2(24,24))
- counter = centered_pixel_label(game_hud,"00/00",Vector2(950,25),Vector2(96,36),24)
+ counter = centered_pixel_label(game_hud,"00/00",Vector2(950,25),Vector2(102,38),24)
+ center_hud_label(counter)
  texture(game_hud,"bolt",Vector2(968,80),Vector2(24,24))
  dash_counter = label(game_hud,"DASH PRONTO",Vector2(998,76),Vector2(132,28),12)
  var pause := Button.new()
  pause.position=Vector2(1072,20)
  pause.size=Vector2(56,54)
  pause.tooltip_text="PAUSA • ESC / START"
- for state in ["normal","hover","pressed","focus"]: pause.add_theme_stylebox_override(state,style("button_focus" if state in ["hover","focus"] else "button"))
+ for state in ["normal","hover","pressed","focus","disabled"]: pause.add_theme_stylebox_override(state,style("button_focus" if state in ["hover","focus"] else "button"))
  pause.pressed.connect(func(): show_menu("pause"))
  game_hud.add_child(pause)
  texture(pause,"pause",Vector2(16,14),Vector2(24,24))
@@ -244,7 +269,7 @@ func build_title() -> void:
  var background := Node2D.new()
  background.set_script(load("res://scripts/systems/background_svg.gd"))
  background.name="BrisinMenuPanorama"
- background.atmosphere_strength=0.0
+ background.atmosphere_strength=0.35
  background.process_mode=Node.PROCESS_MODE_ALWAYS
  title_screen.add_child(background)
  var shade := ColorRect.new()
@@ -723,7 +748,7 @@ func _unhandled_input(event: InputEvent) -> void:
    dismiss_important_notice()
   get_viewport().set_input_as_handled()
   return
- if starting or (is_instance_valid(world) and bool(world.get("portal_transition_active"))): return
+ if starting or menu_click_busy or (is_instance_valid(world) and bool(world.get("portal_transition_active"))): return
  if event.is_action_pressed("pause_game"):
   if not submenu.is_empty(): back_menu()
   elif menu_kind=="end" or menu_kind=="intro": return
@@ -744,11 +769,11 @@ func layout_approved_title() -> void:
   btn.size=Vector2(272 if bottom_row else 564,120 if i==0 else 80)
   btn.add_theme_font_override("font",MOBILE_FONT)
   btn.add_theme_font_size_override("font_size",32 if bottom_row else 44 if i>0 else 64)
-  for state in ["normal","hover","pressed","focus"]:
+  for state in ["normal","hover","pressed","focus","disabled"]:
    btn.add_theme_stylebox_override(state,style("mobile/menu"+("_primary" if i==0 else "")+("_pressed" if state=="pressed" else "")))
   btn.get_node("FocusArrow").position=Vector2(16,(btn.size.y-16)/2)
   btn.get_node("FocusArrow").hide()
-  for ink in ["font_color","font_hover_color","font_pressed_color","font_focus_color"]: btn.add_theme_color_override(ink,Color.TRANSPARENT)
+  for ink in ["font_color","font_hover_color","font_pressed_color","font_focus_color","font_disabled_color"]: btn.add_theme_color_override(ink,Color.TRANSPARENT)
   var caption := Node2D.new()
   caption.name="MobileCaption"
   btn.add_child(caption)
@@ -757,10 +782,53 @@ func layout_approved_title() -> void:
 func draw_mobile_caption(caption: Node2D, button: Button) -> void:
  var font_size := button.get_theme_font_size("font_size")
  var value := button.text
- var text_size := MOBILE_FONT.get_string_size(value,HORIZONTAL_ALIGNMENT_LEFT,-1,font_size)
- var baseline := button.size/2+Vector2(-text_size.x/2,float(font_size)/3.0)
+ var ink := mobile_caption_ink(value,font_size)
+ # The nine-slice artwork reserves 8px below the face for its hard shadow.
+ # Center actual glyph ink (including accents), then account for the 2px
+ # downward text edge; neither trailing advance nor font padding shifts it.
+ var face_center := (button.size-Vector2(0,8))*0.5
+ var baseline := (face_center-ink.get_center()-Vector2(0,1)).round()
  # The approved title has opaque cream letters and a chunky short dark edge.
  var outline := 3.0 if font_size<40 else 4.0
  for offset in [Vector2(-outline,0),Vector2(outline,0),Vector2(0,-outline),Vector2(0,outline),Vector2(-outline,outline),Vector2(outline,outline+2)]:
   caption.draw_string(MOBILE_FONT,baseline+offset,value,HORIZONTAL_ALIGNMENT_LEFT,-1,font_size,Color("100a04"))
  caption.draw_string(MOBILE_FONT,baseline,value,HORIZONTAL_ALIGNMENT_LEFT,-1,font_size,CREAM)
+
+func mobile_caption_ink(value: String, font_size: int) -> Rect2:
+ return font_caption_ink(value,font_size,MOBILE_FONT,mobile_font_ink,24.0)
+
+func font_caption_ink(value: String, font_size: int, font: Font, metrics: Dictionary, base_size: float) -> Rect2:
+ var factor := float(font_size)/base_size
+ var cursor := 0.0
+ var ink := Rect2()
+ var has_ink := false
+ for index in value.length():
+  var code := value.unicode_at(index)
+  var box: Array = metrics.get(str(code),[])
+  if not box.is_empty():
+   var glyph := Rect2(Vector2(cursor, -font.get_ascent(font_size))+Vector2(box[0],box[1])*factor,Vector2(box[2],box[3])*factor)
+   ink=ink.merge(glyph) if has_ink else glyph
+   has_ink=true
+  cursor+=font.get_char_size(code,font_size).x
+ return ink
+
+func center_hud_label(item: Label) -> void:
+ item.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+ item.add_theme_color_override("font_color",Color.TRANSPARENT)
+ item.add_theme_color_override("font_outline_color",Color.TRANSPARENT)
+ var caption := Node2D.new()
+ caption.name="CenteredHUDInk"
+ item.add_child(caption)
+ caption.draw.connect(draw_hud_caption.bind(caption,item))
+ item.draw.connect(caption.queue_redraw)
+ item.resized.connect(caption.queue_redraw)
+ item.theme_changed.connect(caption.queue_redraw)
+
+func draw_hud_caption(caption: Node2D, item: Label) -> void:
+ var font := item.get_theme_font("font")
+ var font_size := item.get_theme_font_size("font_size")
+ var bold := font==MOBILE_FONT
+ var metrics: Dictionary = mobile_font_ink if bold else mobile_font_ink.regular
+ var ink := font_caption_ink(item.text,font_size,font,metrics,24.0 if bold else 12.0)
+ var baseline := (item.size*0.5-ink.get_center()).round()
+ caption.draw_string(font,baseline,item.text,HORIZONTAL_ALIGNMENT_LEFT,-1,font_size,CREAM)

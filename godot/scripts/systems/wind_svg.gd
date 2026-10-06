@@ -51,4 +51,4 @@ func _draw() -> void:
   var phase := fposmod(clock*0.36+float(i)/18.0,1.0)
   var lane := fposmod(float(i)*0.381,1.0)
   var p := travel(phase,lane,8.0).round()
-  draw_rect(Rect2(p,Vector2.ONE*(2 if i%3 else 3)),Color(0.72,0.94,0.92,sin(phase*PI)*0.45))
+  draw_rect(Rect2(p,Vector2.ONE*(2 if i%3 else 3)),Color(1,0.9,0.7,sin(phase*PI)*0.45))

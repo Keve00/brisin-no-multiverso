@@ -1,0 +1,193 @@
+{
+  "platforms": {
+    "Carga": {
+      "before": 10.5,
+      "after": 2.2,
+      "use_revision": true
+    },
+    "Cogumelos": {
+      "before": 23.1,
+      "after": 12.0,
+      "use_revision": true
+    },
+    "Degraus": {
+      "before": 13.5,
+      "after": 6.33,
+      "use_revision": true
+    },
+    "Palmeira": {
+      "before": 21.43,
+      "after": 12.77,
+      "use_revision": true
+    },
+    "Plataforma ativa": {
+      "before": 9.3,
+      "after": 2.37,
+      "use_revision": true
+    },
+    "Ponte": {
+      "before": 9.7,
+      "after": 2.87,
+      "use_revision": true
+    },
+    "Rail": {
+      "before": 9.1,
+      "after": 7.23,
+      "use_revision": true
+    },
+    "Rocha frágil": {
+      "before": 16.3,
+      "after": 9.03,
+      "use_revision": true
+    },
+    "Vento": {
+      "before": 24.37,
+      "after": 25.52,
+      "use_revision": false
+    }
+  },
+  "characters": {
+    "Brisin": {
+      "before": 5.43,
+      "after": 7.73,
+      "use_revision": false
+    },
+    "Corrompido": {
+      "before": 20.67,
+      "after": 19.33,
+      "use_revision": true
+    },
+    "Cristal": {
+      "before": 3.33,
+      "after": 4.47,
+      "use_revision": false
+    },
+    "ETzinho": {
+      "before": 7.1,
+      "after": 5.77,
+      "use_revision": true
+    },
+    "Escavador": {
+      "before": 9.63,
+      "after": 11.1,
+      "use_revision": false
+    },
+    "Esporo": {
+      "before": 2.93,
+      "after": 8.17,
+      "use_revision": false
+    },
+    "Magnético": {
+      "before": 3.33,
+      "after": 4.97,
+      "use_revision": false
+    },
+    "Orbital": {
+      "before": 3.83,
+      "after": 4.67,
+      "use_revision": false
+    },
+    "Plasma": {
+      "before": 3.23,
+      "after": 4.47,
+      "use_revision": false
+    },
+    "Satélite": {
+      "before": 4.63,
+      "after": 9.63,
+      "use_revision": false
+    },
+    "Sentinela": {
+      "before": 6.27,
+      "after": 10.17,
+      "use_revision": false
+    }
+  },
+  "objects": {
+    "Checkpoint off": {
+      "before": 4.67,
+      "after": 6.53,
+      "use_revision": false
+    },
+    "Checkpoint on": {
+      "before": 11.07,
+      "after": 7.2,
+      "use_revision": true
+    },
+    "Chip": {
+      "before": 34.93,
+      "after": 27.47,
+      "use_revision": true
+    },
+    "Dash": {
+      "before": 37.17,
+      "after": 42.37,
+      "use_revision": false
+    },
+    "Farol off": {
+      "before": 13.3,
+      "after": 10.2,
+      "use_revision": true
+    },
+    "Farol on": {
+      "before": 9.57,
+      "after": 10.8,
+      "use_revision": false
+    },
+    "Gemas": {
+      "before": 1.6,
+      "after": 3.3,
+      "use_revision": false
+    },
+    "Nó off": {
+      "before": 18.27,
+      "after": 14.7,
+      "use_revision": true
+    },
+    "Nó on": {
+      "before": 13.63,
+      "after": 7.57,
+      "use_revision": true
+    },
+    "Portal off": {
+      "before": 14.53,
+      "after": 11.1,
+      "use_revision": true
+    },
+    "Portal on": {
+      "before": 17.37,
+      "after": 10.77,
+      "use_revision": true
+    },
+    "Pulso": {
+      "before": 32.53,
+      "after": 41.73,
+      "use_revision": false
+    },
+    "Rail de sinal": {
+      "before": 12.57,
+      "after": 11.63,
+      "use_revision": true
+    },
+    "Tiro": {
+      "before": 39.53,
+      "after": 46.37,
+      "use_revision": false
+    },
+    "Turbina off": {
+      "before": 15.53,
+      "after": 12.4,
+      "use_revision": true
+    },
+    "Turbina on": {
+      "before": 10.6,
+      "after": 9.37,
+      "use_revision": true
+    },
+    "Vento": {
+      "before": 24.37,
+      "after": 25.52,
+      "use_revision": false
+    }
+  }
+}
