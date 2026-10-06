@@ -22,7 +22,9 @@ fazem parte deste ZIP editável.
 
 A versão extraterrestre inclui nove Ruídozinhos coloridos e Etzinhos maiores com cinco estados animados,
 menu sem frase de rodapé e todas as famílias de plataformas, objetos interativos e cenário/efeitos,
-o panorama vetorial aprovado com atmosfera, menu e bandeiras animados,
+o panorama laranja vetorial aprovado com atmosfera de mesma intensidade,
+paletas quentes para as famílias de assets e 64 frames SVG de locomoção,
+menu e bandeiras animados,
 dash/pulso opacos em SVG, chips SIM brancos (F / Y) com gesto de lançamento, dicas contextuais
 e transição do portal de 1,8 s antes da conclusão.
 Vento usa curvas e folhas; gemas laranja pulsam; coleta dispara anel, fragmentos
@@ -35,8 +37,8 @@ As dez variações aparecem na fase; Etzinho está em três patrulhas.
 Os geradores em Brisin/tools exigem Python, Pillow e Inkscape para renderizar.
 As referências mobile aprovadas ficam no repositório em tools/reference_art;
 não são duplicadas neste ZIP para respeitar o limite de download.
-As referências novas estão em Brisin/tools/reference_art/cosmic; a origem do novo fundo fica em
-Brisin/tools/reference_art. Passe o caminho da prancha ao
+As referências novas estão em Brisin/tools/reference_art/cosmic; a origem do fundo laranja é background-orange-approved.png em
+Brisin/tools/reference_art/cosmic. Passe o caminho da prancha ao
 gerador de plataformas/objetos, ou --source ao de cenário. Os PNGs de origem
 servem para regeneração e não estão embutidos nos SVGs.
 '''
@@ -57,6 +59,8 @@ def main():
         for name in ['wasm-parts.json', 'verify-loader.cjs', '.gitignore']:
             out.write(ROOT / name, 'Brisin/' + name)
         for file in sorted((ROOT / 'dist').iterdir()):
+            if file.name.startswith('index.pck-'):
+                continue # Godot temporary export files are not editable sources.
             if file.is_file() and file.name != 'loading-bg.png' and file != temporary and file.suffix not in {'.zip', '.pck', '.wasm', '.part0', '.part1', '.part2'}:
                 out.write(file, 'Brisin/dist/' + file.name)
         for file in sorted((ROOT / 'godot').rglob('*')):
@@ -75,7 +79,11 @@ def main():
                 continue
             out.write(file, 'Brisin/' + str(rel))
         for file in sorted((ROOT / 'tools').rglob('*')):
-            if file.is_file() and file.suffix in {'.py', '.cjs', '.png', '.svg', '.gd'} and file.name not in {'approved-mobile-menu.png', 'approved-mobile-controls.png', 'approved-background.png', 'approved-checkpoint.png'}:
+            if file.suffix == '.png' and 'warm' in file.relative_to(ROOT).parts:
+                continue # Exact extracted swatches + selection.json reproduce the transfer.
+            if file.relative_to(ROOT).as_posix() == 'tools/reference_art/cosmic/background.png':
+                continue # Superseded panorama; active warm source is included.
+            if file.is_file() and file.suffix in {'.py', '.cjs', '.png', '.svg', '.gd', '.json'} and file.name not in {'approved-mobile-menu.png', 'approved-mobile-controls.png', 'approved-background.png', 'approved-checkpoint.png'}:
                 out.write(file, 'Brisin/' + str(file.relative_to(ROOT)))
         for folder in ['docs', 'qa']:
             for file in sorted((ROOT / folder).rglob('*')):

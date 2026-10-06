@@ -118,7 +118,7 @@ Detalhes confirmados nas soluções desta rodada:
 
 - Avisos e contadores precisam centrar texto na área útil após o ícone, com margens simétricas, não só mudar o alinhamento de uma label estreita. Compense a tinta da fonte bitmap e exclua a sombra inferior da moldura ao centrar verticalmente. Revise títulos, textos longos, contagem 00/25 e 25/25 por imagem e geometria; não use espaços no texto como correção de layout.
 - No menu, reutilize a plataforma coastal_0 SVG aprovada em escala uniforme, com contato da superfície y64 e pés ancorados. Use o panorama SVG e seus sistemas animados, evitando duplicar um fundo PNG legado. Aceno, corpo e vela acompanham o gesto sem deslocar pés; todas as entradas/saídas da preparação continuam coincidentes por pixels.
-- Moldura do portal fica fixa; núcleo, pistas, túnel e partículas têm pivô comum e movimentos próprios. Compare portal disponível e fases de entrada lado a lado: uma moldura circular detalhada não deve trocar abruptamente por anéis quadrados grossos de outra grade. Preserve sequência finita1,8s e lifecycle. Modo reduzido deve diminuir população, velocidade e amplitude reais. Faíscas douradas usam paleta/asset próprios: multiplicar textura ciano por âmbar gera verde.
+- Moldura do portal fica fixa; núcleo, pistas, túnel e partículas têm pivô comum e movimentos próprios. Compare portal disponível e fases de entrada lado a lado: uma moldura circular detalhada não deve trocar abruptamente por anéis quadrados grossos de outra grade. Preserve sequência finita1,8 s e lifecycle. Modo reduzido deve diminuir população, velocidade e amplitude reais. Faíscas douradas usam paleta/asset próprios: multiplicar textura ciano por âmbar gera verde.
 - Mar próximo é Node2D decorativo atrás do gameplay e acima do panorama, com superfície y810 e módulos512×224 recortados em escala1:1. A arte cobre atéy1034; perigo físico continua emy>900. Ondas, espuma e reflexos ficam na grade2px; confira seam do último/primeiro frame e bordas x0/9600 em offsets0/±510. Pausa e blockout congelam as camadas; água não cria colisões nem encobre plataformas.
 - No mar distante, ondulações SVG pequenas só ocupam regiões cujo envelope completo da animação está dentro da máscara da água aprovada. Não desloque textura inteira do mar nem pinte reflexos sobre ilhas/coqueiros. Névoa é desenhada depois dos reflexos, para não reintroduzir brilho excessivo no fundo esmaecido. A revisão atual eleva também o céu: piso18%, pico55%, água baixa34%. Aplique o mapeamento sempre ao perfil original, sem acumular ganhos ao regenerar.
 - README de entrega descreve fase realmente integrada, instalação do Godot4.5.1, controles, execução porHTTP, exportação e testes. Use caminhos absolutos no helper de export para evitar PCK gerado emgodot/dist por engano; preserve compatibilidade do runtime. SnapshotGitHub mantém código/assets/testes/docs e o carregador web; binários de build podem ser reconstruídos pelo helper documentado. CacheGodot, segredos e metadadosSites não pertencem ao repositório portátil.
@@ -192,7 +192,7 @@ Detalhes confirmados nas soluções desta rodada:
 
 - Separar vento inteiro da camada modular: um limiar só para ciano claro deixa contornos escuros e folhas no chão, repetindo o efeito em toda a ilha. Verificar ambas as variantes renderizadas em plataformas largas; efeito tem uma instância central e canvas próprio.
 - Recortar padding lateral vazio da camada de chão pela faixa de contato, sem stretch. Toda família de piso plano precisa ter arte nos dois extremos e ao longo de toda a superfície; preencher interrupções decorativas do conceito com módulos vizinhos antes de repetir. O recorte não altera colisões ou o tamanho lógico da fase.
-- Portal deve iniciar entrada com a mesma textura, pivô, escala e orientação do núcleo visível. Não trocar por outra espiral nem por uma nova moldura. Animação pode acelerar o núcleo durante atração e contrair a abertura no fim; moldura fica imóvel. Conferir amostras dos transforms reais, pausa, cancelamento, modo reduzido e conclusão única em1,8s.
+- Portal deve iniciar entrada com a mesma textura, pivô, escala e orientação do núcleo visível. Não trocar por outra espiral nem por uma nova moldura. Animação pode acelerar o núcleo durante atração e contrair a abertura no fim; moldura fica imóvel. Conferir amostras dos transforms reais, pausa, cancelamento, modo reduzido e conclusão única em1,8 s.
 
 ## Lateral esquerda do menu — regressão de 03/10/2026
 
@@ -259,3 +259,65 @@ Detalhes confirmados nas soluções desta rodada:
 ## Brilho das gemas do menu
 
 - O halo do menu compartilha a profundidade da gema, desenhado atrás do corpo, com composição aditiva e intensidade visível após a transparência do SVG. Usar reflexos animados, corpo opaco e escala uniforme. Flashes reduzidos mantêm halo/reflexos suaves e constantes. Verificar a composição no renderizador.
+
+## Recortes e módulos extraterrestres — revisão de 06/10/2026
+
+- Na prancha de plataformas, remover o fundo azul pela paleta da fonte sem apagar sombras violetas das rochas. Verificar os espaços negativos e o apoio da superfície após remover os efeitos de vento.
+- Emendas de módulos devem compartilhar cores e máscara de transparência. Capturar as nove famílias nos dois sentidos, incluindo comprimentos maiores que o módulo fonte.
+- Cada variação de degraus deve ser desenhada nas coordenadas de seus próprios patamares de colisão; não espelhar a imagem inteira mantendo outra geometria física.
+- O Ruídozinho Orbital tem espaços negativos fechados entre os anéis. A remoção só por flood fill externo é insuficiente: limpar esses espaços preservando o contorno de um pixel e os detalhes do rosto. Regenerar todos os estados e conferir sobre fundo claro e no jogo.
+
+## Portal e vegetação — pivôs e recortes de 06/10/2026
+
+- Registrar o portal pela abertura real da referência, com escala de fonte constante entre estados. A moldura usa canvas 160×160, pivô (80,152), abertura (80,103); o núcleo 80×80 tem centro (40,40). Escala uniforme 1,5 e offset de abertura (0,-73,5). A transição usa a posição global do rotor, nunca outro offset aproximado.
+- Manter a moldura acima das camadas giratórias e limitar túnel, arcos e partículas ao raio da abertura. Conferir vários ângulos e o primeiro frame da transição.
+- Vegetação é extraída inteira das referências isoladas, com canvas reservado e pivô de raízes (100,170) para as camadas de plataforma. Não cortar plantas pelo Y do chão nem recortar todas as partes pelo bounding box só do tronco: copas e luzes podem ser componentes desconectados.
+
+## Limites das decorações — 06/10/2026
+
+- Toda decoração terrestre deve usar a superfície real de apoio, incluindo os patamares dos degraus. Encaixar a silhueta inteira com margem de seis pixels, reservando o envelope do balanço de folhas. Deslocar para dentro primeiro e reduzir escala uniformemente apenas quando a largura da silhueta exceder o espaço. Nunca esconder o excesso por recorte de folhas ou troncos.
+- Camadas embutidas de vegetação também respeitam a largura disponível e mantêm o pivô das raízes. A plataforma final do portal não recebe a palmeira embutida, para deixar a abertura e a animação livres.
+- Ao limpar o portal, remover fragmentos isolados de fundo/partículas escurecidas; preservar pedras da base, contornos estruturais e a sombra interna da abertura.
+
+## ETzinho armado aprovado — 06/10/2026
+
+- Referência `tools/reference_art/cosmic/etzinho-armed-approved.png`: manter identidade, cores, arma pequena e mão conectada. Converter em paths vetoriais, sem bitmap embutido. Gerador específico deve sobreviver à regeneração geral.
+- Canvas128×128, pés(64,112), altura100px, ombro(74,80), boca da arma(114,73). Corpo e braço compartilham sistema de coordenadas e escala uniforme; espelhamento preserva magnitudes.
+- Espera/patrulha, alerta/mira e disparo250ms animam no Godot. Projétil nasce na boca real da arma, com a mesma direção da mira. Pulso interrompe mira/recuo/flash; dano/derrota incluem a arma na pose, sem camada flutuante. Reset restaura todas as camadas. Flashes reduzidos conservam recuo e corpo opaco sem lampejo.
+
+## Nó de Conexão aprovado — 06/10/2026
+
+- Nó compacto circular é diferente do farol alto e do portal final. Referência `tools/reference_art/cosmic/connection-node-approved.png`. Converter em paths reais, sem raster embutido.
+- Frame160×224, pivô de chão(80,212), centro do núcleo(80,117), escala uniforme0,7. Moldura/base estáticas; núcleo pulsa, arcos interiores giram, painéis têm sequência e partículas orbitam. Pausa congela tudo; estado Offline esconde emissão.
+- Remover fundo azul também dos espaços internos; preservar sombras/contornos violetas. Remover fragmentos desconectados da prancha e não deixar partes estáticas de partículas nas camadas rígidas. Conferir SVG rasterizado sobre fundo claro e no jogo. Flashes reduzidos limitam pulsação e partículas.
+
+## Bordas das luzes — 06/10/2026
+
+- Auditar as camadas emissivas renderizadas pelo Godot, incluindo glow, halo, núcleo Online, lâmpada, feixe, pacotes, sinal, arcos, túnel, spark e tiros. Não confundir sombras/contornos de pedra e metal com luz.
+- Remover pixels escuros de borda conectados à transparência; preservar sombra interna encerrada pela luz. O export aplica audit_light_layers/clean_light_edges e reimporta antes de empacotar, evitando reintrodução por geradores. Comparar sobre fundo claro.
+- Núcleo do Nó não contém fragmentos azuis dos arcos da prancha: esses pertencem apenas à camada giratória.
+
+## Transição dos botões — 06/10/2026
+
+- Botões de menu têm superfície SVG no estado disabled e a mesma cor de texto dos outros estados. Caption desenhada separadamente também deve ocultar o texto nativo disabled. Animar botão inteiro com pivô central e escala uniforme; aguardar o feedback antes de navegar. Bloquear cliques repetidos e Escape durante o feedback; preservar preparação do Brisin e pausa do jogo.
+
+## Fundo laranja aprovado — 06/10/2026
+
+- Referência background-orange-approved.png, panorama extenso de torres/cânions/cachoeiras sem personagens, gemas ou props de gameplay pintados. Gerar paths vetoriais reais com build_warm_background.py. Preservar canvas2172×724, escala uniforme e cobertura da câmera/paralaxe por toda a fase.
+- Preservar as opacidades/faixas e intensidade0,72 da névoa, alterando só a cor para cobre suave#d6a58e. Névoa atrás do gameplay, menu mantém atmosphere_strength0. Offline recebe matiz quente; Online conserva referência. Não regenerar outros assets para trocar o fundo.
+
+## Paleta quente e animações — 06/10/2026
+
+- Usar a seleção de contraste por asset:20 paletas revisadas e17 iniciais. O gerador build_warm_assets transfere as amostras aprovadas para os paths existentes, preservando alpha/viewBox/pivôs/margens; os hashes tornam o export idempotente. As amostras e a seleção ficam em tools/reference_art/warm.
+- Transferir também emissões procedurais do rail, vento, plataformas e conexão. Não deixar ciano no código após aquecer apenas as texturas. Estruturas ameixa/cobre, iluminação âmbar/creme e chão com faixa de contato clara.
+- Caminhada/corrida/salto usam64 SVGs de paths reais, canvas 144×128, pés (72,120),12 fps. Preservar contagens24/24/16, alpha das fontes, física e comandos mobile. locomotion_svg valida a máscara renderizada contra os atlas originais.
+- Nó distingue carga por fase de luz 3,6 rad/s e Online 2,4 rad/s. Núcleo mantém amplitude 2,5% (1,2% reduzido); moldura imóvel. Partículas mudam intensidade dentro das órbitas anteriores. Portal mantém entrada1,8 s, raio, escalas e handoff. Pausa e flashes reduzidos continuam cobertos pelos testes.
+- Capturas de plataformas devem mostrar a última linha e suas legendas dentro da viewport; captura de spawn usa posição real, sem deslocar Brisin para fora da borda.
+
+## Centralização e contraste — 06/10/2026
+
+- Centralizar os rótulos do menu pelos bounds da tinta real do bitmap, incluindo acentos e cedilha. Excluir o avanço final vazio e os 8px de sombra inferior do SVG; compensar também os 2px da sombra do texto. Não estimar baseline por font_size/3. font_ink.json deve ser regenerado com a fonte.
+- Plataformas de sinal usam metal ameixa/cobre escuro e luz/contato creme para separar a silhueta do céu laranja. Preservar paths/alpha, módulos, escala, estado Online e movimento. O gerador aplica essa regra por família.
+- Névoa do fundo aumentada levemente: intensidade 0,84 no gameplay, fator 0,35 no fundo do menu. A névoa fica atrás da arte jogável; não apagar plataformas, personagens ou botões.
+
+- Título/detalhe da conexão e contador de gemas também centralizam tinta real. O texto ocupa a área livre dos ícones, com atualização para estados e contagens; o HUD mobile conserva tamanhos legíveis e centraliza nos próprios bounds.

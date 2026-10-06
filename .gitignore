@@ -26,3 +26,4 @@ godot/assets/world_01/platforms/cosmic*.import
 dist/index.pck
 dist/index.wasm.part*
 dist/Brisin_SVGs_e_Interacoes.zip
+dist/.Brisin_SVGs_e_Interacoes.zip.tmp.*

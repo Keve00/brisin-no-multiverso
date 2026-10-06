@@ -3,6 +3,8 @@ extends Node2D
 # use the same expansion; no instantaneous center-distance hit hidden by a wave.
 const Effects = preload("res://scripts/player/action_effects_svg.gd")
 const Chip = preload("res://scripts/player/sim_projectile.gd")
+const EnemyShot = preload("res://scripts/enemies/alien_projectile.gd")
+var shots_blocked := 0
 var world: Node2D
 var waves: Array[Dictionary] = []
 
@@ -52,6 +54,7 @@ func _physics_process(dt: float) -> void:
   clear()
   return
  for wave in waves:
+  wave.step_radius = wave.previous_radius
   wave.age += dt
   var radius: float = Effects.PULSE_RADIUS*Effects.pulse_expansion(wave.age)
   for enemy in world.enemies:
@@ -65,3 +68,35 @@ func _physics_process(dt: float) -> void:
     enemy.receive_pulse(wave.origin)
   wave.previous_radius = radius
  waves = waves.filter(func(wave: Dictionary) -> bool: return wave.age < Effects.PULSE_DURATION)
+
+func launch_enemy_shot(origin: Vector2, aim: Vector2, owner_id: int) -> void:
+ if get_tree().paused or world.player.state in ["DISABLED","RESPAWN"]: return
+ var count := 0
+ for child in get_children():
+  if child.get_script() == EnemyShot:
+   count += 1
+   if child.owner_id == owner_id and child.hit_age<0: return
+ if count>=8: return
+ var shot := Node2D.new()
+ shot.set_script(EnemyShot)
+ shot.world = world
+ shot.combat = self
+ shot.owner_id = owner_id
+ shot.position = origin
+ shot.velocity = aim.normalized()*EnemyShot.SPEED
+ add_child(shot)
+ Audio.play("alien_shot")
+
+func pulse_block_fraction(start: Vector2, step: Vector2, size: Vector2) -> float:
+ var first := INF
+ for wave in waves:
+  var r0: float = wave.get("step_radius",wave.previous_radius)
+  var r1: float = wave.previous_radius
+  var steps := maxi(1,int(ceil((step.length()+absf(r1-r0))/2.0)))
+  for i in range(steps+1):
+   var t := float(i)/steps
+   var body := Rect2(start+step*t-size/2,size)
+   if wave_touches_body(wave.origin,body,body,lerpf(r0,r1,t),lerpf(r0,r1,t)):
+    first = minf(first,t)
+    break
+ return first

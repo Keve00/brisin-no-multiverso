@@ -12,7 +12,7 @@
         64
       ],
       "geometry": "paths",
-      "colors": 47
+      "colors": 52
     },
     {
       "path": "godot/assets/world_01/platforms/coastal_0.svg",
@@ -25,7 +25,7 @@
         64
       ],
       "geometry": "paths",
-      "colors": 27
+      "colors": 32
     },
     {
       "path": "godot/assets/world_01/platforms/coastal_0_ground.svg",
@@ -38,20 +38,20 @@
         0
       ],
       "geometry": "paths",
-      "colors": 25
+      "colors": 335
     },
     {
       "path": "godot/assets/world_01/platforms/coastal_0_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
-      "colors": 27
+      "colors": 30
     },
     {
       "path": "godot/assets/world_01/platforms/coastal_1.svg",
@@ -64,7 +64,7 @@
         64
       ],
       "geometry": "paths",
-      "colors": 27
+      "colors": 32
     },
     {
       "path": "godot/assets/world_01/platforms/coastal_1_ground.svg",
@@ -77,20 +77,20 @@
         0
       ],
       "geometry": "paths",
-      "colors": 25
+      "colors": 335
     },
     {
       "path": "godot/assets/world_01/platforms/coastal_1_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
-      "colors": 27
+      "colors": 30
     },
     {
       "path": "godot/assets/world_01/platforms/sand_0.svg",
@@ -103,7 +103,7 @@
         64
       ],
       "geometry": "paths",
-      "colors": 26
+      "colors": 28
     },
     {
       "path": "godot/assets/world_01/platforms/sand_0_ground.svg",
@@ -116,20 +116,20 @@
         0
       ],
       "geometry": "paths",
-      "colors": 26
+      "colors": 269
     },
     {
       "path": "godot/assets/world_01/platforms/sand_0_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
-      "colors": 26
+      "colors": 25
     },
     {
       "path": "godot/assets/world_01/platforms/sand_1.svg",
@@ -142,7 +142,7 @@
         64
       ],
       "geometry": "paths",
-      "colors": 26
+      "colors": 28
     },
     {
       "path": "godot/assets/world_01/platforms/sand_1_ground.svg",
@@ -155,20 +155,20 @@
         0
       ],
       "geometry": "paths",
-      "colors": 26
+      "colors": 254
     },
     {
       "path": "godot/assets/world_01/platforms/sand_1_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
-      "colors": 26
+      "colors": 25
     },
     {
       "path": "godot/assets/world_01/platforms/steps_0.svg",
@@ -200,11 +200,11 @@
       "path": "godot/assets/world_01/platforms/steps_0_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
       "colors": 0
@@ -239,11 +239,11 @@
       "path": "godot/assets/world_01/platforms/steps_1_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
       "colors": 0
@@ -259,7 +259,7 @@
         64
       ],
       "geometry": "paths",
-      "colors": 18
+      "colors": 23
     },
     {
       "path": "godot/assets/world_01/platforms/thin_0_ground.svg",
@@ -272,20 +272,20 @@
         0
       ],
       "geometry": "paths",
-      "colors": 16
+      "colors": 217
     },
     {
       "path": "godot/assets/world_01/platforms/thin_0_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
-      "colors": 15
+      "colors": 18
     },
     {
       "path": "godot/assets/world_01/platforms/thin_1.svg",
@@ -298,7 +298,7 @@
         64
       ],
       "geometry": "paths",
-      "colors": 18
+      "colors": 23
     },
     {
       "path": "godot/assets/world_01/platforms/thin_1_ground.svg",
@@ -311,20 +311,20 @@
         0
       ],
       "geometry": "paths",
-      "colors": 16
+      "colors": 217
     },
     {
       "path": "godot/assets/world_01/platforms/thin_1_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
-      "colors": 15
+      "colors": 18
     },
     {
       "path": "godot/assets/world_01/platforms/cracked_0.svg",
@@ -337,7 +337,7 @@
         64
       ],
       "geometry": "paths",
-      "colors": 24
+      "colors": 28
     },
     {
       "path": "godot/assets/world_01/platforms/cracked_0_ground.svg",
@@ -350,20 +350,20 @@
         0
       ],
       "geometry": "paths",
-      "colors": 20
+      "colors": 259
     },
     {
       "path": "godot/assets/world_01/platforms/cracked_0_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
-      "colors": 20
+      "colors": 29
     },
     {
       "path": "godot/assets/world_01/platforms/cracked_1.svg",
@@ -376,7 +376,7 @@
         64
       ],
       "geometry": "paths",
-      "colors": 24
+      "colors": 28
     },
     {
       "path": "godot/assets/world_01/platforms/cracked_1_ground.svg",
@@ -389,20 +389,20 @@
         0
       ],
       "geometry": "paths",
-      "colors": 20
+      "colors": 259
     },
     {
       "path": "godot/assets/world_01/platforms/cracked_1_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
-      "colors": 20
+      "colors": 29
     },
     {
       "path": "godot/assets/world_01/platforms/raft_0.svg",
@@ -415,7 +415,7 @@
         64
       ],
       "geometry": "paths",
-      "colors": 27
+      "colors": 34
     },
     {
       "path": "godot/assets/world_01/platforms/raft_0_ground.svg",
@@ -428,20 +428,20 @@
         0
       ],
       "geometry": "paths",
-      "colors": 27
+      "colors": 213
     },
     {
       "path": "godot/assets/world_01/platforms/raft_0_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
-      "colors": 21
+      "colors": 26
     },
     {
       "path": "godot/assets/world_01/platforms/raft_1.svg",
@@ -454,7 +454,7 @@
         64
       ],
       "geometry": "paths",
-      "colors": 27
+      "colors": 34
     },
     {
       "path": "godot/assets/world_01/platforms/raft_1_ground.svg",
@@ -467,20 +467,20 @@
         0
       ],
       "geometry": "paths",
-      "colors": 27
+      "colors": 216
     },
     {
       "path": "godot/assets/world_01/platforms/raft_1_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
-      "colors": 21
+      "colors": 26
     },
     {
       "path": "godot/assets/world_01/platforms/wood_bridge_0.svg",
@@ -493,7 +493,7 @@
         64
       ],
       "geometry": "paths",
-      "colors": 16
+      "colors": 20
     },
     {
       "path": "godot/assets/world_01/platforms/wood_bridge_0_ground.svg",
@@ -506,17 +506,17 @@
         0
       ],
       "geometry": "paths",
-      "colors": 16
+      "colors": 157
     },
     {
       "path": "godot/assets/world_01/platforms/wood_bridge_0_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
       "colors": 0
@@ -532,7 +532,7 @@
         64
       ],
       "geometry": "paths",
-      "colors": 16
+      "colors": 20
     },
     {
       "path": "godot/assets/world_01/platforms/wood_bridge_1_ground.svg",
@@ -545,17 +545,17 @@
         0
       ],
       "geometry": "paths",
-      "colors": 16
+      "colors": 157
     },
     {
       "path": "godot/assets/world_01/platforms/wood_bridge_1_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
       "colors": 0
@@ -571,7 +571,7 @@
         64
       ],
       "geometry": "paths",
-      "colors": 19
+      "colors": 24
     },
     {
       "path": "godot/assets/world_01/platforms/signal_0_ground.svg",
@@ -584,20 +584,20 @@
         0
       ],
       "geometry": "paths",
-      "colors": 19
+      "colors": 207
     },
     {
       "path": "godot/assets/world_01/platforms/signal_0_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
-      "colors": 9
+      "colors": 11
     },
     {
       "path": "godot/assets/world_01/platforms/signal_1.svg",
@@ -610,7 +610,7 @@
         64
       ],
       "geometry": "paths",
-      "colors": 19
+      "colors": 24
     },
     {
       "path": "godot/assets/world_01/platforms/signal_1_ground.svg",
@@ -623,20 +623,20 @@
         0
       ],
       "geometry": "paths",
-      "colors": 19
+      "colors": 207
     },
     {
       "path": "godot/assets/world_01/platforms/signal_1_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
-      "colors": 9
+      "colors": 11
     },
     {
       "path": "godot/assets/world_01/platforms/wind_island_0.svg",
@@ -649,12 +649,12 @@
         64
       ],
       "geometry": "paths",
-      "colors": 29
+      "colors": 25
     },
     {
       "path": "godot/assets/world_01/platforms/wind_island_0_ground.svg",
       "canvas": [
-        140,
+        137,
         39
       ],
       "pivot": [
@@ -662,20 +662,20 @@
         0
       ],
       "geometry": "paths",
-      "colors": 22
+      "colors": 239
     },
     {
       "path": "godot/assets/world_01/platforms/wind_island_0_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
-      "colors": 29
+      "colors": 53
     },
     {
       "path": "godot/assets/world_01/platforms/wind_island_0_wind.svg",
@@ -701,12 +701,12 @@
         64
       ],
       "geometry": "paths",
-      "colors": 29
+      "colors": 25
     },
     {
       "path": "godot/assets/world_01/platforms/wind_island_1_ground.svg",
       "canvas": [
-        140,
+        137,
         39
       ],
       "pivot": [
@@ -714,20 +714,20 @@
         0
       ],
       "geometry": "paths",
-      "colors": 22
+      "colors": 239
     },
     {
       "path": "godot/assets/world_01/platforms/wind_island_1_deco.svg",
       "canvas": [
         200,
-        176
+        256
       ],
       "pivot": [
         100,
-        64
+        170
       ],
       "geometry": "paths",
-      "colors": 29
+      "colors": 53
     },
     {
       "path": "godot/assets/world_01/platforms/wind_island_1_wind.svg",
@@ -745,119 +745,119 @@
     {
       "path": "godot/assets/world_01/environment/palms_0.svg",
       "canvas": [
-        126,
-        119
+        127,
+        122
       ],
       "pivot": [
         63,
-        114
+        117
       ],
       "geometry": "paths",
-      "colors": 25
+      "colors": 30
     },
     {
       "path": "godot/assets/world_01/environment/palms_1.svg",
       "canvas": [
-        106,
-        102
+        91,
+        103
       ],
       "pivot": [
-        53,
-        97
+        45,
+        98
       ],
       "geometry": "paths",
-      "colors": 20
+      "colors": 28
     },
     {
       "path": "godot/assets/world_01/environment/palms_2.svg",
       "canvas": [
-        88,
+        87,
         85
       ],
       "pivot": [
-        44,
+        43,
         80
-      ],
-      "geometry": "paths",
-      "colors": 26
-    },
-    {
-      "path": "godot/assets/world_01/environment/vegetation_0.svg",
-      "canvas": [
-        59,
-        42
-      ],
-      "pivot": [
-        29,
-        37
       ],
       "geometry": "paths",
       "colors": 25
     },
     {
-      "path": "godot/assets/world_01/environment/vegetation_1.svg",
+      "path": "godot/assets/world_01/environment/vegetation_0.svg",
       "canvas": [
-        54,
-        39
+        62,
+        42
       ],
       "pivot": [
-        27,
-        34
-      ],
-      "geometry": "paths",
-      "colors": 26
-    },
-    {
-      "path": "godot/assets/world_01/environment/vegetation_2.svg",
-      "canvas": [
-        44,
-        52
-      ],
-      "pivot": [
-        22,
-        47
-      ],
-      "geometry": "paths",
-      "colors": 23
-    },
-    {
-      "path": "godot/assets/world_01/environment/rocks_sand_0.svg",
-      "canvas": [
-        37,
-        52
-      ],
-      "pivot": [
-        18,
-        47
+        31,
+        37
       ],
       "geometry": "paths",
       "colors": 27
     },
     {
+      "path": "godot/assets/world_01/environment/vegetation_1.svg",
+      "canvas": [
+        62,
+        42
+      ],
+      "pivot": [
+        31,
+        37
+      ],
+      "geometry": "paths",
+      "colors": 27
+    },
+    {
+      "path": "godot/assets/world_01/environment/vegetation_2.svg",
+      "canvas": [
+        62,
+        60
+      ],
+      "pivot": [
+        31,
+        55
+      ],
+      "geometry": "paths",
+      "colors": 25
+    },
+    {
+      "path": "godot/assets/world_01/environment/rocks_sand_0.svg",
+      "canvas": [
+        37,
+        53
+      ],
+      "pivot": [
+        18,
+        48
+      ],
+      "geometry": "paths",
+      "colors": 28
+    },
+    {
       "path": "godot/assets/world_01/environment/rocks_sand_1.svg",
       "canvas": [
         60,
-        48
+        49
       ],
       "pivot": [
         30,
-        43
+        44
       ],
       "geometry": "paths",
-      "colors": 26
+      "colors": 27
     },
     {
       "path": "godot/assets/world_01/environment/rocks_sand_2.svg",
       "canvas": [
         57,
-        45
+        46
       ],
       "pivot": [
         28,
-        40
+        41
       ],
       "geometry": "paths",
-      "colors": 36
+      "colors": 37
     },
     {
       "path": "godot/assets/world_01/environment/ruins_0.svg",
@@ -870,7 +870,7 @@
         55
       ],
       "geometry": "paths",
-      "colors": 25
+      "colors": 31
     },
     {
       "path": "godot/assets/world_01/environment/ruins_1.svg",
@@ -883,7 +883,7 @@
         55
       ],
       "geometry": "paths",
-      "colors": 25
+      "colors": 31
     },
     {
       "path": "godot/assets/world_01/environment/ruins_2.svg",
@@ -896,7 +896,7 @@
         49
       ],
       "geometry": "paths",
-      "colors": 31
+      "colors": 34
     },
     {
       "path": "godot/assets/world_01/environment/posts_0.svg",
@@ -909,7 +909,7 @@
         46
       ],
       "geometry": "paths",
-      "colors": 18
+      "colors": 21
     },
     {
       "path": "godot/assets/world_01/environment/posts_0_lamp.svg",
@@ -935,7 +935,7 @@
         46
       ],
       "geometry": "paths",
-      "colors": 18
+      "colors": 21
     },
     {
       "path": "godot/assets/world_01/environment/posts_1_lamp.svg",
@@ -961,7 +961,7 @@
         46
       ],
       "geometry": "paths",
-      "colors": 18
+      "colors": 21
     },
     {
       "path": "godot/assets/world_01/environment/posts_2_lamp.svg",
@@ -979,41 +979,41 @@
     {
       "path": "godot/assets/world_01/environment/water_props_0.svg",
       "canvas": [
-        48,
-        42
+        47,
+        41
       ],
       "pivot": [
-        24,
-        37
+        23,
+        36
       ],
       "geometry": "paths",
-      "colors": 22
+      "colors": 21
     },
     {
       "path": "godot/assets/world_01/environment/water_props_1.svg",
       "canvas": [
-        48,
-        42
+        47,
+        41
       ],
       "pivot": [
-        24,
-        37
+        23,
+        36
       ],
       "geometry": "paths",
-      "colors": 22
+      "colors": 21
     },
     {
       "path": "godot/assets/world_01/environment/water_props_2.svg",
       "canvas": [
         44,
-        16
+        15
       ],
       "pivot": [
         22,
-        11
+        10
       ],
       "geometry": "paths",
-      "colors": 24
+      "colors": 18
     },
     {
       "path": "godot/assets/world_01/interactive/turbine_base_off.svg",
@@ -1460,15 +1460,15 @@
     {
       "path": "godot/assets/world_01/interactive/portal_frame_off.svg",
       "canvas": [
-        128,
-        140
+        160,
+        160
       ],
       "pivot": [
-        62,
-        136
+        80,
+        152
       ],
       "geometry": "paths",
-      "colors": 24
+      "colors": 42
     },
     {
       "path": "godot/assets/world_01/interactive/portal_core_off.svg",
@@ -1481,20 +1481,20 @@
         40
       ],
       "geometry": "paths",
-      "colors": 20
+      "colors": 30
     },
     {
       "path": "godot/assets/world_01/interactive/portal_frame_on.svg",
       "canvas": [
-        128,
-        140
+        160,
+        160
       ],
       "pivot": [
-        62,
-        136
+        80,
+        152
       ],
       "geometry": "paths",
-      "colors": 32
+      "colors": 61
     },
     {
       "path": "godot/assets/world_01/interactive/portal_core.svg",
@@ -1507,7 +1507,7 @@
         40
       ],
       "geometry": "paths",
-      "colors": 32
+      "colors": 27
     },
     {
       "path": "godot/assets/world_01/interactive/rail_post_off.svg",
@@ -5771,7 +5771,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/idle/01.svg",
@@ -5784,7 +5784,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/idle/02.svg",
@@ -5797,7 +5797,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/idle/03.svg",
@@ -5810,7 +5810,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/idle/04.svg",
@@ -5823,7 +5823,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/idle/05.svg",
@@ -5836,7 +5836,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/idle/06.svg",
@@ -5849,7 +5849,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 96
+      "colors": 95
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/idle/07.svg",
@@ -5862,7 +5862,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/patrol/00.svg",
@@ -5875,7 +5875,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/patrol/01.svg",
@@ -5888,7 +5888,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/patrol/02.svg",
@@ -5901,7 +5901,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/patrol/03.svg",
@@ -5914,7 +5914,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/patrol/04.svg",
@@ -5927,7 +5927,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/patrol/05.svg",
@@ -5940,7 +5940,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/patrol/06.svg",
@@ -5953,7 +5953,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/patrol/07.svg",
@@ -5966,7 +5966,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/alert/00.svg",
@@ -5979,7 +5979,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/alert/01.svg",
@@ -5992,7 +5992,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 97
+      "colors": 96
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/alert/02.svg",
@@ -6005,7 +6005,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 97
+      "colors": 96
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/alert/03.svg",
@@ -6018,7 +6018,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 97
+      "colors": 96
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/alert/04.svg",
@@ -6031,7 +6031,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/alert/05.svg",
@@ -6044,7 +6044,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/hit/00.svg",
@@ -6057,7 +6057,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/hit/01.svg",
@@ -6070,7 +6070,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 97
+      "colors": 96
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/hit/02.svg",
@@ -6083,7 +6083,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 97
+      "colors": 96
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/hit/03.svg",
@@ -6096,7 +6096,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 97
+      "colors": 96
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/hit/04.svg",
@@ -6109,7 +6109,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/hit/05.svg",
@@ -6122,7 +6122,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/00.svg",
@@ -6135,7 +6135,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/01.svg",
@@ -6148,7 +6148,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/02.svg",
@@ -6174,7 +6174,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 94
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/04.svg",
@@ -6187,7 +6187,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 94
+      "colors": 92
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/05.svg",
@@ -6200,7 +6200,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 95
+      "colors": 92
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/06.svg",
@@ -6213,7 +6213,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 90
+      "colors": 88
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/07.svg",
@@ -6226,7 +6226,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 82
+      "colors": 80
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/08.svg",
@@ -6239,7 +6239,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 70
+      "colors": 65
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/09.svg",
@@ -6252,7 +6252,7 @@
         112
       ],
       "geometry": "paths",
-      "colors": 48
+      "colors": 44
     },
     {
       "path": "godot/assets/enemies/cosmic/orbital/frames/defeated/10.svg",

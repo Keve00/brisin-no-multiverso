@@ -12,7 +12,11 @@ def main():
  if not version.startswith('4.5.1.'):
   parser.error('The included web runtime requires Godot4.5.1. Export a complete matching runtime before using another version.')
  restore_runtime()
- commands=[[args.godot,'--headless','--path',str(ROOT/'godot'),'--editor','--import'],
+ commands=[[sys.executable,'tools/build_warm_assets.py'],
+ [args.godot,'--headless','--path',str(ROOT/'godot'),'--editor','--import'],
+ [args.godot,'--headless','--path',str(ROOT/'godot'),'--script',str(ROOT/'tools/audit_light_layers.gd')],
+ [sys.executable,'tools/clean_light_edges.py'],
+ [args.godot,'--headless','--path',str(ROOT/'godot'),'--editor','--import'],
  [args.godot,'--headless','--path',str(ROOT/'godot'),'--export-pack','Web',str(ROOT/'dist/index.pck')],
  ['node','tools/update_web_pack_size.cjs'],
  ['node','tools/fix_web_audio_pause.cjs'],['node','tools/verify_web_audio.cjs'],

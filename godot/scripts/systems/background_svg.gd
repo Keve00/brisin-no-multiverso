@@ -38,8 +38,8 @@ func _draw() -> void:
   blend=world.online_blend
  var rect:=panorama_rect(camera_center(),length)
  if not is_instance_valid(world):rect.position.x=-430.0
- draw_texture(PANORAMA,rect.position,Color(0.76,0.8,0.94).lerp(Color.WHITE,blend))
+ draw_texture(PANORAMA,rect.position,Color(0.94,0.82,0.76).lerp(Color.WHITE,blend))
  for index in RELAYS.size():
   var strength:=0.04+(0.08 if WorldState.reduced_flash else 0.14)*(0.5+0.5*sin(clock*0.8+index))
   draw_texture(BEACON,rect.position+RELAYS[index]-Vector2(32,32),Color(1,0.65,0.35,strength*(0.3+blend*0.7)))
- draw_texture(ATMOSPHERE,rect.position,Color(1,1,1,atmosphere_strength*0.72))
+ draw_texture(ATMOSPHERE,rect.position,Color(1,1,1,atmosphere_strength*0.84))

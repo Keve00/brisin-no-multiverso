@@ -112,6 +112,7 @@ func run() -> void:
  var jump_age := 0
  var dash_pending := false
  var route_dead := false
+ var route_pulse_release_frame := -1
  var route_dash_release_frame := -1
  var route_chip_release_frame := -1
  press("move_right")
@@ -125,6 +126,11 @@ func run() -> void:
    jump_age+=1
    if dash_pending and jump_age==18: press("dash")
    if jump_age==34: release("jump");release("dash");dash_pending=false
+  if route_pulse_release_frame==i: release("pulse")
+  if p.pulse_time<=0:
+   for projectile in world.combat.get_children():
+    if projectile.get_script()==preload("res://scripts/enemies/alien_projectile.gd") and projectile.hit_age<0 and projectile.global_position.distance_to(p.global_position+Vector2(0,-35))<170:
+     press("pulse");route_pulse_release_frame=i+2
   if route_dash_release_frame==i: release("dash")
   if route_chip_release_frame==i: release("chip")
   for threat in world.enemies:
@@ -144,11 +150,12 @@ func run() -> void:
   var final_jumps := [6320.0,6690.0,6895.0,7060.0,7990.0,8490.0,8990.0,9550.0,10050.0,10550.0,10990.0,11490.0,11990.0,12490.0,13198.0,13710.0,14210.0,14710.0]
   var final_jump := 0
   var final_jump_age := 0
+  var pulse_release_frame := -1
   var dash_release_frame := -1
   var chip_release_frame := -1
   var brake_for_landing := false
   press("move_right")
-  for i in 2600:
+  for i in 3300:
    if p.state == "RESPAWN":
     break
    if p.state == "DISABLED": break
@@ -166,6 +173,11 @@ func run() -> void:
    if GameCommands.pressed("jump"):
     final_jump_age += 1
     if final_jump_age == 34: release("jump")
+   if pulse_release_frame==i: release("pulse")
+   if p.pulse_time<=0:
+    for projectile in world.combat.get_children():
+     if projectile.get_script()==preload("res://scripts/enemies/alien_projectile.gd") and projectile.hit_age<0 and projectile.global_position.distance_to(p.global_position+Vector2(0,-35))<170:
+      press("pulse");pulse_release_frame=i+2
    if dash_release_frame == i: release("dash")
    if chip_release_frame == i: release("chip")
    for threat in world.enemies:

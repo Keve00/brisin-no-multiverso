@@ -1,0 +1,26 @@
+{
+  "canvas": [
+    160,
+    224
+  ],
+  "ground_pivot": [
+    80,
+    212
+  ],
+  "core_center": [
+    80,
+    117
+  ],
+  "scale": 0.7,
+  "source": "connection-node-approved.png",
+  "geometry": "real paths; no raster",
+  "layers": [
+    "static frame",
+    "pulsing crystal",
+    "rotating inner arcs",
+    "sequential pedestal panels",
+    "signal",
+    "sparks"
+  ],
+  "background_cleanup": "navy and black board excluded in all negative spaces; rigid-frame disconnected particles removed"
+}

@@ -17,6 +17,8 @@ var online_only := false
 var online := false
 var ground_texture: Texture2D
 var decoration_texture: Texture2D
+var decoration_ink := Rect2()
+var decoration_enabled := true
 var wind_texture: Texture2D
 var _shapes: Array[CollisionShape2D] = []
 var _crumble_state := "intact"
@@ -47,6 +49,7 @@ func configure_variant(kind: String, alternate: int = 0) -> void:
  texture = load(base+".svg")
  ground_texture = load(base+"_ground.svg")
  decoration_texture = load(base+"_deco.svg")
+ decoration_ink=Rect2(decoration_texture.get_image().get_used_rect())
  wind_texture = load(base+"_wind.svg") if kind == "wind_island" else null
  _build_collisions()
  queue_redraw()
@@ -151,6 +154,13 @@ func _physics_process(dt: float) -> void:
     _state_time = 0.0
  queue_redraw()
 
+func decoration_layout() -> Rect2:
+ var ink_width:=maxf(1.0,decoration_ink.size.x)
+ var factor:=minf(1.0,maxf(1.0,rect.size.x-12.0)/ink_width)
+ # Center visible ink rather than transparent canvas; roots keep their Y pivot.
+ var x:=rect.size.x/2-(decoration_ink.position.x+ink_width/2)*factor
+ return Rect2(Vector2(x,-170*factor),decoration_texture.get_size()*factor)
+
 func _draw_modular() -> void:
  if not ground_texture: return
  var size := ground_texture.get_size()
@@ -170,8 +180,8 @@ func _draw_modular() -> void:
    draw_texture_rect_region(ground_texture,Rect2(cursor,0,span,size.y),Rect2(cap,0,span,size.y))
    cursor += span
  # Decoration is a single fixed-size layer, rather than repeated tall palms.
- if decoration_texture:
-  draw_texture(decoration_texture,Vector2(width/2-100,-64))
+ if decoration_texture and decoration_enabled:
+  draw_texture_rect(decoration_texture,decoration_layout(),false)
 
 func _draw() -> void:
  draw_set_transform(_visual_offset)
@@ -183,16 +193,16 @@ func _draw() -> void:
    _draw_modular()
    if variant == "signal":
     var strength := 0.55+sin(clock*2.5)*0.15
-    draw_circle(Vector2(rect.size.x/2,48),8,Color(0.25,0.9,1,strength))
+    draw_circle(Vector2(rect.size.x/2,48),8,Color(1,0.76,0.35,strength))
    elif variant == "wind_island":
     if wind_texture:
      var wind_tint := Color(1,1,1,0.75+sin(clock*2)*0.15)
      draw_texture(wind_texture,Vector2(rect.size.x/2-100+roundf(sin(clock*1.4)*3),-64+roundf(cos(clock*1.1)*2)),wind_tint)
     for index in range(4):
      var phase := fmod(clock*0.7+index*0.25,1.0)
-     draw_rect(Rect2(rect.size.x/2-50+phase*100,36+sin(phase*TAU)*12,2,2),Color(0.55,1,0.92,sin(phase*PI)*0.8))
+     draw_rect(Rect2(rect.size.x/2-50+phase*100,36+sin(phase*TAU)*12,2,2),Color(1,0.88,0.62,sin(phase*PI)*0.8))
    if bridge:
-    draw_rect(Rect2(0,5,rect.size.x,2),Color(0.3,0.85,1,0.35+0.15*sin(clock*2)))
+    draw_rect(Rect2(0,5,rect.size.x,2),Color(1,0.78,0.38,0.35+0.15*sin(clock*2)))
   elif bridge:
    draw_rect(Rect2(0,0,rect.size.x,24),Color("173d51"))
    draw_rect(Rect2(0,18,rect.size.x,4),Color("2b7284"))

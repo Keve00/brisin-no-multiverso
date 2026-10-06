@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" shape-rendering="crispEdges">
- <path fill="#285e42" d="M8 2h4v4h-2v2H8v2H4v2H2V6h2V4h4z"/>
- <path fill="#85ae45" d="M8 2h2v4H8v2H4V6h2V4h2z"/>
- <path fill="#c9d67b" d="M8 4h2v2H8v2H6v2H4V8h2V6h2z"/>
+ <path fill="#7b4b37" d="M8 2h4v4h-2v2H8v2H4v2H2V6h2V4h4z"/>
+ <path fill="#d77a24" d="M8 2h2v4H8v2H4V6h2V4h2z"/>
+ <path fill="#ea9c48" d="M8 4h2v2H8v2H6v2H4V8h2V6h2z"/>
 </svg>

@@ -3,100 +3,100 @@
     {
       "id": "palms_0",
       "canvas": [
-        126,
-        119
+        127,
+        122
       ],
       "pivot": [
         63,
-        114
+        117
       ]
     },
     {
       "id": "palms_1",
       "canvas": [
-        106,
-        102
+        91,
+        103
       ],
       "pivot": [
-        53,
-        97
+        45,
+        98
       ]
     },
     {
       "id": "palms_2",
       "canvas": [
-        88,
+        87,
         85
       ],
       "pivot": [
-        44,
+        43,
         80
       ]
     },
     {
       "id": "vegetation_0",
       "canvas": [
-        59,
+        62,
         42
       ],
       "pivot": [
-        29,
+        31,
         37
       ]
     },
     {
       "id": "vegetation_1",
       "canvas": [
-        54,
-        39
+        62,
+        42
       ],
       "pivot": [
-        27,
-        34
+        31,
+        37
       ]
     },
     {
       "id": "vegetation_2",
       "canvas": [
-        44,
-        52
+        62,
+        60
       ],
       "pivot": [
-        22,
-        47
+        31,
+        55
       ]
     },
     {
       "id": "rocks_sand_0",
       "canvas": [
         37,
-        52
+        53
       ],
       "pivot": [
         18,
-        47
+        48
       ]
     },
     {
       "id": "rocks_sand_1",
       "canvas": [
         60,
-        48
+        49
       ],
       "pivot": [
         30,
-        43
+        44
       ]
     },
     {
       "id": "rocks_sand_2",
       "canvas": [
         57,
-        45
+        46
       ],
       "pivot": [
         28,
-        40
+        41
       ]
     },
     {
@@ -163,6 +163,204 @@
       "pivot": [
         21,
         46
+      ]
+    },
+    {
+      "id": "water_props_0",
+      "canvas": [
+        47,
+        41
+      ],
+      "pivot": [
+        23,
+        36
+      ]
+    },
+    {
+      "id": "water_props_1",
+      "canvas": [
+        47,
+        41
+      ],
+      "pivot": [
+        23,
+        36
+      ]
+    },
+    {
+      "id": "water_props_2",
+      "canvas": [
+        44,
+        15
+      ],
+      "pivot": [
+        22,
+        10
+      ]
+    },
+    {
+      "id": "rocks_sand_0",
+      "canvas": [
+        37,
+        53
+      ],
+      "pivot": [
+        18,
+        48
+      ]
+    },
+    {
+      "id": "rocks_sand_1",
+      "canvas": [
+        60,
+        49
+      ],
+      "pivot": [
+        30,
+        44
+      ]
+    },
+    {
+      "id": "rocks_sand_2",
+      "canvas": [
+        57,
+        46
+      ],
+      "pivot": [
+        28,
+        41
+      ]
+    },
+    {
+      "id": "water_props_0",
+      "canvas": [
+        47,
+        41
+      ],
+      "pivot": [
+        23,
+        36
+      ]
+    },
+    {
+      "id": "water_props_1",
+      "canvas": [
+        47,
+        41
+      ],
+      "pivot": [
+        23,
+        36
+      ]
+    },
+    {
+      "id": "water_props_2",
+      "canvas": [
+        44,
+        15
+      ],
+      "pivot": [
+        22,
+        10
+      ]
+    },
+    {
+      "id": "rocks_sand_0",
+      "canvas": [
+        37,
+        53
+      ],
+      "pivot": [
+        18,
+        48
+      ]
+    },
+    {
+      "id": "rocks_sand_1",
+      "canvas": [
+        60,
+        49
+      ],
+      "pivot": [
+        30,
+        44
+      ]
+    },
+    {
+      "id": "rocks_sand_2",
+      "canvas": [
+        57,
+        46
+      ],
+      "pivot": [
+        28,
+        41
+      ]
+    },
+    {
+      "id": "water_props_0",
+      "canvas": [
+        47,
+        41
+      ],
+      "pivot": [
+        23,
+        36
+      ]
+    },
+    {
+      "id": "water_props_1",
+      "canvas": [
+        47,
+        41
+      ],
+      "pivot": [
+        23,
+        36
+      ]
+    },
+    {
+      "id": "water_props_2",
+      "canvas": [
+        44,
+        15
+      ],
+      "pivot": [
+        22,
+        10
+      ]
+    },
+    {
+      "id": "rocks_sand_0",
+      "canvas": [
+        37,
+        52
+      ],
+      "pivot": [
+        18,
+        47
+      ]
+    },
+    {
+      "id": "rocks_sand_1",
+      "canvas": [
+        60,
+        48
+      ],
+      "pivot": [
+        30,
+        43
+      ]
+    },
+    {
+      "id": "rocks_sand_2",
+      "canvas": [
+        57,
+        45
+      ],
+      "pivot": [
+        28,
+        40
       ]
     },
     {
