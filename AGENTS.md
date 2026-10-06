@@ -222,3 +222,7 @@ Detalhes confirmados nas soluções desta rodada:
 ## Gemas sem resíduos da prancha
 
 - O SVG compartilhado por gemas da fase, menu e HUD não deve conter fundo da prancha, sombra solta ou fragmentos de outra célula. Preserve facetas laranja, canvas/pivô, halo luminoso e contorno de um pixel preso à silhueta. A limpeza deve fazer parte do gerador para sobreviver à regeneração.
+
+## Brilho das gemas do menu
+
+- O halo do menu compartilha a profundidade da gema, desenhado atrás do corpo, com composição aditiva e intensidade visível após a transparência do SVG. Usar reflexos animados, corpo opaco e escala uniforme. Flashes reduzidos mantêm halo/reflexos suaves e constantes. Verificar a composição no renderizador.
